@@ -1,0 +1,41 @@
+\documentclass{article}
+\begin{document}
+\textbf{Lemma 2.3} The following are equivalent for the dense subspace $S$ of the Tychonoff space $X$: 
+\begin{enumerate}
+	\item $S$ is $C^*$-embedded in $X$. 
+	\item If $Z_1$ and $Z_2$ are disjoint zero-sets of $S$, then $\overline{Z_1}^X\cap \overline{Z_2}^X=\emptyset$.
+\end{enumerate}
+
+
+\vskip 10pt
+
+\textbf{Proof of 1 $\Rightarrow$ 2: }  By the transitivity of $C^*$-embedding, $S$ is $C^*$-embedded and dense in $\beta X$. Thus $\beta S$ is equivalent to $\beta X$. Let $Z_1$ and $Z_2$ are disjoint zero-sets of $S$. Since disjoint zero-sets in $S$ hve disjoint closures in $\beta S \equiv_S \beta X$, $\overline{Z_1}^{\beta X}\cap \overline{Z_2}^{\beta X}=\emptyset$. Hence $\overline{Z_1}^X\cap \overline{Z_2}^X=\emptyset$.
+
+
+\vskip 20pt
+
+
+
+\textbf{Proof of 2 $\Rightarrow$ 1: } It suffices to show that $S$ is $C^*$-embedded in $S\cup \{p\}$ for each $p\in X\backslash S$. Because if it is true, then by \textbf{Lemma 2.2}, for each $f\in C^*(S)$ there exists $F\in C(X)$ such that $F|_S=f, $ and as $F|_S\in C^*(S)$, it follows that $F\in C^*(X)$. Thus $S$ would be $C^*$-embedded in $X$.  
+
+
+\vskip 15pt
+
+It remains to be shown that for each $p\in X\backslash S,$ $S$ is $C^*$-embedded in $S\cup \{p\}$. Let $p\in X\backslash S$, and let $C(p)$ denote the collection of closed neighborhoods of $p$ in $S\cup \{p\}.$ If $f\in C^*(S)$, the $\overline{f\left[A\cap X\right]}^{\textbf{R}}$ is a compact nonempty subset of \textbf{R}, and $\left\{\overline{f\left[A\cap S\right]}^{\textbf{R}}: A\in C(p)\right\}\neq \emptyset$. Note that if $s\in \bigcap\left\{ \overline{f[A\cap S]}^{\textbf{R}}: A\in C(p)\right\}$ and $\epsilon>0$, then $p\in \overline{f^\leftarrow \left[ [s-\epsilon, s+\epsilon]\right]}^{S\cup \{p\}}$. That is because if $A\in C(p)$, then $(s-\epsilon, s+\epsilon)\cap f[A\cap S]\neq \emptyset$ and so $A\cap f^\leftarrow \left[(s-\epsilon, s+\epsilon)\right]\neq \emptyset.$ 
+
+\vskip 10pt
+ 
+Choose $r\in \bigcap \left\{f[A\cap S]: A\in C(p)\right\}$ and define $F:S\cup \{p\} \rightarrow \textbf{R}$ as
+$$ F|_S=f \mbox{ and } F(p)=r.$$
+
+Since $f$ is continuous, $F$ is continuous at each point of $S$. We must show that $F$ is continuous at $p$. Let $\epsilon>0$ be given. We claim that there exists $A_0\in C(p)$ such that $f\left[A_0\cap S\right] \subseteq (r-\epsilon, r+\epsilon).$ For if this were not the case, then $\overline{f\left[A\cap S\right]}^{\textbf{R}}\backslash (r-\frac{3\epsilon}{4}, r+\frac{3\epsilon}{4})$ is a nonempty compact subset of \textbf{R} for each $A\in C(p).$ As $\left\{\overline{f[A\cap S]}^{\textbf{R}}\backslash (r-\frac{3\epsilon}{4}, r+\frac{3\epsilon}{4}): A\in C(p)\right\}$ has the finite intersection property, there exists $s\in \bigcap \left\{\overline{f[A\cap S]}^{\textbf{R}}\backslash (r-\frac{3\epsilon}{4}, r+\frac{3\epsilon}{4}): A\in C(p)\right\}$. As noted in the previous paragraph, it follows that $$p\in \overline{f^\leftarrow\left[[s-\frac{\epsilon}{4},s+\frac{\epsilon}{4}]\right]}^{S\cup \{p\}} \cap \overline{f^\leftarrow \left[[r-\frac{\epsilon}{4}, r+\frac{\epsilon}{4}]\right]}^{S\cup \{p\}}.$$
+As  $f^\leftarrow\left[[s-\frac{\epsilon}{4},s+\frac{\epsilon}{4}]\right]$ and $f^\leftarrow \left[[r-\frac{\epsilon}{4}, r+\frac{\epsilon}{4}]\right]$ are disjoint zero-sets of $S$, this is in contradiction to our hypotheses that if $Z_1$ and $Z_2$ are disjoint zero-sets of $S$, then $\overline{Z_1}^X\cap \overline{Z_2}^X=\emptyset$. 
+
+
+ 
+Thus, there exists $A_0\in C(p)$ such that $f\left[A_0\cap S\right]\subseteq (r-\epsilon, r+\epsilon).$ Thus $F[A_0]\subseteq (r-\epsilon, r+\epsilon)$ and $F$ is continuous at $p$. As $f$ was arbitrarily chosen from $C^*(S)$, it follows that $S$ is $C^*$-embedded in $S\cup\{p\}.$ The Lemma is proved.
+
+
+
+
+\end{document}

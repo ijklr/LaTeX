@@ -1,0 +1,33 @@
+\documentclass{article}
+\begin{document}
+
+\textbf{Lemma 2.2 } Let $Y\in E(X)$ for a space $X$ and let $Z$ be a regular space. Let $g:Y\rightarrow Z$ be such that for each $y\in Y, g|_{X\cup \{y\}}$ is continuous. Then $g$ is continuous.
+
+\vskip 15pt
+
+\textbf{Proof: } Let 
+\begin{center}
+$O_1^y=\{W\cap X: W$ is open in $Y$ and $y\in W\},$ and 
+
+$O_2^y=\{W\cap X: W$ is open in $X\cup \{y\}$ and $y\in W$\}. 
+\end{center}
+
+
+We have $O_1^y=O_2^y$ because: 
+
+\vskip 5pt
+$(\subseteq:) $ Let $W\cap X \in O_1^y$. $W$ is open in $Y$ and $y\in W.$ Since $X\cup \{y\}$ is the subspace of $Y$, $W\cap (X\cup \{y\})$ is open in $X\cup \{y\}$. Also, $y\in W\cap (X\cup \{y\}).$ So, $W\cap X=\left(W\cap \left(X\cup\{y\}\right)\right)\cap X \in O_2^y$.
+
+
+$(\supseteq:)$ Let $W\cap X\in O_2^y$. Since $W$ is open in $X\cup \{y\},$ there exists $V\in \tau(Y)$ such that $W=V\cap (X\cup \{y\})$. Since $y\in W$ and thus $y\in V$, we have $V\cap X \in O_1^y$. As $W\cap X=V\cap X$, $W\cap X \in O_1^y$. 
+
+
+\vskip 20pt
+
+Since $g|_{X\cup \{y\}}$ is continuous, then by \textbf{Lemma 2.1}, the filter $\{A\subseteq Z: A \supseteq g|_X [U]$ for some $U\in O_2^y\}$ converges
+ to $g(y)$. Since $O_1^y=O_2^y$, we have $\{A\subseteq Z: A\supseteq g|_X [U]$ for some $U\in O_1^y\}$ converging to $g(y)$ as well. By the other direction of \textbf{Lemma 2.1}, $g$ is continuous.
+
+
+
+
+\end{document}

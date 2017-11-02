@@ -1,0 +1,97 @@
+This is C:\Program Files\MiKTeX 2.5\miktex\bin\makeindex.exe, version 2.14 [02-Oct-2002] (kpathsea + Thai support).
+Scanning input file C:\Documents and Settings\Shaun Cheng\Desktop\USB broken\Lemma4...
+!! Input index error (file = C:\Documents and Settings\Shaun Cheng\Desktop\USB broken\Lemma4, line = 1):
+   -- Unknown index keyword \documentclass.
+!! Input index error (file = C:\Documents and Settings\Shaun Cheng\Desktop\USB broken\Lemma4, line = 2):
+   -- Unknown index keyword \begin.
+!! Input index error (file = C:\Documents and Settings\Shaun Cheng\Desktop\USB broken\Lemma4, line = 3):
+   -- Unknown index keyword \textbf.
+!! Input index error (file = C:\Documents and Settings\Shaun Cheng\Desktop\USB broken\Lemma4, line = 4):
+   -- Unknown index keyword $C_1=\.
+!! Input index error (file = C:\Documents and Settings\Shaun Cheng\Desktop\USB broken\Lemma4, line = 5):
+   -- Unknown index keyword $C_2=\.
+!! Input index error (file = C:\Documents and Settings\Shaun Cheng\Desktop\USB broken\Lemma4, line = 7):
+   -- Unknown index keyword Then,$C_1\cap\overline.
+!! Input index error (file = C:\Documents and Settings\Shaun Cheng\Desktop\USB broken\Lemma4, line = 9):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = C:\Documents and Settings\Shaun Cheng\Desktop\USB broken\Lemma4, line = 11):
+   -- Unknown index keyword \textbf.
+!! Input index error (file = C:\Documents and Settings\Shaun Cheng\Desktop\USB broken\Lemma4, line = 12):
+   -- Unknown index keyword Supposethecontrary.Let$x\inC_1\cap\overline.
+!! Input index error (file = C:\Documents and Settings\Shaun Cheng\Desktop\USB broken\Lemma4, line = 14):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = C:\Documents and Settings\Shaun Cheng\Desktop\USB broken\Lemma4, line = 18):
+   -- Unknown index keyword Foreach$y\inC_2$,let$Z_y=\bar.
+!! Input index error (file = C:\Documents and Settings\Shaun Cheng\Desktop\USB broken\Lemma4, line = 19):
+   -- Unknown index keyword Since$\.
+!! Input index error (file = C:\Documents and Settings\Shaun Cheng\Desktop\USB broken\Lemma4, line = 20):
+   -- Unknown index keyword \begin.
+!! Input index error (file = C:\Documents and Settings\Shaun Cheng\Desktop\USB broken\Lemma4, line = 21):
+   -- Unknown index keyword $\left|\betaX\right|^+=\left|\.
+!! Input index error (file = C:\Documents and Settings\Shaun Cheng\Desktop\USB broken\Lemma4, line = 22):
+   -- Unknown index keyword \end.
+!! Input index error (file = C:\Documents and Settings\Shaun Cheng\Desktop\USB broken\Lemma4, line = 23):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = C:\Documents and Settings\Shaun Cheng\Desktop\USB broken\Lemma4, line = 25):
+   -- Unknown index keyword $\left|\.
+!! Input index error (file = C:\Documents and Settings\Shaun Cheng\Desktop\USB broken\Lemma4, line = 28):
+   -- Unknown index keyword Define$A_y=\pi_2\left[\.
+!! Input index error (file = C:\Documents and Settings\Shaun Cheng\Desktop\USB broken\Lemma4, line = 29):
+   -- Unknown index keyword T(|\betaX|^+)\rightarrowT(|\betaX|^+)$istheprojectionmap.Thus,wedefined$A_y\subseteqT(\left|\betaX\right|^+)$suchthat$\left|A_y\right|=\left|\betaX\right|^+$and$\bar.
+!! Input index error (file = C:\Documents and Settings\Shaun Cheng\Desktop\USB broken\Lemma4, line = 32):
+   -- Unknown index keyword Let$T=\bigcap\left\.
+!! Input index error (file = C:\Documents and Settings\Shaun Cheng\Desktop\USB broken\Lemma4, line = 34):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = C:\Documents and Settings\Shaun Cheng\Desktop\USB broken\Lemma4, line = 36):
+   -- Unknown index keyword Wehave$\left|\bar.
+!! Input index error (file = C:\Documents and Settings\Shaun Cheng\Desktop\USB broken\Lemma4, line = 39):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = C:\Documents and Settings\Shaun Cheng\Desktop\USB broken\Lemma4, line = 40):
+   -- Unknown index keyword Ontheotherhand,wehave$\left|\bar.
+!! Input index error (file = C:\Documents and Settings\Shaun Cheng\Desktop\USB broken\Lemma4, line = 41):
+   -- Unknown index keyword $\bar.
+!! Input index error (file = C:\Documents and Settings\Shaun Cheng\Desktop\USB broken\Lemma4, line = 42):
+   -- Unknown index keyword \subseteq\bar.
+!! Input index error (file = C:\Documents and Settings\Shaun Cheng\Desktop\USB broken\Lemma4, line = 43):
+   -- Unknown index keyword \subseteq\bar.
+!! Input index error (file = C:\Documents and Settings\Shaun Cheng\Desktop\USB broken\Lemma4, line = 44):
+   -- Unknown index keyword =\bar.
+!! Input index error (file = C:\Documents and Settings\Shaun Cheng\Desktop\USB broken\Lemma4, line = 45):
+   -- Unknown index keyword \subseteq\overline.
+!! Input index error (file = C:\Documents and Settings\Shaun Cheng\Desktop\USB broken\Lemma4, line = 46):
+   -- Unknown index keyword =\overline.
+!! Input index error (file = C:\Documents and Settings\Shaun Cheng\Desktop\USB broken\Lemma4, line = 49):
+   -- Unknown index keyword wherethelastequalityholdsbecause$\bar.
+!! Input index error (file = C:\Documents and Settings\Shaun Cheng\Desktop\USB broken\Lemma4, line = 51):
+   -- Unknown index keyword Since$\left\.
+!! Input index error (file = C:\Documents and Settings\Shaun Cheng\Desktop\USB broken\Lemma4, line = 52):
+   -- Unknown index keyword \subseteq\bar.
+!! Input index error (file = C:\Documents and Settings\Shaun Cheng\Desktop\USB broken\Lemma4, line = 54):
+   -- Unknown index keyword $\bar.
+!! Input index error (file = C:\Documents and Settings\Shaun Cheng\Desktop\USB broken\Lemma4, line = 55):
+   -- Unknown index keyword \subseteq\bar.
+!! Input index error (file = C:\Documents and Settings\Shaun Cheng\Desktop\USB broken\Lemma4, line = 56):
+   -- Unknown index keyword andwehave$\left|\bar.
+!! Input index error (file = C:\Documents and Settings\Shaun Cheng\Desktop\USB broken\Lemma4, line = 57):
+   -- Unknown index keyword $\left|\bar.
+!! Input index error (file = C:\Documents and Settings\Shaun Cheng\Desktop\USB broken\Lemma4, line = 58):
+   -- Unknown index keyword previousargumentthat$\left|\bar.
+!! Input index error (file = C:\Documents and Settings\Shaun Cheng\Desktop\USB broken\Lemma4, line = 59):
+   -- Unknown index keyword $C_1\cap\overline.
+!! Input index error (file = C:\Documents and Settings\Shaun Cheng\Desktop\USB broken\Lemma4, line = 62):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = C:\Documents and Settings\Shaun Cheng\Desktop\USB broken\Lemma4, line = 64):
+   -- Unknown index keyword Weshowthat$X\cap\overline.
+!! Input index error (file = C:\Documents and Settings\Shaun Cheng\Desktop\USB broken\Lemma4, line = 67):
+   -- Unknown index keyword Since$x\in\overline.
+!! Input index error (file = C:\Documents and Settings\Shaun Cheng\Desktop\USB broken\Lemma4, line = 69):
+   -- Unknown index keyword However,since$x\inX$,$\left|\bar.
+!! Input index error (file = C:\Documents and Settings\Shaun Cheng\Desktop\USB broken\Lemma4, line = 72):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = C:\Documents and Settings\Shaun Cheng\Desktop\USB broken\Lemma4, line = 73):
+   -- Unknown index keyword Again,wereachedcontradiction.Thus,$X\cap\overline.
+!! Input index error (file = C:\Documents and Settings\Shaun Cheng\Desktop\USB broken\Lemma4, line = 77):
+   -- Unknown index keyword \end.
+done (0 entries accepted, 46 rejected).
+Nothing written in C:\Documents and Settings\Shaun Cheng\Desktop\USB broken\Lemma4.ind.
+Transcript written in C:\Documents and Settings\Shaun Cheng\Desktop\USB broken\Lemma4.ilg.

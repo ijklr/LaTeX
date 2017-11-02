@@ -1,0 +1,204 @@
+\documentclass{article}
+\begin{document}
+
+\textbf{Buzjakova's Theorem.} A pseudocompact space $X$ condenses onto a compact space if and only if the space $X\times T(\left| \beta X \right| ^+ +1)$ condenses onto a normal space. 
+\vskip 25pt
+
+\textbf{Proof.}\vskip 10pt
+\textbf{($\Rightarrow$:) } Let $X$ be a pseudocompact space that condenses onto a compact space $K$. So there exists $f:X\rightarrow K$ such that $f$ is one-to-one, onto, and continuous. Define $g: X\times T(|\beta X|^+ +1) \rightarrow K\times T(|\beta X|^+ +1)$ by $g(x,\alpha)=(f(x), \alpha).$ Then, $g$ is one-to-one, onto, and continuous. Hence $X\times T(|\beta X|^+ +1)$ condenses onto a normal space. 
+
+
+\vskip 20pt
+
+
+\textbf{($\Rightarrow$:)} By \textbf{Fact 3.4}, the space $X\times T(|\beta X|^+)$ condenses onto $X\times T(|\beta X|^+ +1).$ 
+Since $X\times T(|\beta X|^+ +1)$ condenses onto some normal space $Z$ by our assumption, the space $X\times T(\beta X|^+)$ must condenses onto $Z$, too. 
+So, there exists $f: X\times T(|\beta X|^+) \rightarrow Z$, where $f$ is ono-to-one, onto, and continuous. 
+Let \\
+$C_1=\{x\in  \beta X \backslash X: |\bar{f}[\{x\} \times T(|\beta X|^+)] \cap Z|=|\beta X|^+\}$, and \\
+$C_2=\{x\in \beta X\backslash X: \left|\bar{f}[\{x\}\times T(|\beta X|^+)]\cap Z\right|<|\beta X|^+ $ and for any $\alpha\in T(|\beta X|^+),$ there exists $\alpha_1\in T(|\beta X|^+)$ such that $\alpha_1 >\alpha$ and $\bar{f}(x,\alpha_1) \in Z \}.$\\
+
+Let $T=\bigcap\{T_x:x\in C_1\}$, where $T_x$ was defined in \textbf{Lemma 3.10}. By \textbf{Fact 3.3,} $T$ is closed and unbounded in $T(|\beta X|^+)$ and $|T|=|\beta X|^+.$
+
+\vskip 15pt
+
+Let $x\in \overline{C_2}^{\beta X}.$ Since $\overline{C_2}^{\beta X}\cap C_1=\emptyset$ by \textbf{Lemma 3.11}, $x\notin C_1$. Thus, $$\left|\bar{f}\left[ \{x\}\times T(|\beta X|^+) \right] \cap Z \right| < |\beta X|^+.$$ 
+Let $\alpha_x=\sup\{ \alpha \in T(|\beta X|^+): f(y,\alpha)\in \bar{f}\left[ \{x\}\times T(|\beta X|^+) \right] \cap Z$ for some $y\in X\}$. Since   $\left|\bar{f}\left[ \{x\}\times T(|\beta X|^+) \right] \cap Z \right| < |\beta X|^+,$ such $\alpha_x$ exists in $T(|\beta X|^+)$. 
+
+\vskip 10pt
+
+Now, for any $\alpha_1 > \alpha_x$, we have either $\bar{f}(x,\alpha_1)\in \beta Z \backslash Z$ or $\bar{f}(x,\alpha_1)\in Z$. If $\bar{f}(x,\alpha_1)\in Z,$ we must have $\bar{f}(x,\alpha_1)=f(x,\alpha_2)$ for some $\alpha_2.$ Furthermore, since $\alpha_1>\alpha_x$ and by our definition of $\alpha_x, \alpha_1>\alpha_2$ must hold.
+\vskip 15pt
+
+Let $\alpha^* = \sup \{\alpha_x: x\in \overline{C_2}^{\beta X}\}.$ Such $\alpha^*$ exists because $\left| \overline{C_2}^{\beta X} \right| <cf(|\beta X|^+).$  For any $\alpha>\alpha^*, \alpha \in T,$
+$$f\left[X\times \{\alpha\}\right] \cap \bar{f}\left[\overline{C_2}^{\beta X} \times \{\alpha\}\right] = \emptyset$$ holds. 
+
+This is because if $z\in f\left[X\times \{\alpha\}\right] \cap \bar{f} \left[\overline{C_2}^{\beta X} \times \{\alpha\} \right]$, we can write $z=\bar{f}(x,\alpha)$ for some $x\in \overline{C_2}^{\beta X}$. From the definition of $\alpha^*$ and the fact that $\alpha>\alpha^*$, we have either $\bar{f}(x,\alpha)=f(y,\alpha_2)$ where $y\in X$ and $\alpha_2<\alpha,$ or, we have $\bar{f}(x,\alpha)\in \beta Z\backslash Z.$ We reach  contradiction in the first case because $f$ is one-to-one, so $\bar{f}=f(y,\alpha_2)\neq f(y',\alpha)$ for any $y'\in X.$ We reach contradiction again in the second case because since $z\in f\left[X\times\{\alpha\}\right], z\in Z.$ So $z=\bar{f}(x,\alpha)\in \beta Z\backslash Z $ is a contradiction. 
+
+\vskip 25pt
+
+
+We have two cases: 
+
+\vskip 20pt
+
+\textbf{CASE I.}For all $\alpha \in T, \alpha>\alpha^*,$ the set $f\left[X\times\{\alpha\}\right] \cup \bar{f}\left[\overline{C_2}^{\beta X} \times \{\alpha\}\right] $is not compact. 
+
+\vskip 20pt
+
+Let $$C_3=(\beta X\backslash X) \backslash (C_1\cup \overline{C_2}^{\beta X}).$$
+
+$C_3$ is nonempty because if it is , then $\beta X\backslash X= C_1\cup \overline{C_2}^{\beta X}.$ We will show that $f\left[\beta X\times \{\alpha\} \right] \subseteq f\left[X\times\{\alpha\}\right]\cup\bar{f}\left[\overline{C_2}^{\beta X}\times\{\alpha\}\right].$ Let $x\in\beta X\backslash X,$ if $x\in C_1$, then $\bar{f}(x,\alpha)=f(y_x,\alpha)$ for some $y_x\in X$ because $\alpha\in T\subseteq T_x.$ Hence $\bar{f}(x,\alpha)\in f\left[X\times\{\alpha\}\right].$ If $x\in \overline{C_2}^{\beta X}$, then $\bar{f}(x,\alpha)\in \bar{f}\left[\overline{C_2}^{\beta X}\times \{\alpha\}\right].$ 
+The other inclusion is trivial. So now, we have 
+$$\bar{f}\left[\beta X\times \{\alpha\}\right]=f\left[X\times\{\alpha\}\right]\cup\bar{f}\left[\overline{C_2}^{\beta X} \times \{\alpha\}\right].$$
+However, as $\bar{f}$ is continuous and $\beta X\times \{\alpha\}$ is compact, $\bar{f}\left[\beta X\times \{\alpha\}\right]$ is compact. But by our assumption, $f\left[X\times\{\alpha\}\right] \cup \bar{f}\left[\overline{C_2}^{\beta X} \times \{\alpha\}\right] $ is not compact, contradiction. Hence, $C_3\neq \emptyset.$
+
+\vskip 20pt
+
+
+For each $x\in C_3,$ there exist $\alpha_x\in T(|\beta X|^+)$ such that for $\alpha>\alpha_x$, $\bar{f}(x,\alpha)\in \beta Z\backslash Z$ holds. This follows from the definition of $C_1$ and $C_2$. Let $\beta^*=\sup\{\alpha_x: x\in C_3\}.$ Such $\beta^*$ exists because $|C_3|<cf(|\beta X|^+).$
+
+Let $$\gamma^*=\max\{\alpha^*, \beta^*\}.$$
+
+\vskip 15pt
+Fix an arbitrary $\lambda \in T, \lambda >\gamma^*.$
+\vskip 10pt
+The set $f\left[X\times \{\lambda\}\right]$ is closed in $Z$. Suppose not, by \textbf{Lemma 3.9}, there exists 
+$$(x,\lambda)\in \overline{X\times \{\lambda\}}^{\beta X\times T(|\beta X|^+ +1)} \backslash X\times \{\lambda\}$$ such that $$\bar{f}(x,\lambda) \in \overline{f\left[X\times\{\lambda\}\right]}^Z \backslash f\left[X\times \{\lambda\}\right].$$ 
+\\
+Since $(x,\lambda)\notin X\times \{\lambda\}, x\in \beta X\backslash X.$ The remainder $\beta X\backslash X$ is partitioned into the sets $C_1, \overline{C_2}^{\beta X},$ and $C_3$. If $x\in C_1,$ then since $\lambda \in T\subseteq T_x$, there exists $y_x\in X$ such that $\bar{f}(x,\lambda)= f(y_x,\lambda) \in f\left[X\times\{\lambda\}\right],$ contradiction. If $x\in C_2,$ then either $\bar{f}(x,\lambda)=f(y,\lambda_2)$ and $\lambda>\lambda_2$, or $\bar{f}(x,\lambda)\in \beta Z\backslash Z$; Contradiction in both cases. If $x\in C_3,$ then $\bar{f}(x,\lambda)\in \beta Z\backslash Z$, contradiction again. Therefore, $f\left[X\times\{\lambda\}\right]$ is closed in $Z$.
+
+
+\vskip 20pt
+
+By \textbf{Fact 3.5,} there exists a system $D=\{D_\alpha\}$ satisfying the first 4 conditions:
+
+\begin{enumerate}
+	\item For each $\alpha$, the set $D_\alpha$ is non-empty and closed in $f\left[X\times \{\lambda\}\right].$
+	\item For $\alpha>\beta, D_\alpha\subseteq D_\beta,$ and if $\beta$ is a limit ordinal, then $D_\beta=\bigcap\left\{ D_\alpha: \alpha< \beta\right\}$.
+	\item $\bigcap \{D_\alpha\}=\emptyset$.
+	\item $\overline{D_1}^{\beta Z} \cap \bar{f}\left[\overline{C_2}^{\beta X} \times \{\lambda\}\right]=\emptyset.$
+
+\vskip 20pt
+
+\begin{flushleft}
+Since $f$ is one-to-one, by condition 4, $f^{-1}\left[D_\alpha\right]\subseteq X\times\{\lambda\}$ for any $\alpha$. Define a system $A=\{A_\alpha\}$ of subsets of $X$ such that $f^{-1}\left[D_\alpha\right]=A_\alpha\times\{\lambda\}.$ We will show that $A$ satisfies the following conditions: 
+\end{flushleft}
+
+\vskip 20pt
+
+
+	\item For each $\alpha$, the set $A_\alpha$ is closed in $X$.\\
+	\texttt{Proof- Since $D_\alpha$ is closed in $f\left[X\times\{\lambda\}\right]$ and $f\left[X\times\{\lambda\}\right]$ is closed in $Z$, $D_\alpha$ must be closed $Z$ as well. As $f$ is continuous, $f^{-1}\left[D_\alpha\right]$ must be closed in $X\times T(|\beta X|^+).$ But $f^{-1}\left[D_\alpha\right]=A_\alpha \times \{\lambda\},$ so it means that $A_\alpha$ is closed in $X$. \
+	}
+	
+\vskip 20pt	
+	
+	
+	\item $\bigcap\{A_\alpha\}=\emptyset.$\\
+	\texttt{Proof- By our definition of $A_\alpha$, we have $f^{-1}\left[\bigcap\{D_\alpha\}\right]=\bigcap\left\{f^{-1}\left[D_\alpha\right]\right\}=
+	\bigcap\left\{A_\alpha\}\right\}=\bigcap \{A_\alpha\}\times\{\lambda\}.$ Since $\bigcap \{D_\alpha\}=\emptyset $ by condition 3, we must have $\bigcap \{A_\alpha\}= \emptyset.$
+	}
+	
+\vskip 20pt	
+	
+	\item For $\alpha>\beta, A_\alpha \subseteq A_\beta$ and if $\beta$ is a limit ordinal, then $A_\beta=\bigcap\{A_\alpha\}.$\\
+	\texttt{Proof- If $\alpha>\beta, D_\alpha\subseteq D_\beta$ holds by condition 2. So, $f^{-1}\left[D_\alpha\right]\subset f^{-1}\left[D_\beta\right] \Rightarrow A_\alpha\times \{\lambda\} \subseteq A_\beta\times \{\lambda \{\lambda\} \Rightarrow A_\lambda \subseteq A_\beta.$ If $\beta$ is a limit ordinal, then by condition 2, $D_\beta=\bigcap \{D_\alpha\}.$ So $A_\beta\times\{\lambda\}=f^{-1}\left[D_\beta\right]=f^{-1}\left[\bigcap\{D_\alpha\}\right]=\bigcap f^{-1}\left[D_\alpha\right]=\bigcap \left\{A_\alpha\times \{\lambda\}\right\}.$ Thus, $A_\beta=\bigcap \{A_\alpha\}.$
+	}
+	
+
+\vskip 20pt
+
+	
+	\item $\overline{A_1}^{\beta X} \cap \overline{C_2}^{\beta X}=\emptyset.$ \\
+	\texttt{Proof- Suppose there exists $x\in \overline{A_1}^{\beta X}\cap \overline{C_2}^{\beta X}.$ Since $x\in \overline{A_1}^{\beta X}, \bar{f}(x,\lambda)\in \bar{f}\left[\overline{A_1}^{\beta X}\times \{\lambda\}\right] \subseteq \overline{\bar{f}\left[A_1\times\{\lambda\}\right]}^{\beta Z}=\overline{f\left[A_1\times\{\lambda\}\right]}^{\beta Z}=\overline{D_1}^{\beta Z}$. On the other hand, since $x\in \overline{C_2}^{\beta X},$ $\bar{f}\in \bar{f}\left[\overline{C_2}^{\beta X}\times \{\lambda\}\right].$ Therefore, $\bar{f}(x,\lambda)\in \overline{D_1}^{\beta Z} \cap \bar{f}\left[\overline{C_2}^{\beta X}\times \{\lambda\}\right].$ This contradicts condition 4.
+	}
+
+\vskip 20pt
+	
+	\item If $x\in \bigcap \overline{A_\alpha}^{\beta X}$, then $x\in C_3.$\\
+	\texttt{Proof- Since $\beta X\backslash X$ is partitioned in to $C_1, \overline{C_2}^{\beta X},$ and $C_3$, we need to show that $x\notin C_1$ and $x\notin \overline{C_2}^{\beta X}.$ From condition 8, $\overline{A_1}^{\beta X} \cap \overline{C_2}^{\beta X}=\emptyset.$ So it follows that $x\notin \overline{C_2}^{\beta X}.$  Suppose that $x\in C_1$, then $\bar{f}(x,\lambda)=f(y_x,\lambda)$ for some $y_x\in X$. Since $\bar{f}(x,\lambda) \in \bar{f}\left[\overline{A_\alpha}^{\beta X} \times \{\lambda\}\right], $ we have $f(y_x,\lambda)\in \bar{f}\left[\overline{A_\alpha}^{\beta X}\times \{\lambda\}\right]$ for all $\alpha$. Moreover, $f(y_x,\lambda)\in \bar{f}\left[\overline{A_\alpha}^{\beta X}\times \{\lambda\}\right]=\bar{f}\left[\overline{A_\alpha \times \{\lambda\}}^{\beta X\times T(|\beta X|^+ +1)}\right]=\bar{f}\left[\overline{A_\alpha \times \{\lambda\}}^{\beta (X\times T(|\beta X|^+ )}\right]\subseteq \overline{\bar{f}\left[A_\alpha \times \{\lambda\}\right]}^{\beta Z}=\overline{f\left[A_\alpha \times \{\lambda\}\right]}^{\beta Z}.$	              
+	Since $f(y_x,\lambda)\in Z$, and by condition 10, $f\left[A_\alpha\times\{\lambda\}\right]$ is closed in $Z$, we must have $f(y_x,\lambda)\in f\left[A_\alpha\times\{\lambda\}\right]$. As $f$ is one-to-one, $y_x\in A_\alpha$ for each $\alpha$. However, that means $y_x\in \bigcap \{A_\alpha\}$, contradicting condition 6, which says $\bigcap \{A_\alpha\}=\emptyset$. So $x\notin C_1$. }
+
+
+\vskip 20pt
+	
+	
+	\item $f\left[A_\alpha\times\{\alpha\}\right]$ is closed in $Z$ for each $\gamma>\gamma^*, \gamma\in T$.\\
+	\texttt{Proof- By \textbf{Lemma 3.9,} there exists $x\in \overline{A_\alpha}^{\beta X}\backslash A_\alpha$ such that $\bar{f}(x,\gamma)\in \overline{f\left[A_\alpha\times\{\alpha\}\right]}^Z \backslash f\left[A_\alpha\times \{\alpha\}\right]$ holds. Since $\overline{A_1}^{\beta X} \cap \overline{C_2}^{\beta X}=\emptyset, x\notin \overline{C_2}^{\beta X}.$ Also, if $x\in C_3,$ then $\bar{f}(x,\gamma)=f(x,\gamma')$ for some $\gamma'>\gamma^*$, contradictin, so $x\notin C_3$. Thus, $x\in C_1.$ But $f\left[A_\alpha\times\{\lambda\}\right]=D_\alpha$ closed in $Z$. So $\bar{f}(x,\lambda)\in f\left[A_\alpha \times \{\lambda\}\right].$ As $x\in C_1, \bar{f}(x,\lambda)=f(y_x,\lambda),$ so we have $\bar{f}(x,\gamma)\in f\left[A_\alpha\times\{\gamma\}\right].$ Contradiction.}
+	
+\end{enumerate}
+
+
+
+\vskip 20pt
+
+
+Let $|A|=\gamma$. Choose a closed subset $G=\{\gamma_\alpha: \alpha\leq \gamma\}$ of $T$ such that $\gamma_1>\gamma^*$ and for $\alpha>\beta, \gamma_\alpha>\alpha_\beta$. Define 
+$$B_1=\bigcup \left\{A_\alpha\times \{\gamma_\alpha\}\right\}$$
+$$B_2=A_1\times \{\gamma_{\gamma}\}$$
+
+$B_1$ is closed in $X\times T(|\beta X|^+)$ because $\bigcap \{A_\alpha\}=\emptyset$ by condition 6. $B_2$ is closd in $X\times T(|\beta X|^+)$ because $A_1$ is closed by condition 5 and by our choice of $G$. $B_1$ and $B_2$ are disjoint because $B_1$ doesn't contain any element with the second coordinate equal to $\gamma_\gamma$.
+
+\vskip 15pt
+
+Now, as each $\overline{A_\alpha}^{\beta X} \neq \emptyset$, $x\in \bigcap \left\{\overline{A_\alpha}^{\beta X}\right\}.$ Thus $(x,\gamma_\gamma)\in \overline{B_2}^{\beta X \times T(|\beta X|^+ +1)}.$ On the other hand, we have $(x, \gamma_\gamma)\in \overline{B_1}^{\beta X \times T(|\beta X|^+ +1)}$. Thus, $(x,\gamma_\gamma)\in \overline{B_1}^{\beta X\times T(|\beta X|^+ +1)} \cap \overline{B_2}^{\beta X\times T(|\beta X|^+ +1)}.$ By \textbf{Fact 3.6}, the sets $B_1$ and $B_2$ are not completely separated in $X\times T(|\beta X|^+).$
+
+\vskip 15pt
+
+
+Let us consider the $f\left[B_1\right]$ and $f\left[B_2\right].$ Since $f$ is one-to-one, we have $f\left[B_1\right] \cap f\left[B_2\right]=\emptyset.$ 
+By condition 10, $f\left[B_2\right]$ is closed in $Z$. We shall prove that $f\left[B_1\right]$ is closed in $Z$. Assume the contrary. Then, by \textbf{Lemma 3.9}, there exists $(x,\gamma_\alpha)\in \overline{B_1}^{\beta X\times T(|\beta X|^+ +1)} \backslash B_1$ such that $\bar{f}(x,\gamma_\alpha)\in \overline{f\left[B_1\right]}^Z\backslash f\left[B_1\right].$ 
+\vskip 10pt
+
+\textbf{Case 1.} $\alpha<\gamma:$\\
+Since $(x,\gamma_\alpha)\in \overline{B_1}^{\beta X\times T(|\beta X|^+ +1)}, (x,\gamma_\alpha)\in \overline{A_\alpha\times \{\gamma_\alpha\}}^{\beta X \times T(|\beta X|^+ +1)}.$ So $\bar{f}(x,\gamma_\alpha)\in \bar{f}\left[\overline{A_\alpha\times \{\gamma_\alpha\}}^{\beta X\times T(|\beta X|^+ +1)}\right] \subset \overline{\bar{f}\left[A_\alpha\times \{\gamma_\alpha\}\right]}^{\beta Z}=\overline{f\left[A_\alpha\times \{\gamma_\alpha\}\right]}^{\beta Z}.$ 
+\vskip 10pt
+By 10, $f\left[A_\alpha\times \{\gamma_\alpha\}\right]$ is closed in $Z$. So either $\bar{f}(x,\gamma_\alpha)\notin Z$ or $\bar{f}(x,\gamma_\alpha)\in f\left[A_\alpha\times \{\gamma_\alpha\}\right]$. If $\bar{f}(x,\gamma_\alpha) \notin Z$, then $\bar{f}(x,\gamma_\alpha)\notin \overline{f\left[B_1\right]}^Z,$ contradiction. If $\bar{f}(x,\gamma_\alpha)\in f\left[A_\alpha\times \{\gamma_\alpha\}\right]$, then $\bar{f}(x,\gamma_\alpha)\in f\left[B_1\right], $contradiction.
+
+\vskip 15pt
+
+\textbf{Case 2.} $\alpha=\gamma:$\\
+The only way $(x,\gamma_\gamma)$ qualifies to be in $\overline{B_1}^{\beta \times T(|\beta X|^+ +1)}$ but not in $B_1$ is if $x\in \bigcap \left\{\overline{A_\alpha}^{\beta X}\right\}$. By condition 9, $x\in C_3$. But since $\gamma_\gamma> \gamma^* \geq \beta^*, \bar{f}(x,\gamma_\gamma)\in \beta Z\backslash Z.$ This contradicts that $\bar{f}(x,\gamma_\gamma)\in \overline{f\left[B_1\right]}^Z.$ \vskip 10pt
+Hence, $f\left[B_1\right]$ is closed in $Z$. 
+
+
+\vskip 20pt
+
+Now, the sets $f\left[B_1\right]$ and $f\left[B_2\right]$ and closed and disjoint in $Z$. Since $Z$ is normal, by Urysohn's Lemma, there exists a continuous function $g:Z\rightarrow [0,1]$ such that $g\left[ f\left[B_1\right]\right]\subseteq \{0\}$ and $g\left[f\left[B_2\right]\right]\subseteq \{1\}.$ Let $h=g\circ f.$ Then $B_1$ and $B_2$ are completely separated by the continuous function $h$. This is a contradiction, so \textbf{CASE I} cannot happen.  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\vskip 25pt
+
+\textbf{CASE II} There exists an ordinal $\alpha \in T, \alpha>\alpha^*$ such that the set $f\left[X\times\{\alpha\}\right] \cup \bar{f}\left[\overline{C_2}^{\beta X} \times \{\alpha\}\right] $is compact. 
+
+\vskip 10pt
+
+Since $f\left[X\times\{\alpha\}\right] \cap \bar{f}\left[\overline{C_2}^{\beta X} \times \{\alpha\}\right]=\emptyset$ and the set 
+$\bar{f}\left[\overline{C_2}^{\beta X} \times \{\alpha\}\right]$ is compact, the set $f\left[X\times\{\alpha\}\right]$ is locally compact. This is because for any $z\in f\left[X\times\{\alpha\}\right], z\notin \bar{f}\left[\overline{C_2}^{\beta X} \times \{\alpha\}\right]$. By $Z$ being normal and hence regular, there exists a closed nhood $N_z$ of $z$ such that $z\in N_z\subseteq \beta Z\backslash \bar{f}\left[\overline{C_2}^{\beta X} \times \{\alpha\}\right].$ As $\beta Z$ is compact, $N_z$ is a compact nhood of $z$. Hence, $f\left[X\times\{\alpha\}\right]$ is locally compact.
+\vskip 10pt
+
+By \textbf{Fact 3.7}, $f\left[X\times\{\alpha\}\right]$ condenses onto a compact space. Hence, $X\times\{\alpha\}$ condenses onto a compact space as well. Since $X$ is homeomorphic to $X\times \{\alpha\}, X$ condenses onto a compact space, too. The theorem is proved. 
+ 
+
+
+
+
+
+
+
+
+\end{document}

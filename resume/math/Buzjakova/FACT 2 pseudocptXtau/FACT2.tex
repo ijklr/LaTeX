@@ -1,0 +1,123 @@
+\documentclass{article}
+\begin{document}
+\textbf{FACT 2.} Let $X$ be a pseudocompact space. Let $\tau=|\beta X|^+$ and denote by $T(\tau)$ the space of all ordinal numbers less than $\tau$.  Then,  $X\times T(\tau)$ is pseudocompact, and also $T(\tau)$ is pseudocompact. \\
+\vskip 15pt
+
+
+\textbf{Proof.} Let $f: X\times T(\tau): \textbf{R}$ be continuous. \vskip 10pt
+By Proposition 1, the ordinal space $T(\tau)$ is pseudocompact.\\ 
+
+By Proposition 2. There exists $\kappa_x<\tau$ such that $f$ is constant on $\{x\}\times [\kappa_x, \tau)$. 
+As $cf(\tau)>|X|,$ there exists $\kappa=sup_{x\in X} \{\kappa_x: x\in X\}.$ 
+Now, $f\left[X\times [0,\kappa+1]\right]$ is bounded because $X\times [0,\kappa+1]$ is pseudocompact by \textbf{FACT 1}.\vskip 5pt
+
+For $\alpha\geq \kappa, f(x,\alpha)=f(x,\beta).$ Thus, $f\left[X\times [\kappa,\tau)\right]=f\left[X\times\{\kappa\}\right]$ which is bounded because $X$ is pseudocompact. \vskip 5pt
+
+
+
+The boundedness of $f\left[X\times [0,\kappa+1]\right]$ and $f\left[X\times [\kappa,\tau)\right]$ gives us that $f\left[X\times T(\tau)\right]$ is bounded. 
+
+
+
+\vskip 20pt
+
+
+
+
+
+
+
+
+
+
+\textbf{Proposition 1} The space $T(\tau)$ is pseudocompact.
+\vskip 10 pt
+\textbf{Proof.} Let $g: T(\tau) \rightarrow \textbf{R}$ be a continuous function.
+
+
+If $f$ is unbounded, then there 
+exists an $x'\in X$ such that $f\left[\{x'\} \times T(\tau)\right]$ is unbounded in $\textbf{R}$.
+ Thus, $g$ is unbounded as well. 
+We will define $\{\alpha_i, i<\omega\}\subseteq T(\tau)$ by induction: \vskip 5pt
+
+\texttt{Step 1.}
+Since $g$ is unbounded, we can find $\alpha_1\in T(\tau)$ such that $g(\alpha_1)\geq1$. 
+
+\vskip 5pt
+
+\texttt{Step N.}
+Since $[0,\alpha_{n-1}]$ is compact in $T(\tau)$ and $g$ is continuous, $g\left[[0,\alpha_{n-1}]\right]$ must be bounded in $\textbf{R}.$ 
+But since $g$ is unbounded,  $g\left[(\alpha_{n-1}, \tau)\right]$ must be unbounded in $\textbf{R}$. So there exists $\alpha_n\in (\alpha_{n-1}, \tau)$
+such that $g(\alpha_n) \geq n$. 
+
+
+\vskip 5pt
+
+Having defined $\alpha_i\in T(\tau)$ for all $i<\omega$, let $\beta=sup\{\alpha_i: i<\omega\}$. Such $\beta$ exists in $T(\tau)$ because $cf(\tau)>\omega$. As $g$ is continuous, we have $$g(\beta)=lim_{i<\omega} g(\alpha_i)$$  This can't happen because the sequence $\{g(\alpha_i): i<\omega\}$ diverges to infinity. Thus, for each $x\in X,$ $f$ must be bounded on $\{x\} \times T(\tau)$. 
+
+
+
+\vskip 15pt
+\textbf{Proposition 2.} Fix $x \in X$. Define $g: T(\tau)\rightarrow \textbf{R}$ as $g(\gamma)=f(x',y)$ for all $\gamma\in T(\tau).$
+Then  $g$ is constant on $[\kappa, \tau)$ for some $\kappa<\tau$.\vskip 10pt
+
+
+\textbf{Proof.}
+By our Proposition 3 below, $[\alpha,\tau)$ is countable compact for all $\alpha < \tau$. 
+This is because if $A=\{a_1,a_2,...\}$ is a countably infinite subset of $[\alpha,\tau)$, then 
+we can get a nondecreasing subsequence $\{a_1,a_2,...\}$. Let $\alpha=lim_{n\rightarrows \infty} \{a_1,a_2,...\}$, which exists because $cf(\tau)>\omega$. So $A$ has an accumulation point, namely $\alpha$. Thus $[\alpha,\tau)$ must be countaby compact.\vskip 5pt
+Since $g$ is continuous, $g\left[[\alpha, \tau)\right]$ is countably compact. In metric spaces, countably compact is equivalent to compact because metric spaces are Lindel$\ddot{o}$ff. Hence, $g\left[\alpha,\tau)\right]$ is compact for all $\alpha<\tau$. 
+Thus, there exists $p \in \bigcap_{\alpha<\tau} f\left[\alpha, \tau)\right]$. Suppose that there exists $q \in \bigcap_{\alpha<\tau} g\left[\alpha, \tau)\right]$ also. \vskip 5 pt
+There exists $\alpha_0 \in [0,\tau)$ such that $g(\alpha_0)=p$. Then there exists $\alpha_1\in [\alpha_0+1,\tau)$ such that $g(\alpha_1)=q.$ Then there exists $\alpha_2\in [\alpha_1+1,\tau)$ such that $g(\alpha_2)=p.$ We continue this process by induction. We have now: 
+$$p=g(\alpha_0)=g(\alpha_2)=g(\alpha_4)=\cdots$$
+$$q=g(\alpha_1)=g(\alpha_3)=g(\alpha_5)=\cdots$$
+
+Let $\beta=sup\{\alpha_n: n<\omega\}$, which exists because $cf(\tau)>\omega$. By continuity of $g$, $g(\beta)=lim_{n<\omega} g(\alpha_n)$. Thus, $p=q$. \vskip 5pt
+
+Now, since $\{p\}=\bigcap_{\alpha<\tau} f\left[\alpha, \tau)\right]$, For all $n<\omega,$ there exists $\alpha_n$ such that $g\left[[\alpha_n,\tau)\right] \subseteq (p-\frac{1}{n}, p+\frac{1}{n}).$ Let $\kappa=sup_{n<\omega} \alpha_n$. So, we have $$g\left[[\kappa, \tau)\right] \subseteq \bigcap_{n<\omega} (p-\frac{1}{n}, p+\frac{1}{n})=\{p\}.$$ 
+
+
+
+\vskip 10pt
+
+
+
+\textbf{Proposition 3.} For every Hausdorff spaces $X$, the following statements are equivalent: \vskip 5pt
+\begin{enumerate}
+	\item  The space $X$ is countably compact.
+	\item For every decreasing sequence $F_1\supset F_2 \supset \cdots $ of non-empty closed subsets of $X$, the intersection $\bigcap_{i=1}^{\infty} F_i$ is non-empty. 
+	\item Every countably infinite subset of $X$ has an accumulation point. 
+\end{enumerate}
+\vskip 10pt
+\textbf{Proof.} \vskip 5pt
+
+\texttt{$1\Rightarrow 2:$} Let $F_1\supset F_2 \supset \cdots $ be non-empty closed subsets of $X$. If $\bigcup_{i=1}^{\infty} F_i =\emptyset$, then $X\backslash F_i : 1\leq i \leq \infty $ would be an countable open cover of $X$, so there is a finite subcover $\{X\backslash F'_i : 1\leq i \leq n\} \subseteq \{X\backslash F_i : 1\leq i \leq \infty\}$ such that $\bigcup \{X\backslash F'_i : 1\leq i \leq n\}= X$. Now, because the $F_i$'s are decreasing, WLOG, $F'_1 \supset F'_2 \supset \cdots \supset F'_n$. So, $\bigcup \{X\backslash F'_i : 1\leq i \leq n\}= X\backslash F'_n$. Contradiction.
+
+
+\vskip 5pt
+
+\textbf{$2\Rightarrow 1:$} By way of contradiction, suppose that $X$ is not countably compact.
+Let $\{U_i\tau(X): 1\leq i\leq \infty\}$ be a countable cover of $X$ that does not yield an open subcover. For each $1\leq n\leq \infty,$ define $F_n=X\backslash \bigcup\{U_i: 1\leq i\leq n\}.$ For each $n$, $F_n$ is non-empty because if it is, then $\{U_i\tau(X): 1\leq i\leq n\}$ would be a finite subcover, which contradicts that $X$ is not countably compact. Thus, we have $F_1\supset F_2 \supset \cdots $ and each $F_n$ is a non-empty closed subset of $X$. 
+
+Now, by our assumption, the intersection $\bigcap_{i=1}^{\infty} F_i$ is non-empty. So there exists some $x\in \bigcap_{i=1}^{\infty} F_i$. So $x\in F_i$ for all $1\leq i\leq \infty$. That means $x\notin U_i$ for all $1\leq i\leq \infty$, contradicting that $\{U_i: 1\leq i\leq \infty\}$ is a cover of $X$. \vskip 5pt
+
+
+
+
+\texttt{$1\Rightarrow 3:$} By way of contradiction, suppose we have a countably infinite subset $\{x_i\in X: 1\leq i \leq \infty\}$ with no accumulation point. Then every point in  $\{x_i\in X: 1\leq i \leq \infty\}$ is an isolated point. So $\{\{x_i\}\in \tau(X): 1\leq i \leq \infty\}$ is an countable open cover that yields no finite subcover, contradicting that $X$ is countably compact. \vskip 5pt
+
+
+\texttt{$3\Rightarrow 1$} By way of contradiction, suppose that  $\{U_i\tau(X): 1\leq i\leq \infty\}$ is a countable cover of $X$ which does not yield an open subcover. Then, by the equivalent of \texttt{1} and \texttt{2}, there exists a decreasing sequence $F_1\supset F_2\cdots $ of non-empty closed subsets of $X$ such that $\bigcup_{i=1}^\infty F_i =\emptyset$. We define the set $A=\{x_1,x_2,...\}$ such that $x_i\in F_i$ for each $1\leq i\leq \infty$. If $A$ is finite, then by pigeon-hole principle, there must be some $x_j\in A$ such that $x_j$ belongs to infinitely many $F_i$'s, and since $F_i$'s are decreasing, $x'_j$ would have to be in all $F_i$'s. Contradicting $\bigcap_{i=1}^\infty F_i=\emptyset$. 
+Hence, $A$ is an infinite set. By our assumption, $A$ has an accumulation point. 
+However, for every $x\in X$, there exists an $i$ such that $x\notin F_i$. Now, $U=X\backslash F_i$ is an open set that contains $x$, and $U$ does not contain an point of the set $\{x_i,x_{i+1},x_{i+2}...\}$.   Now, $V=\{x\}\cup X\backslash \{x_1,x_2,...,x_{i-1}\}$ is an open set that contains $x$. Hence, we have $x\in (U\cap V) \in \tau(X)$ and $(U\cap V)\cap A=\{x\}$. Thus $x$ is an isolated point with repect to $A$. Since $x$ was arbitrary, we get that $A$ has no accumulation point, contradiction.  Proposition 3 is proved. 
+
+
+
+
+
+
+
+
+
+
+\end{document}

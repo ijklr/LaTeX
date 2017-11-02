@@ -1,0 +1,323 @@
+\documentclass{article}
+\usepackage{amssymb,latexsym}
+\begin{document}
+
+\textbf{Fact 3.1} If $X$ is pseudocompact and $Y$ is compact, then $X\times Y$ is pseudocompact. 
+
+\vskip 15pt
+
+
+\textbf{Proof.} Let $f: X\times Y \rightarrow \mathbb{R}$. As $\{x\}\times Y$ is compact, $f\left[ \{x\} \times Y\right] $ is 
+closed and bounded in $\mathbb{R}$ for all $x \in X$. We can define $g:X \rightarrow \mathbb{R}$ as 
+$$g(x)=\max \{f(x,y):y\in Y\}.$$
+
+Fix $x_0 \in X$, we will show that $g$ is continuous at $x_0$. Let $\epsilon >0$. 
+
+\vskip 10pt
+
+
+By our definition of $g$, there exists some $y_0\in Y$ such that $g(x_0)=f(x_0,y_0)$. Let $r=f(x_0,y_0)$. Now, define the sets $U_y$'s and $V_y$'s as follows:  \vskip 15pt
+
+\emph{For each $y\in Y:$}
+\vskip 5pt
+
+If $f(x_0,y) \in (r-\epsilon, r+\epsilon)$, we can get $V_{y} \in \tau(Y) $ and $U_{y} \in \tau(X)$ such that $x_0\in U_y, y_0\in V_{y}$ and $f\left[U_y \times V_y\right] \subseteq (r-\epsilon, r+\epsilon)$. In particular, since $f(x_0,y_0) \in (r-\epsilon, r+\epsilon)$, $x_0\in U_{y_0}\in \tau(X),$ $y_0\in V_{y_0}\in \tau(Y)$, and $f\left[U_{y_0} \times V_{y_0}\right] \subseteq (r-\epsilon, r+\epsilon)$
+\vskip 5pt
+
+If $f(x_0,y) \notin (r-\epsilon, r+\epsilon)$, then since $f(x_0,y)\leq \max\{f(x_0,y):y\in Y\}=r$, we must have $f(x_0,y)\leq r-\epsilon$. Hence, we can get $V_{y} \in \tau(Y) $ and $U_{y} \in \tau(X)$ such that  $x_0\in U_y, y_0\in V_{y}$, and $f\left[U_y \times V_y\right] \subseteq (-\infty, r).$ \\
+
+\vskip 12pt
+
+The family $\{V_y: y\in Y\}$ as defined aboved is an open cover of $Y$. By compactness, there exists $\{V_i: 1\leq i \leq n\} \subseteq \{V_y: y\in Y\}$ such that $\bigcup \{V_i: 1\leq i \leq n\} = Y$. Corresponding to $\{V_i: 1\leq i \leq n\}$, we have the set $\{U_i: 1\leq i \leq n\}$. Let $U=\bigcap \{U_i: 1\leq i \leq n\} \cap U_{y_0}$, now $U$ is an open set containing $x_0$. \\
+
+\vskip 5pt
+
+Pick any $x\in U$. 
+\vskip 10pt
+On one hand, we have $\max\{f(x,y):y\in Y\}<r+\epsilon$ because:
+$$\left\{f(x,y):y\in Y\right\} = \left\{f(x,y):y\in \bigcup \{V_i: 1\leq i \leq n\}\right\}$$
+$$=\bigcup \left\{f\left[\{x\}\times V_i\right]: 1\leq i\leq n\right\}$$
+$$\subseteq \bigcup \left\{f\left[U_i\times V_i\right]: 1\leq i\leq n\right\}$$
+$$ \subseteq (-\infty, r+\epsilon).$$
+
+\vskip 20pt
+
+One the other hand, we have $\max\{f(x,y):y\in Y\}>r-\epsilon$ because:
+$$\max\{f(x,y):y\in Y\}>f(x,y_0), \mbox{and}$$
+ $$f(x,y_0)\in f\left[U\times \{y_0\}\right] \subseteq f\left[U_{y_0} \times \{y_0\}\right]
+ \subseteq f\left[U_{y_0} \times V_{y_0}\right] \subseteq (r-\epsilon, r+\epsilon).$$
+
+
+\vskip 10 pt
+We have now $r-\epsilon<\max\{f(x,y):y\in Y\}<r+\epsilon$ for all $x\in U$. Hence, $g[U] \subseteq (r-\epsilon, r+\epsilon)$, so $g$ is continuous on $X$. 
+As $X$ is pseudocompact, $g$ must be bounded. Therefore, $f$ must be bounded as well. 
+Thus, $X\times Y$ is pseudocompact. 
+
+
+\vskip 40pt
+
+
+\textbf{Fact 3.2} Let $X$ be a pseudocompact space. Let $\tau=|\beta X|^+$ and denote by $T(\tau)$ the space of all ordinal numbers less than $\tau$.  Then,  $X\times T(\tau)$ is pseudocompact, and also $T(\tau)$ is pseudocompact.
+\vskip 20pt
+
+
+\textbf{Proof.} Let $f: X\times T(\tau)\rightarrow \mathbb{R}$ be continuous. \vskip 15pt
+By \textbf{Claim 3.2.1} below, the ordinal space $T(\tau)$ is pseudocompact.
+\vskip 10pt 
+
+By \textbf{Claim 3.2.2}, there exists $\kappa_x<\tau$ such that $f$ is constant on $\{x\}\times [\kappa_x, \tau)$. 
+As $cf(\tau)>|X|,$ there exists $\kappa=\sup_{x\in X} \{\kappa_x: x\in X\}.$ 
+Now, $f\left[X\times [0,\kappa+1]\right]$ is bounded because $X\times [0,\kappa+1]$ is pseudocompact by \textbf{Fact 3.1}.\vskip 10pt
+
+For $\alpha\geq \kappa, f(x,\alpha)=f(x,\beta).$ Thus, $f\left[X\times [\kappa,\tau)\right]=f\left[X\times\{\kappa\}\right]$ which is bounded because $X$ is pseudocompact. \vskip 10pt
+
+The boundedness of $f\left[X\times [0,\kappa+1]\right]$ and $f\left[X\times [\kappa,\tau)\right]$ gives us that $f\left[X\times T(\tau)\right]$ is bounded. Hence, $X\times T(\tau)$ is pseudocompact.
+
+
+
+\vskip 25pt
+
+
+
+
+
+
+
+
+
+
+\textbf{Claim 3.2.1} The space $T(\tau)$ is pseudocompact.
+\vskip 10 pt
+\textbf{Proof.} Let $g: T(\tau) \rightarrow \mathbb{R}$ be a continuous function.
+
+
+By way of contradiction, suppose that $g$ is unbounded. 
+We will define the subset $\{\alpha_i, i<\omega\}\subseteq T(\tau)$ by induction: \vskip 10pt
+
+\texttt{Step 1.}
+Since $g$ is unbounded, we can find $\alpha_1\in T(\tau)$ such that $g(\alpha_1)\geq1$. 
+
+\vskip 5pt
+
+\texttt{Step N.}
+Since $[0,\alpha_{n-1}]$ is compact in $T(\tau)$ and $g$ is continuous, $g\left[[0,\alpha_{n-1}]\right]$ must be bounded in $\mathbb{R}.$ 
+But since $g$ is unbounded,  $g\left[(\alpha_{n-1}, \tau)\right]$ must be unbounded in $\mathbb{R}$. So there exists $\alpha_n\in (\alpha_{n-1}, \tau)$
+such that $g(\alpha_n) \geq n$. 
+
+
+\vskip 5pt
+
+Having defined $\alpha_i\in T(\tau)$ for all $i<\omega$, let $\beta=\sup\{\alpha_i: i<\omega\}$. Such $\beta$ exists in $T(\tau)$ because $cf(\tau)>\omega$. As $g$ is continuous, we have $$g(\beta)=\lim_{i<\omega} g(\alpha_i)$$  This can't happen because the sequence $\{g(\alpha_i): i<\omega\}$ diverges to infinity. Thus, $g$ must be bounded. 
+
+
+
+\vskip 25pt
+\textbf{Claim 3.2.2} Let $g: T(\tau)\rightarrow \mathbb{R}$ be continuous.
+Then  $g$ is constant on $[\kappa, \tau)$ for some $\kappa\in T(\tau)$.
+
+\vskip 15pt
+
+
+\textbf{Proof.}
+By \textbf{Claim 3.2.3} below, $[\alpha,\tau)$ is countably compact for all $\alpha \in T(\tau)$. 
+This is because if $A=\{a_1,a_2,...\}$ is a countably infinite subset of $[\alpha,\tau)$, then 
+we can get a nondecreasing subsequence $\{a'_1,a'_2,...\}$ of $A$. Let $\alpha=\lim_{n\rightarrow \infty} \{a'_1,a'_2,...\}$, which exists because $cf(\tau)>\omega$. So $A$ has an accumulation point, namely $\alpha$. Thus $[\alpha,\tau)$ must be countaby compact.
+
+\vskip 15pt
+
+Since $g$ is continuous, $g\left[[\alpha, \tau)\right]$ is countably compact. In metric spaces, countably compact is equivalent to compact because metric spaces are Lindel$\ddot{o}$ff. Hence, $g\left[[\alpha,\tau)\right]$ is compact for all $\alpha<\tau$. 
+Thus, there exists $p \in \bigcap_{\alpha<\tau} g\left[\alpha, \tau)\right]$. To show that $p$ is unique, suppose that there exists $q \in \bigcap_{\alpha<\tau} g\left[\alpha, \tau)\right]$. 
+
+\vskip 15 pt
+
+There exists some $\alpha_0 \in [0,\tau)$ such that $g(\alpha_0)=p$. As $q\in g\left[[\alpha_0+1,\tau)\right]$, there exists $\alpha_1\in [\alpha_0+1,\tau)$ such that $g(\alpha_1)=q.$ As $p\in g\left[[\alpha_1+1,\tau)\right]$, there exists $\alpha_2\in [\alpha_1+1,\tau)$ such that $g(\alpha_2)=p.$ We continue this process by induction. We have now: 
+$$p=g(\alpha_0)=g(\alpha_2)=g(\alpha_4)=\cdots$$
+$$q=g(\alpha_1)=g(\alpha_3)=g(\alpha_5)=\cdots$$
+
+Let $\beta=\sup\{\alpha_n: n<\omega\}$, which exists because $cf(\tau)>\omega$. By continuity of $g$, $g(\beta)=\lim_{n<\omega} g(\alpha_n)$. Thus, 
+$$p=\lim_{n<\omega} g(\alpha_{2n})=g(\beta)=\lim_{n<\omega} g(\alpha_{2n+1})=q$$
+
+\vskip 10pt
+
+So, $\bigcap_{\alpha<\tau} g\left[[\alpha, \tau)\right]=\{p\}$. For each $n<\omega$, we can find some $\gamma_n\in T(\tau)$ such that $g\left[[\gamma_n,\tau)\right] \subseteq (p-\frac{1}{n}, p+\frac{1}{n}).$ Let $\kappa=\sup_{n<\omega} \gamma_n$. So, we have $$g\left[[\kappa, \tau)\right] \subseteq \bigcap_{n<\omega} (p-\frac{1}{n}, p+\frac{1}{n})=\{p\}.$$ 
+
+
+
+\vskip 30pt
+
+
+
+\textbf{Claim 3.2.3} For every Hausdorff spaces $X$, the following statements are equivalent: \vskip 5pt
+\begin{enumerate}
+	\item  The space $X$ is countably compact.
+	\item For every decreasing sequence $F_1\supset F_2 \supset \cdots $ of non-empty closed subsets of $X$, the intersection $\bigcap_{i=1}^{\infty} F_i$ is non-empty. 
+	\item Every countably infinite subset of $X$ has an accumulation point. 
+\end{enumerate}
+\vskip 15pt
+\textbf{Proof.} \vskip 10pt
+
+\textbf{1$\Rightarrow $2:} Let $F_1\supset F_2 \supset \cdots $ be non-empty closed subsets of $X$. If $\bigcap_{i=1}^{\infty} F_i =\emptyset$, then $\left\{X\backslash F_i : 1\leq i \leq \infty\right\} $ would be an countable open cover of $X$, so there is a finite subcover $\{X\backslash F'_i : 1\leq i \leq n\} \subseteq \{X\backslash F_i : 1\leq i \leq \infty\}$ such that $\bigcup \{X\backslash F'_i : 1\leq i \leq n\}= X$. Now, because the $F_i$'s are decreasing, without loss of generality, $F'_1 \supset F'_2 \supset \cdots \supset F'_n$. So, $\bigcup \{X\backslash F'_i : 1\leq i \leq n\}= X\backslash F'_n$. Contradiction.
+
+
+\vskip 10pt
+
+\textbf{2$\Rightarrow $1:} By way of contradiction, suppose that $X$ is not countably compact.
+Let $\{U_i\in \tau(X): 1\leq i\leq \infty\}$ be a countable cover of $X$ that does not yield an finite subcover. For each $1\leq n\leq \infty,$ define $F_n=X\backslash \bigcup\{U_i: 1\leq i\leq n\}.$ For each $n$, $F_n$ is non-empty because if it is, then $\{U_i(X): 1\leq i\leq n\}$ would be a finite subcover, contradiction. Thus, we have $F_1\supset F_2 \supset \cdots $ and each $F_n$ is a non-empty closed subset of $X$. 
+\vskip 10pt
+Now, by our assumption, the intersection $\bigcap_{i=1}^{\infty} F_i$ is non-empty. So there exists some $x\in \bigcap_{i=1}^{\infty} F_i$. So $x\in F_i$ for all $1\leq i\leq \infty$. That means $x\notin U_i$ for all $1\leq i\leq \infty$, contradicting that $\{U_i: 1\leq i\leq \infty\}$ is a cover of $X$. 
+
+\vskip 15pt
+
+
+
+
+\textbf{1$\Rightarrow $3:} By way of contradiction, suppose we have a countably infinite subset $A=\{x_i\in X: 1\leq i \leq \infty\}$ with no accumulation point in $X$. Then every point in  $A$ is an isolated point with respect to $A$. For each $x_i\in A$, let $x_i \in U_{x_i}\in \tau(X)$ such that $U_{x_i} \cap A = \{x_i\}$. So $\{X\backslash A\} \cup \{U_{x_i} \in \tau(X): 1\leq i \leq \infty\}$ is an countable open cover of $X$ that yields no finite subcover, contradicting that $X$ is countably compact. 
+
+\vskip 15pt
+
+
+\textbf{3$\Rightarrow$1:} By way of contradiction, suppose that  $\{U_i\in \tau(X): 1\leq i\leq \infty\}$ is a countable cover of $X$ which does not yield an open subcover. Then, by the equivalence of \textbf{1} and \textbf{2}, there exists a decreasing sequence $F_1\supset F_2\cdots $ of non-empty closed subsets of $X$ such that $\bigcap_{i=1}^\infty F_i =\emptyset$. We define the set $A=\{x_1,x_2,...\}$ such that $x_i\in F_i$ for each $1\leq i\leq \infty$. If $A$ is finite, then by pigeon-hole principle, there must be some $x_j\in A$ such that $x_j$ belongs to infinitely many $F_i$'s, and since $F_i$'s are decreasing, $x'_j$ would have to be in all $F_i$'s. Contradicting $\bigcap_{i=1}^\infty F_i=\emptyset$. 
+Hence, $A$ is an infinite set. By our assumption, $A$ has an accumulation point. Let $x$ be an accumulation point of $A$.
+
+\vskip 10pt
+Since $\bigcap_{i=1}^\infty F_i =\emptyset$, there exists an $i$ such that $x\notin F_i$. Now, $U=X\backslash F_i$ is an open set that contains $x$, and $U$ does not contain any point of the set $\{x_i,x_{i+1},x_{i+2}...\}\subseteq F_i$.  Let  $V=\{x\}\cup (X\backslash \{x_1,x_2,...,x_{i-1}\})$. $V$ is an open set that contains $x$. Hence, we have $x\in (U\cap V) \in \tau(X)$.
+
+However, $(U\cap V)\cap A=\{x\}$ by the way we defined $U$ and $V$. Thus $x$ is not an accumulation point of $A$, contradiction.   
+
+\vskip 40pt
+
+
+
+\textbf{Fact 3.3} Let $\tau$ be an uncountable regular cardinal. Let $T(\tau)$ be the space 
+of all ordinal numbers less than $\tau$. Let $A_\alpha$ be closed, unbounded subset of $T(\tau)$. Let $\gamma\in T(\tau).$ Then, $\bigcap \{A_\alpha : \alpha<\gamma\}$ is closed, unbounded and $\left| \bigcap \{A_\alpha: \alpha<\gamma\} \right|=\tau$.
+
+
+
+\vskip 15pt
+\textbf{Proof.} 
+
+We will construct the set $\{p_\alpha: \alpha<\tau\}$ by transfinite induction.
+
+\vskip 10pt
+\texttt{\textbf{Step 1.}}
+
+Pick any element $a_{1,1}\in A_1$, we can find some element $a_{1,2}\in A_2$ such that $a_{1,2}>a_{1,1}$ because $A_2$ is unbounded. Then, 
+by continuing this process, we can define $a_{1,n}$ in the same way, for all $n<\omega$. 
+For all $\alpha<\gamma$,
+If $\alpha$ is a successor ordinal, then since $A_\alpha$ is unbounded, we can find some $a_{1,\alpha} \in A_\alpha$ such that $a_{1,\alpha}>a_{1,\alpha-1}$. If $\alpha$ is a limit ordinal, then let $\beta=\sup_{\kappa<\alpha} \{a_{1,\kappa}\}$, which exists because $\alpha<cf(\tau)$. Now, since $A_\alpha$ is unbounded, we can find some $a_{1,\alpha}\in A_\alpha$ such that $a_{1,\alpha} >  \beta$.
+
+Thus, we have defined the set $\{a_{1,\alpha}: \alpha <\gamma\}$. Let $\beta_1=\sup\{a_{1,\alpha}: \alpha <\gamma\}$, which exists because $\gamma<cf(\tau)$. 
+
+\vskip 10pt
+
+\texttt{Step N.}
+Let $a_{n,1}\in A_1$ be such that $a_{n,1} > \beta_{n-1}$. Let $a_{n,2}\in A_2$ be such that $a_{n,2} > a_{n,1}$. Now continuing the same way as in Step 1, we can define $a_{n,\alpha}$ for all $\alpha<\gamma$. Let $\beta_n=\sup\{a_{n,\alpha}: \alpha <\gamma\}$. 
+\vskip 10pt
+So, we have contructed the set $\left\{a_{n,\alpha}: n<\omega, \alpha<\gamma\right\}$.
+
+\vskip 10pt
+
+For all $\alpha<\gamma, \lim_{n<\omega} a_{n,\alpha} \in A_\alpha$ because $A_\alpha$ is closed. Moreover, if $\alpha,\alpha' <\gamma$, then $\lim_{n<\omega} a_{n,\alpha}= \lim_{n<\omega} a_{n,\alpha'}$. So if we define $p_1=\lim_{n<\omega} a_{n,\alpha}$ for some $\alpha<\gamma$, then $p_1\in \bigcap \{A_\alpha: \alpha<\gamma\}$. 
+\vskip 10pt
+
+
+For all $\alpha <\tau$, if $\alpha$ is an isolated ordinal, then we start from $p_{\alpha-1}\in A_1$ in Step 1 again, and define $p_\alpha$ the same way as we did for $p_1$. 
+If $\alpha$ is a limit ordinal, then we let $p_\alpha= \sup \{p_\kappa: \kappa<\alpha\}$. This exists because $\alpha<cf(\tau)$. 
+
+\vskip 10pt
+
+We've finished contruction of the set $\{p_\alpha: \alpha<\tau\}\subseteq T(\tau)$.  From the way we contructed it, this set is closed, unbounded and its cardinality is $\tau$.
+
+
+\vskip 30pt
+
+\textbf{Fact 3.4} Let $X$ be a Tychonoff space and $|X|>\aleph_0$. Let $\tau=|\beta X|^+$. Then, $T(\tau)$ can be condensed onto $T(\tau+1).$ Moreover, for any space $X, X\times T(\tau)$ condenses onto $X\times T(\tau+1).$
+
+\vskip 15pt
+
+\textbf{Proof.} Define $g:T(\tau) \rightarrow T(\tau+1)$ by $g(0)=\tau$ and $g(\alpha)=\alpha-1$ for all $\alpha<\omega$. Now, $g$ is one-to-one and onto. Note that $g$ is continuous at $\omega$ because if $(\beta, \omega]$ is an open set containing $g(\omega)$,then $(\beta+1,\omega]$ is an open set such that $g\left[(\beta+1, \omega]\right] \subseteq (\beta, \omega],$ and $g$ is continuous on all $\alpha<\omega$ because $\{\alpha\} \in T(\tau)$; finally, $g$ is continuous on all $\alpha>\omega$ because $g|_{(\omega, \tau)}$ is the identity function. Thus, $T(\tau)$ can be condensed onto $T(\tau+1).$
+
+\vskip 10pt
+
+
+Moreover, define $h: X\times T(\tau)\rightarrow X\times T(\tau+1)$ by $h(x,\alpha)=(x,g(\alpha)).$ Since $g$ is one-to-one, onto, and continuous, then, $h$ must also be one-to-one, onto, and continuous. 
+
+
+\vskip 30pt
+
+
+\textbf{Fact 3.5} Let $Z$ be a Tychonoff space. Let $A$ be a closed subset of $Z$, $B$ be compact subset of $\beta Z$. 
+The set $A\cup B$ is not compact in $\beta Z$. 
+Then, there exists a system $D=\{D_\alpha\}$ satisfying the following conditions:
+\begin{enumerate}
+\item For each $  \alpha  $, the set $ D_\alpha  $ is non-empty and closed in $A$.
+\item For $ \alpha>\beta, D_\alpha \subseteq D_\beta  $ and if $  \beta $ is a limit ordinal number, then\\$  D_\beta=\bigcap \{D_\alpha:\alpha <\beta\}.$
+\item $ \bigcap\{D_\alpha\}=\emptyset . $
+\item $\overline{D_1}^{\beta Z}\cap B =\emptyset.$
+	 
+\end{enumerate}
+
+\textbf{Proof.} \\
+Since $A\cup B $ is not compact, there is an open cover $\mathcal{C} \subset \tau(\beta Z)$ of $A\cup B$ that has no finite subcover.  Since $B$ is compact and $\mathcal{C}$ covers $B$, there is a finite subcover $\{C_i:1\leq i \leq n\}\subseteq \mathcal{C}$ such that $B\subseteq  \bigcup\left\{C_i:1\leq i \leq n\right\}$.
+\vskip 10pt
+
+Let $E=A\backslash \bigcup \{C_i:1\leq i \leq n\}$. $E$ is closed in $A$. $E$ is nonempty because if it is, then that means $\{C_i:1\leq i \leq n\}$ covers $A$ as well as $B$, contradiction. Furthermore, $E$ is not compact. If $E$ is compact, we can get a finite subcover $\{C'_i:1\leq i\leq n\}$ from $\mathcal{C}$. Then, $\{C'_i:1\leq i\leq n\} \cup \{C_i:1\leq i \leq n\}$ is a finite subcover that covers $A\cup B$, contradiction. 
+
+
+\vskip 10pt
+
+
+As $E$ is not compact, we can find an open cover $\mathcal{F}\subseteq \tau(\beta Z)$ such that no finite subcover of $\mathcal{F}$ covers $E$. 
+without loss of generality, we can assume that $|\mathcal{F}|=L(E)$, the Lindeloff number of $E$. We can well-order $\mathcal{F}$, so $\mathcal{F}=\left\{F_\alpha: \alpha<L(E)\right\}$.
+Define $D_\alpha=E\backslash \bigcup \left\{F_\gamma: \gamma<\alpha\right\}$ for each $\alpha < L(E)$. We shall verify that $D$ satisfies all four condictions:
+
+
+\begin{enumerate}
+\item For each $  \alpha  $, the set $ D_\alpha  $ is non-empty and closed in $A$.\\
+\texttt{Proof- Each $D_\alpha$ is non-empty because if $D_\alpha=\emptyset$ for some $\alpha$, then $E\backslash \bigcup \left\{F_\gamma: \gamma<\alpha\right\}=\empty$ and so $E \subseteq \{F_\gamma: \gamma<\alpha\}$. However, since $\alpha<L(E)$, we have a contradiction. So $D_\alpha$ is nonempty. Moreover, $D_\alpha$ is closed in $A$ because it is closed in $E$, and $E$ is closed in $A$.}
+\vskip 10pt
+\item For $ \alpha>\beta, D_\alpha \subseteq D_\beta  $ and if $  \beta <L(E) $ is a limit ordinal number, then\\$  D_\beta=\bigcap \{D_\alpha:\alpha <\beta\}.$\\
+\texttt{Proof- By the way we defined the $D_\alpha's$, $D_\alpha\subseteq D_\beta$ if $\alpha>\beta$. If $\beta$ a limit ordinal number, and 
+if $D_\beta \neq \bigcap\left\{D_\alpha:\alpha<\beta\right\}, $ then we replace $D_\beta$ with the set $\bigcap\left\{D_\alpha:\alpha<\beta\right\}$, which is nonempty and\\ closed in $A$. So now, $ D_\beta=\bigcap \{D_\alpha:\alpha <\beta\}.$}
+\vskip 10pt
+\item $ \bigcap\{D_\alpha\}=\emptyset . $\\
+\texttt{Proof- This is true because $ \bigcap\{D_\alpha\}= E\backslash\bigcup\left\{F_\gamma: \gamma<L(E)\right\}=\emptyset.$}
+
+\vskip 10pt
+\item $\overline{E}^{\beta Z} \cap B =\emptyset.$\\
+\texttt{Since $\overline{E}^{\beta Z} \cap B=\emptyset$, and $D_1\subseteq E$, then $\overline{D_1}^{\beta Z}\cap B=\emptyset.$}	 
+\end{enumerate}
+
+
+
+\vskip 30pt
+
+
+
+\textbf{Fact 3.6} Let $X$ be a Tychonoff space. If $B_1$, $B_2$ are subsets of $X$ such that $\overline{B_1}^{\beta X} \cap \overline{B_2}^{\beta X} \neq \emptyset,$ then $B_1$ and $B_2$ are not completely separated in $X$. 
+
+
+\vskip 15pt
+
+
+\textbf{Proof.} Suppose $B_1$ and $B_2$ are completely separated in $X$. Then there exists a continuous function function $f:X\rightarrow [0,1]$ such that 
+$f\left[B_1\right] \subseteq\{0\}$ and $f\left[B_2\right]\subseteq \{1\}.$ Let $\bar{f}: \beta X\rightarrow [0,1]$ be the extension of $f$. The sets $\bar{f}^{-1}(0)$ and $\bar{f}^{-1}(1)$ are closed in $\beta X$ such that $\overline{B_1}^{\beta X} \subseteq \bar{f}(0)$ and $\overline{B_2}^{\beta X} \subseteq \bar{f}^{-1}(1).$ Since $\bar{f}^{-1}(0)\cap\bar{f}^{-1}=\emptyset,$ we have $\overline{B_1}^{\beta X}\cap \overline{B_2}^{\beta X}=\emptyset,$ contradiction. 
+
+
+\vskip 30pt
+
+
+\textbf{Fact 3.7} Let $X$ be a Tychonoff space. If $X$ is locally compact, then $X$ can be condensed onto a compact space. 
+
+\vskip 15pt
+
+
+\textbf{Proof.} Let $X\cup \{\infty\}$ be the one-point compactification of $X$. Pick any $x_0\in X$. Let $K$ be the space $X\cup \{\infty\}$ with the point $\infty$ identified with $x_0$. In $K$, the open sets containing $x_0$ is of the form $U_{x_0} \cup V_{\infty},$ where $U_{x_0}$ is any open set containing $x_0$ in $X$, and $V_\infty$ is any open set containing $\infty$ in $X\times \{\infty\}.$ For $x\in K\backslash \{x_0\},$ the open sets containing $x$ in $K$ are same as the open sets containing $x$ in $X$. 
+\vskip 10pt
+
+$K$ is compact with the topology we've just defined. Let $f:X\times K$ be the identity map. So, $f$ is one-to-one and onto. Let $U_{x_0}\cup V_\infty$ be an open set containing $f(x_0)=x_0,$ then $U_{x_0}$ is an open set in $X$ such that
+$f\left[U_{x_0}\right]=U_{x_0}\subset U_{x_0}\cup V_\infty.$  So $f$ is continuous on $x_0$, as well as on other points of $X$. Hence, $X$ can be condensed onto $K$.
+
+
+
+\end{document}

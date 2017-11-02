@@ -1,0 +1,58 @@
+\documentclass{article}
+\begin{document}
+
+\textbf{FACT 3.} Let $\tau$ be an uncountable regular cardinal. Let $T(\tau)$ be the space 
+of all ordinal numbers less than $\tau$. Let $A_\alpha$ be closed, unbounded subset of $T(\tau)$. Let $\gamma\in T(\tau).$ Then, $\bigcap \{A_\alpha : \alpha<\gamma\}$ is closed, unbounded and $\left| \bigcap \{A_\alpha: \alpha<\gamma\} \right|=\tau$.
+
+
+
+\vskip 15pt
+\textbf{Proof.} 
+
+We will construct the set $\{p_\alpha: \alpha<\tau\}$ by transfinite induction.
+
+\vskip 10pt
+\texttt{\textbf{Step 1.}}
+
+Pick any element $a_{1,1}\in A_1$, we can find some element $a_{1,2}\in A_2$ such that $a_{1,2}>a_{1,1}$ because $A_2$ is unbounded. Then, 
+by continuing this process, we can define $a_{1,n}$ in the same way, for all $n<\omega$. 
+For all $\alpha<\gamma$,
+If $\alpha$ is a successor ordinal, then since $A_\alpha$ is unbounded, we can find some $a_{1,\alpha} \in A_\alpha$ such that $a_{1,\alpha}>a_{1,\alpha-1}$. If $\alpha$ is a limit ordinal, then let $\beta=sup_{\kappa<\alpha} \{a_{1,\kappa}\}$. This exists because $cf(\tau)>\beta$. Now, since $A_\alpha$ is unbounded, we can find some $a_{1,\alpha}$ such that $a_{1,\alpha} >  a_{1,\beta}$.
+
+Hence, we've defined the set $\{a_{1,\alpha}: \alpha <\gamma\}$. Let $\beta_1=sup\{a_{1,\alpha}: \alpha <\gamma\}$. It exists because $\gamma<cf(\tau)$. 
+
+\vskip 10pt
+
+\texttt{Step N.}
+Let $a_{n,1}\in A_1$ be such that $a_{n,1} > \beta_{n-1}$. Let $a_{n,2}\in A_2$ be such that $a_{n,2} > a_{n,1}$. Continuing this way, as in Step 1, we can 
+define $a_{n,\alpha}$ for all $\alpha<\gamma$. 
+\vskip 10pt
+
+
+For all $\alpha<\gamma$, let $p_1= lim_{n<\omega} a_{n,\alpha} \in A_\alpha$ because $cf(A)>\omega$. Moreover, if $\alpha =\alpha'$, then $lim_{n<\omega} a_{n,\alpha}= lim_{n<\omega} a_{n,\alpha'}$. Hence, $p_1\in \bigcap \{A_\alpha: \alpha<\gamma\}$. 
+\vskip 10pt
+
+
+For all $\alpha <\tau$, if $\alpha$ is an isolated ordinal, then we start from Step 1 again to get $p_2$. 
+If $\alpha$ is a limit ordinal, then we let $p_\alpha= sup \{p_\kappa: \kappa<\alpha\}$. This exists because $\alpha<cf(\tau)$. 
+
+\vskip 10pt
+
+We've finished contruction of the set $\{p_\alpha: \alpha<\tau\}\subseteq T(\tau)$.  From the way we contructed it, this set is closed, unbounded and its cardinality is $\tau$.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

@@ -1,0 +1,31 @@
+\documentclass{article}
+\begin{document}
+
+\textbf{Lemma 2.4}  Let $X$ and $Y$ be Tychonoff spaces, and $\pi_X: X\times Y\rightarrow X$ be the projection map. If $\pi_X$ is z-closed, $Z$ is a zero-set in $X\times Y$, and $(x,p)\in \overline{Z}^{X\times \beta Y}$, then $(x,p)\in \overline{Z\cap \left(\{x\}\times Y\right)}^{X\times \beta Y}$.
+
+\vskip 20pt
+ 
+\textbf{Proof: }Assume that $(x,p)\notin \overline{Z\cap (\{x\}\times Y)}^{X\times \beta Y}.$ Since $X\times \beta Y$ is Tychonoff, there exists a continuous function $f: X\times \beta Y \rightarrow [0,1]$ such that $f\left[\overline{Z\cap (\{x\}\times Y)}^{X\times \beta Y}\right] \subseteq \{1\}$ and $f(x,p)=0$. 
+
+\vskip 15pt
+
+Let $Z_f=f^{\leftarrow}(0).$ So $Z_f$ contains $(x,p)$. Since $(x,p)\in \overline{Z}^{X\times \beta Y},$ we have $(x,p)\in \overline{Z}^{X\times \beta Y} \cap Z_f$. Thus, 
+$$x\in \pi_X\left[\overline{Z}^{X\times \beta Y} \cap Z_f\right] \subseteq \pi_X\left[\overline{Z\cap Z_f}^{X\times \beta Y}\right] \subseteq \overline{\pi_X\left[Z\cap Z_f\right]}^X.$$
+
+\vskip 10pt
+
+On the other hand, since $\overline{Z\cap(\{x\}\times Y)}^{X\times \beta Y} \cap Z_f = \emptyset, $ 
+we have $Z\cap (\{x\}\times Y) \cap Z_f=\emptyset$. Now, if $x\in \pi_X\left[Z\cap Z_f\right],$ then $Z\cap Z_f\neq \emptyset$ and hence 
+$Z\cap Z_f\cap (\{x\}\times Y) \neq \emptyset,$  contradiction. So, $x\notin \pi_X\left[Z\cap Z_f\right]$.
+
+\vskip 20pt
+
+Hence, $$x\in \overline{\pi_X\left[Z\cap Z_f\right]}^X \backslash \pi_X\left[Z\cap Z_f\right].$$
+\vskip 5pt
+As $Z\cap Z_f$ is a zero-set in $X\times Y$, $\pi_X\left[Z\cap Z_f\right]$ is closed in $X$, we have  $\overline{\pi_X\left[Z\cap Z_f\right]}^X = \pi_X\left[Z\cap Z_f\right],$ contradiction.
+
+
+
+
+
+\end{document}

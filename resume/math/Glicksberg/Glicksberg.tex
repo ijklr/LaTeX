@@ -1,0 +1,125 @@
+  \documentclass{amsart}
+	\usepackage{amssymb,latexsym}
+	\usepackage{verbatim} 
+\author{shaun yi cheng}
+\begin{document}
+
+\begin{center}
+\textbf{Glicksberg's Theorem}
+\end{center}
+\vskip 5 pts
+
+\textbf{Lemma 1}
+\emph{Let $X, Y$ be Tychonoff spaces. If the projection $\pi_X: X\times Y \rightarrow X$ transforms functionally closed subsets of $X\times Y$ to closed subsets of $X$, then $X\times Y$ can be $C^*$-embedded in $X\times \beta Y$.}
+
+
+\begin{proof}Urysohn's Extension Theorem says that $X\times Y$ can be $C^*$-embedded in $X\times \beta Y \iff $ every completely separated sets $A,B \subseteq X\times Y$ can be completely separated in $X\times \beta Y.$ So, let $A, B \subseteq X\times Y$ be completely separated sets in $X\times Y$. We will show that $A,B$ can be completely separated in $X\times \beta Y.$
+
+Since $A, B$ can be completely separated in $X\times Y$, there exists a function $f: X\times Y \rightarrow [0,1]$ such that $f[A]\subseteq \{0\} $ and $f[B]\subseteq \{1\}$. Let $Z_0=\pi_X f^\leftarrow (0)$ and $Z_1= \pi_X f^\leftarrow (1)$. We are done if we can show that $cl_{X\times \beta Y} Z_0 \cap cl_{X\times \beta Y}Z_1 = \emptyset.$
+
+
+
+Suppose $cl_{X\times \beta Y} Z_0 \cap cl_{X\times \beta Y}Z_1 \neq \emptyset.$ Then there exists $(x',y') \in cl_{X\times \beta Y} Z_0 \cap cl_{X\times \beta Y}Z_1.$ Let $\pi_X: X\times Y \rightarrow X$ and $\bar{\pi}_X:X\times \beta Y \rightarrow X$ be projection maps. Since $Z_0$ is a functionally closed set in $X \times Y$, by our hypothesis, $\pi_X[Z_0]$ is closed in $X$. Hence, $\bar{\pi}_X[\in cl_{X\times \beta Y} Z_0] \subseteq cl_X \bar{\pi}_X[Z_0] = cl_X \pi[Z_0] = \pi_X[Z_0].$ Similarly, $\pi_X [Z_1]$ closed in $X$, and so using our hypothesis again, we get $\bar{\pi}_X[ cl_{X\times \beta Y} Z_1] \subseteq  \pi_X[Z_1]$. In fact, $\bar{\pi}_X[\in cl_{X\times \beta Y} Z_0]= \pi_X[Z_0]$ and $\bar{\pi}_X[ cl_{X\times \beta Y} Z_1] =  \pi_X[Z_1]$. 
+
+Now, $x' \in \bar{\pi}_X[ cl_{X\times \beta Y} Z_0 \cap cl_{X\times \beta Y}Z_1]=\bar{\pi}_X[ cl_{X\times \beta Y} Z_0]  \cap \bar{\pi}_X[cl_{X\times \beta Y}Z_1] = \pi_X[Z_0] \cap \pi_X[Z_1].$ Define a continuous function $f_{x'}:Y\rightarrow [0,1]$ such that $f_{x'}(y)=f(x',y).$ As $\beta Y$ is the Stone-$\check{C}$ech compactification of $Y$, we can extend $f_{x'}$ to $\bar{f}_{x'}:\beta Y \rightarrow [0,1]$.
+
+Since $(x',y') \in cl_{X\times \beta Y} Z_0 \cap cl_{X\times \beta Y}Z_1,$ there exist two sequences $\{(r_n,a_n)\}_{n\in\mathbb{N}}$, \\$ \{(t_n,b_n)\}_{n\in\mathbb{N}} \subseteq X\times Y$ both converging to $(x',y')$ such that $f(r_n,a_n)=0$ and $f(t_n,b_n)=1$ for all $n\in \mathbb{N}$. 
+Furthermore, we always have the $f(r_n,a_n)\rightarrow \bar{f}_{x'}(y')$ and $f(t_n,b_n)\rightarrow \bar{f}_{x'}(y')$ whenever those two sequences converge to $(x',y')$, where $f$ is continuous and $\bar{f}_{x'}$ is the extension of $f_{x'}$. Those statements would imply $\bar{f}_{x'}(y')=0$ and $\bar{f}_{x'}(y')=1$, a contradiction. Therefore $cl_{X\times \beta Y} Z_0 \cap cl_{X\times \beta Y}Z_1 = \emptyset.$
+
+
+
+
+
+\end{proof}
+
+
+
+
+
+
+
+
+\textbf{Lemma 2}
+\emph{If the Cartesian product $X\times Y$ of Tychonoff spaces $X$ and $Y$ is pseudocompact, then the projection $\pi_X: X\times Y \rightarrow X$ transforms functionally closed subsets of $X \times Y$ to closed subsets of $X$.}
+\begin{proof}
+Let $X, Y$ be Tychonoff and $X\times Y$ be pseudocompact. By way of contradiction, suppose that there exists a functionally closed subset $Z$ of $X \times Y$ such that $\pi_X[Z]$ is not closed in $X$. Let $x_0\in cl_X \pi_X[Z] \backslash \pi_X[Z] \neq \emptyset$. Let $g:X\times Y \rightarrow [0,1] $ such that $Z=g^\leftarrow(0)$.
+
+Define $f:X\times Y \rightarrow [0,1] $ such that $f(x,y)=min\{\frac{g(x,y)}{g(x_0,y)},1\}.$
+By our definition, $f$ is a continuous function. Moreover, $f(x_0,y)=1 $ for all $y\in Y$ and $Z=f^\leftarrow(0)$.
+
+Since $X$ is Tychonoff, it is first-countable. Let $\mathcal{B}_{x_0}=\{B_k \in \tau(X): 
+B_0 \supset B_1 \supset B_2 \supset \cdots $ and $x_0 \in B_k, k=1,2,3,...$ \} be a neighborhood basis of $x_0$.   We shall define two sequences, $(x_0, y_{i})$ and$ (x_i,y_i)$, and their open neighborhoods(open in $X\times Y$), $V_i$'s and $W_i$'s by induction: 
+
+Step 1:  
+Pick a point in $Z$ and label it $(x_1,y_1)$. 
+Since $X$ is Hausdorff and $\mathcal{B}$ is the neighborhood basis of $x_0$, there exist $V_1 \in \mathcal{B}$, and basic open sets $W_1 \in \tau(X)$ and $Y_1 \in \tau(Y)$ such that  $(x_1,y_1) \in W_1\times Y_1$ and $(x_0,y_1)\in V_1\times Y_1 $, and $W_1 \cap V_1 = \emptyset$. 
+
+Step n: Since $x_0 \in V_{n-1}\in \mathcal{B}$ and $x_0 \in \pi_X(Z)$, we can find a
+point $(x_n, y_n) \in Z$ such that $x_n \in V_{n-1}$, and that $y_n$ is chosen so that $f(x_n, y_n)=0$. 
+Now, since $f$ is continuous and $\mathcal{B}$ is the neighborhood basis of $x_0$, we can take  $V_n \in \mathcal{B}$( where $V_n \subset V_{n-1}$),  and $W_n \subset V_{n-1}$, a basic open set of $X$, and $Y_n$, a basic open set of $Y$, such that $W_n \times Y_n \in \tau(X\times Y)$ and $V_n \times Y_n \in \tau(X\times Y)$ are open sets in $X\times Y$ that contains $(x_n,y_n), (x_0,y_n)$, respectively. 
+
+
+After $\omega $ many steps, we've constructed infinitely $W_i$'s and $V_i$'s such that $f[W_i\times Y_i]\subseteq [0,\frac{1}{3})$ and $f[V_i\times Y_i]\subseteq (\frac{1}{3},1]$. 
+Now, we will show that the family $\mathcal{F}=\{W_i\times Y_i: 1\leq i < \infty\} $ is locally finite. 
+Let $(x',y')\in X\times Y$. If $(x',y')\in W_i$ for some $W_i \in \mathcal{F}$, then we are done because the sets in $\mathcal{W}$ are pair-wise disjoint. 
+
+Suppose that $(x',y') \notin \{x_0\}\times Y$, then there must be some $V_j \in \mathcal{B}$ such that $x'\notin V_j$. Moreover, since $X$ is Hausdorff, there exist open sets $U_x\in \tau(X), V_j\in \mathcal{B}$ such that $x'\in U_x$ and $U_x$ is disjoint from $V_j$. But $W_k \subseteq V_j $ for all $k>j.$ So there can be at most $j$ many $W_i$'s such that $W_i\cap V_j'\neq \emptyset.$ Pick any open set $U_y\subset Y$ that contains $y'$. Then $U_x\times U_y \subset X\times Y$ is an open neighborhood of $(x',y')$ which only meets $\mathcal{F}$ finitely many times.
+
+
+Now suppose that $(x',y') \in \{x_0\}\times Y$. Since $x'=x_0, f(x',y')=0.$ Since $f:X\times Y \rightarrow [0,1]$ is 
+continuous, there exist $U\in \tau(X\times Y)$ such that $(x',y')\in U$ and $f[U]\in (\frac{2}{3},1].$ Hence, $U$ does not meet $\mathcal{F}$. Because if it does, then $f[U]\cap [0,\frac{1}{3}) \neq \emptyset,$ contradicting that $f[U]\in (\frac{2}{3},1]$. 
+
+We've shown that the family $\mathcal{F}\subset \mathcal{P}(X\times Y)$ is locally finite. However, $\mathcal{F}$ is infinite, and this contradicts Lemma 3. Thus, $X\times Y$ cannot be pseudocompact. 
+
+
+
+
+
+
+\end{proof}
+
+
+
+
+\textbf{Lemma 3}
+\emph{Let $X$ be a Tychonoff space. If $X$ is pseudocompact, then every locally finite family of non-empty open subsets of $X$ is finite.}
+
+\begin{proof}
+(By way of contradiction.)Suppose that there exists a locally finite family $\mathcal{F}=\{U_i \in \tau(X): U_i\neq \emptyset, 1\leq i < \infty\}$. Since each $U_i$ is non-empty, choose a point $x_i\in U_i$ for $i\in \mathbb{N}$ Since 
+$X$ is a Tychonoff space, there exists continuous functions $f_i:X \rightarrow [0,i]$ such that $f_i(x_i)=i$ and 
+$f_i[X \backslash U_i] \subseteq \{0\}$ for each $i \in \mathbb{N}$. Define the fuction $f:X\rightarrow \mathbb{R}$ as $f(x)=\Sigma_{i=1}^\infty |f_i(x)|$. To show that $f$ is continuous, pick $x_0\in X$ and an open set $V$ of $\mathbb{R}$ containing $f(x_0)$. 
+We can assume that  $V=(f(x_0)-\frac{1}{m}, f(x_0)+\frac{1}{m})$ for some $m \in \mathbb{N}$.
+Since $\mathcal{F}$ is locally finite, there exists an open set $U_0 \in \tau(X)$ containing $x_0$ such that $U_0$ meets $\mathcal{F}$ only finitely many times. 
+So we have $\{a_i\}_{i=1}^{n} \subset \mathbb{N}$ such that $U_0\cap U_{a_i} \neq \emptyset$ for $i\in [n].$
+Define $\delta: \mathcal{P}(\mathbb{R}) \rightarrow \mathbb{R}$ to be $\delta(S)=sup (S) - inf (S).$
+For each $i \in [n]$, since  $f_{a_i}$ is continuous, there exists $W_i \in \tau(X)$ 
+such that $x_0\in W_i$ and  $\delta(f_i[W_i])<\frac{1}{mn}$. 
+Let $W=W_1 \cap W_2 \cap \cdots \cap W_n$. 
+Then $\delta(f_i[W])< \frac{1}{mn}$ for each $i\in [n]$ 
+So $\delta(f[W])=sup_{x\in W}(\Sigma_{i=1}^\infty |f_i(x)|)-inf_{x\in W}(\Sigma_{i=1}^\infty |f_i(x)|) 
+=\sup_{x\in W}(\Sigma_{a_i: i\in [n]} |f_{a_i}(x)|)-inf_{x\in W}(\Sigma_{a_i: i\in [n]}|f_{a_i}(x)|)
+=\Sigma_{a_i: i\in [n]}(\sup_{x\in W}( |f_{a_i}(x)|)-inf_{x\in W}|f_{a_i}(x)|)<n\frac{1}{mn}=\frac{1}{m}$. 
+As $x_0\in W\in \tau(X)$ and $f[W]\subset (f(x_0)-\frac{1}{m}, f(x_0)+\frac{1}{m})=V$, $f$ is a continuous function. 
+However, since $f(x_i) \geq i$ for all $i\in \mathbb{N},$ $f$ is  not bounded. This contradicts the pseudocompactness of $X$, which says that every real-valued continuous function on $X$ must be bounded.
+
+
+
+\end{proof}
+
+\textbf{Glicksberg's Theorem}
+\emph{If the Cartesian product $X\times Y$ of Tychonoff spaces $X$ and $Y$ is pseudocompact, then $\beta Y \times \beta Y $ is the $\check{C}$ech-Stone compactification of $X\times Y$.}
+\begin{proof}
+We need to show that $X\times Y$ can be $C^*$-embedded  in $X\times \beta Y$. 
+
+Since $X\times Y$ is pseudocompact, by Lemma 2, the projection $\pi_X: X\times Y \rightarrow X$ transforms functionally closed subsets of $X\times Y$ to closed subsets of $X$. Then, by Lemma 1 , $X\times Y$ can be $C^*$-embedded in $X\times \beta Y$. 
+
+
+Now, $X\times \beta Y$ is pseudocompact. So by Lemma 2 and Lemma 1 again, $X\times \beta Y$ can be $C^*$-embedded in $\beta X\times \beta Y$.  
+
+Hence, $X \times Y$ can be $C^*$-embedded  in $X\times \beta Y$.
+
+
+
+
+\end{proof}
+\end{document}

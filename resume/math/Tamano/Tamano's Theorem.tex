@@ -1,0 +1,35 @@
+   \documentclass{amsart}
+	\usepackage{amssymb,latexsym}
+	\usepackage{verbatim} 
+\author{shaun yi cheng}
+\begin{document}
+
+\bf{Theorem 1:} 
+$X$ is paracompact iff for each $F \in \beta X-X$ compact, there exists a surrounding $V$ of $X$ such that $\tilde{V} \cap \Delta_F=\emptyset$, where
+ $\tilde{V}=int_{\beta X \times \beta X} cl_{\beta X \times \beta X} V$.
+
+
+
+\begin{proof}
+($\Rightarrow :$)\\
+Let $X$ be paracompact, and $F\in \beta X\setminus X$ compact. Let $x\in X.$ As $\beta X$ is Hausdorff, there exists $U^*_x \in \tau_{\beta X}$ containing $x$ such that 
+$(cl_{\beta X}U^*_x)\cap F = \emptyset$. \\
+Let $U_x = U^*_x\cap X$. $\{U_x\}_{x\in X}$ forms a covering of $X$. As $X$ is paracompact, there is a locally finite open refinement of $\{U_x\}_{x\in X}$, call it $\{U_\lambda\}_{\lambda \in \Lambda}$. Let $\Phi$ be a partition of unity subordinate to $\{U_\lambda\}_{\lambda \in \Lambda}$. For $(y_1,y_2) \in X$, define $d(y_1,y_2)=\sum_{\phi\in\Phi} |\phi(y_1)-\phi(y_2)| $ and let $V_n=\{(y_1,y_2)\in X \times X : d(y_1,y_2) < \frac{1}{2^n} \}$. Note that $V_1$ is a surrounding for $X$ because for all $x\in X$, $d(x,x)=0$ and so $\Delta_X \subseteq V_1$. \\
+(By way of contradiction) Now, suppose that $\tilde{V_1}\cap \Delta_F \neq \emptyset$. Then let $(p,p)\in \tilde{V_1}\cap\Delta_F.$
+$\tilde{V_1}$ is open in $\beta X$ so let $(p,p) \in U^*(p) \times U^*(p) \in \tau_{\beta X}$ and $U^*(p) \times U^*(p) \subseteq \tilde{V_1}.$ Note that $U^*(p)\cap X$ is nonempty because $X$ is dense in $\beta X$.\\
+Fix $z\in U^*(p) \cap X.$ There exists only a finite number of $\phi$'s that doesn't vanish at $z$, say $\phi_1,...,\phi_n$, and the other $\phi$'s in $\Phi$ vanishes at $z$. \\
+For $k\in \{1,2,...,n\}$, let $H_k$ be the set of points in $X$ for where $\phi_k$ does not vanish. Now, if $y\notin \bigcup_{k=1}^{n} H_k$ , then $d(z,y)=\sum_{\phi \in \Phi}|\phi(z)-\phi(y)| = \sum_{i=1}^{n} |\phi_i(z)-\phi_i(y)| + \sum_{\Phi\backslash [n]} |\phi_i(z)-\phi_i(y)| = \sum_{i=1}^{n}|\phi_i(z)|+\sum_{\Phi \setminus \{ \phi_i: 1\leq i \leq n\}} |\phi_i(y)| = 2$. \\
+So $y\notin U^*(p)\cap X$. Because if $y \in U^*(p) \cap X$, then $U^*(p) \times U^*(p) \subseteq  \tilde{V_1}=int_{\beta X \times \beta X} cl_{\beta X \times \beta X} V_1 \Rightarrow (X\times X)\cap(U^*(p)\times U^*(p))\subseteq (X \times X)\cap (int_{\beta X \times \beta X} cl_{\beta X \times \beta X} V_1)$. So $y\in int_X cl_X V_1 \subseteq cl_X V_1$, which means $d(z,y)\leq \frac{1}{2}.$ Thus $y\notin U^*(p)\cap X$.\\
+
+So we have that if $y \notin \bigcup_{k=1}^{n} H_k$, then $y\notin U^*(p)\cap X.$ Thus $U^*(p)\cap X \subseteq \sum_{k=1}^{n} H_k.$ Hence $p\in cl_{\beta X} (\bigcup_{k=1}^{n} H_k).$ However, since $H_k$ is contained in some $U_\lambda \in \{U_\lambda\}_{\lambda \in \Lambda}$ ($\phi_k$ subordinate to $U_\lambda$) and $\{U_\lambda\}_{\lambda \in \Lambda}$ is a refinement of $\{U_x\}_{x\in X},$ we have $H_k \subseteq U_x$ for some $U_x \in \{U_x\}_{x \in X}.$\\
+Now, we assumed earlier that $cl_{\beta X} U_x \cap F = \emptyset$ for all $x\in X$. So $F\cap cl_{\beta X} \bigcup_{k=1}^{n} H_k = \emptyset.$ But $p \in F\cap cl_{\beta X} \bigcup_{k=1}^{n} H_k$, contradiction. \\
+Hence, $\tilde{V_1}\cap \Delta_F = \emptyset$ as required. 
+
+
+
+
+
+\end{proof}
+
+
+\end{document}

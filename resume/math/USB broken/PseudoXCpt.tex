@@ -1,0 +1,49 @@
+\documentclass{article}
+\begin{document}
+
+\textbf{FACT 1.} If $X$ is pseudocompact and $Y$ is compact, then $X\times Y$ is pseudocompact. 
+
+\vskip 15pt
+
+
+\textbf{Proof.} Let $f: X\times Y \rightarrow \textbf{R}$. As $Y$ is compact, $f\left[ \{x\} \times Y\right] $ is 
+closed and bounded in $\textbf{R}$ for all $x \in X$. We can define $g:X \rightarrow \textbf{R}$ as 
+$$g(x)=max \{f(x,y):y\in Y\}.$$
+
+Fix $x_0 \in X$, we will show that $g$ is continuous at $x_0$. Let $\epsilon >0$. 
+
+\vskip 10pt
+
+
+By our definition of $g(x_0)$, there exists some $y_0\in Y$ such that $g(x_0)=f(x_0,y_0)$. Let $r=f(x_0,y_0)$. Now, define the sets $U_y$'s and $V_y$'s as follows:  \vskip 12pt
+
+\textsl{For each $y\in Y:$ }
+
+If $f(x_0,y) \in (r-\epsilon, r+\epsilon)$, we can get $V_{y} \in \tau(Y) $ and $U_{y} \in \tau(X)$ such that $y_0\notin V_{y}$ and $f\left[U_y \times V_y\right] \subseteq (r-\epsilon, r+\epsilon)$. 
+
+If $f(x_0,y) \notin (r-\epsilon, r+\epsilon)$, then combining with $f(x_0,y)\leq max\{f(x_0,y):y\in Y\}=f(x_0,y_0)=r$, we must have $f(x_0,y)\leq r-\epsilon$. Hence, we can get $V_{y} \in \tau(Y) $ and $U_{y} \in \tau(X)$ such that $f\left[U_y \times V_y\right] \subseteq (-\infty, r).$ \\
+
+\vskip 12pt
+
+The family $\{V_y: y\in Y\}$ as defined aboved is an open cover of $Y$. By compactness, there exists $\{V_i: 1\leq i \leq n\} \subseteq \{V_y: y\in Y\}$ such that $\bigcup \{V_i: 1\leq i \leq n\} = Y$. Corresponding to $\{V_i: 1\leq i \leq n\}$, we have the set $\{U_i: 1\leq i \leq n\}$. Let $U=\bigcap \{U_i: 1\leq i \leq n\} \cap U_{y_0}$, now $U$ is an open set containing $x_0$. \\
+
+\vskip 5pt
+
+Pick any $x\in U$. 
+\vskip 10pt
+On one hand, we have $max\{f(x,y):y\in Y\}<r+\epsilon$ because \\
+$\{f(x,y):y\in Y\} = \left\{f(x,y):y\in \bigcup \{V_i: 1\leq i \leq n\}\right\}\\
+=\bigcup \left\{f\left[\{x\}\times V_i\right]: 1\leq i\leq n\right\}\subseteq \bigcup \{f\left[U_i\times V_i\right]: 1\leq i\leq n\} \subseteq (-\infty, r+\epsilon).$\\
+
+One the other hand, we have $max\{f(x,y):y\in Y\}>r-\epsilon$. That is because $f(x,y_0)\in f\left[U\times \{y_0\}\right] \subseteq f\left[U_{y_0} \times \{y_0\}\right] \subseteq f\left[U_{y_0} \times V_{y_0}\right] \subseteq (r-\epsilon, r+\epsilon)$.
+
+
+\vskip 10 pt
+We have now $r-\epsilon<max\{f(x,y):y\in Y\}<r+\epsilon$ for all $x\in U$. Hence, $g[U] \subseteq (r-\epsilon, r+\epsilon)$, so $g$ is continuous on $X$. 
+As $X$ is pseudocompact, $g$ must be bounded. Therefore, $f$ must be bounded as well. 
+Thus, $X\times Y$ is pseudocompact. 
+
+
+
+
+\end{document} 

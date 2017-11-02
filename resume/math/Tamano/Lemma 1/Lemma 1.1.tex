@@ -1,0 +1,20 @@
+\documentclass{article}
+\begin{document}
+
+\textbf{Lemma 1.1} The product of a paracompact space with a compact Hausdorff space is paracompact. 
+
+\vskip 5pt
+
+\textbf{Proof.} Let $X$ be paracompact, $Y$ compact, and let $\mathcal{U}$ be an open cover of $X\times Y$. For fixed $x\in X,$ as $\{x\}\times Y$ is compact in $X\times Y$, a finite number of elements of $\mathcal{U}$, say $U_{\alpha_1}^x, \dots , U_{\alpha_{n_x}}^x$, cover $\{x\}\times Y$. Pick an open nhood $V_x$ of $x$ in $X$ such that $V_x\times Y\subseteq \bigcup_{i=1}^{n_x} U_{\alpha_i}^x.$ 
+\vskip 10pt
+The sets $V_x$, as $x$ ranges through $X$, form an open cover of $X$. By the paracompactness of $X$, let $\mathcal{V}$ be an open locally finite refinement. For each $V\in \mathcal{V}, V\subseteq V_x$ for some $V_x$. 
+Let $$\mathcal{W}_V=\left\{(V\times Y)\cap U_{\alpha_i}^x: 1\leq i\leq n_x\right\},$$ and let 
+
+$$\mathcal{R}=\bigcup \left\{\mathcal{W}_V: V\in \mathcal{V}\right\}.$$
+
+\vskip 5pt
+
+Since $\mathcal{W}_V\subseteq \mathcal{U}$ for each $V\in \mathcal{V}$, $\mathcal{R}$ is a refinement of $\mathcal{U}$. For each $x\in X$, $W_V$ is a cover for $\{x\}\times Y$ for some $V\in \mathcal{V}$. Thus, $\mathcal{R}$ is a cover of $X\times Y$. Lastly, $\mathcal{R}$ is locally finite because given $(x,y)\in X\times Y,$ there is a neighborhood $U_x$ of $x$ which meets only finitely many $V\in \mathcal{V}$ and the neighborhood $U_x\times Y$ of $(x,y)$ can then only meet only finitely many sets of $\mathcal{R}$. Hence, $X\times Y$ is paracompact.
+
+
+\end{document}

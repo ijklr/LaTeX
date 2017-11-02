@@ -1,0 +1,36 @@
+   \documentclass{amsart}
+	\usepackage{amssymb,latexsym}
+	\usepackage{verbatim} 
+\author{shaun yi cheng}
+\begin{document}
+\textbf{Lemma 2}
+\emph{Let $X, Y$ be Tychonoff spaces. If the projection $p: X\times Y \rightarrow X$ transforms functionally closed subsets of $X\times Y$ to closed subsets of $X$, then $X\times Y$ can be $C^*$-embedded in $X\times \beta Y$.}
+
+
+\begin{proof}Urysohn's Extension Theorem says that $X\times Y$ can be $C^*$-embedded in $X\times \beta Y \iff $ every completely separated sets $A,B \subseteq X\times Y$ can be completely separated in $X\times \beta Y.$ So, let $A, B \subseteq X\times Y$ be completely separated sets in $X\times Y$. We will show that $A,B$ can be completely separated in $X\times \beta Y.$
+
+Since $A, B$ can be completely separated in $X\times Y$, there exists a function $f: X\times Y \rightarrow [0,1]$ such that $f[A]\subseteq \{0\} $ and $f[B]\subseteq \{1\}$. Let $Z_0=\pi_X f^\leftarrow (0)$ and $Z_1= \pi_X f^\leftarrow (1)$. We are done if we can show that $cl_{X\times \beta Y} Z_0 \cap cl_{X\times \beta Y}Z_1 = \emptyset.$
+
+
+
+Suppose $cl_{X\times \beta Y} Z_0 \cap cl_{X\times \beta Y}Z_1 \neq \emptyset.$ Then there exists $(x',y') \in cl_{X\times \beta Y} Z_0 \cap cl_{X\times \beta Y}Z_1.$ Let $\pi_X: X\times Y \rightarrow X$ and $\bar{\pi}_X:X\times \beta Y \rightarrow X$ be projection maps. Since $Z_0$ is a functionally closed set in $X \times Y$, by our hypothesis, $\pi_X[Z_0]$ is closed in $X$. Hence, $\bar{\pi}_X[\in cl_{X\times \beta Y} Z_0] \subseteq cl_X \bar{\pi}_X[Z_0] = cl_X \pi[Z_0] = \pi_X[Z_0].$ Similarly, $\pi_X [Z_1]$ closed in $X$, and so using our hypothesis again, we get $\bar{\pi}_X[ cl_{X\times \beta Y} Z_1] \subseteq  \pi_X[Z_1]$. In fact, $\bar{\pi}_X[\in cl_{X\times \beta Y} Z_0]= \pi_X[Z_0]$ and $\bar{\pi}_X[ cl_{X\times \beta Y} Z_1] =  \pi_X[Z_1]$. 
+
+Now, $x' \in \bar{\pi}_X[ cl_{X\times \beta Y} Z_0 \cap cl_{X\times \beta Y}Z_1]=\bar{\pi}_X[ cl_{X\times \beta Y} Z_0]  \cap \bar{\pi}_X[cl_{X\times \beta Y}Z_1] = \pi_X[Z_0] \cap \pi_X[Z_1].$ Define a continuous function $f_{x'}:Y\rightarrow [0,1]$ such that $f_{x'}(y)=f(x',y).$ As $\beta Y$ is the Stone-$\check{C}$ech compactification of $Y$, we can extend $f_{x'}$ to $\bar{f}_{x'}:\beta Y \rightarrow [0,1]$.
+
+Since $(x',y') \in cl_{X\times \beta Y} Z_0 \cap cl_{X\times \beta Y}Z_1,$ there exist two sequences $\{(r_n,a_n)\}_{n\in\mathbb{N}}$, \\$ \{(t_n,b_n)\}_{n\in\mathbb{N}} \subseteq X\times Y$ both converging to $(x',y')$ such that $f(r_n,a_n)=0$ and $f(t_n,b_n)=1$ for all $n\in \mathbb{N}$. 
+Furthermore, we always have the $f(r_n,a_n)\rightarrow \bar{f}_{x'}(y')$ and $f(t_n,b_n)\rightarrow \bar{f}_{x'}(y')$ whenever those two sequences converge to $(x',y')$, where $f$ is continuous and $\bar{f}_{x'}$ is the extension of $f_{x'}$. Those statements would imply $\bar{f}_{x'}(y')=0$ and $\bar{f}_{x'}(y')=1$, a contradiction. Therefore $cl_{X\times \beta Y} Z_0 \cap cl_{X\times \beta Y}Z_1 = \emptyset.$
+
+
+
+
+
+\end{proof}
+
+
+
+
+
+
+
+
+\end{document}

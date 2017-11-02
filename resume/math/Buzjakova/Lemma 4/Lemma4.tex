@@ -1,0 +1,74 @@
+\documentclass{article}
+\begin{document}
+\textbf{Lemma 3.11} Let $X$ be a pseudocompact space, and let $f$ be a continuous one-to-one function from $X\times T(|\beta X|^+)$ onto $Z$. We are given two sets: \\
+$C_1=\{x\in \beta X\backslash X: \left|\bar{f}[\{x\}\times T(|\beta X|^+)]\cap Z\right|=|\beta X|^+\}.$\\
+$C_2=\{x\in \beta X\backslash X: \left|\bar{f}[\{x\}\times T(|\beta X|^+)]\cap Z\right|<|\beta X|^+ $ and for any $\alpha\in T(|\beta X|^+),$ there exists $\alpha_1\in T(|\beta X|^+)$ such that $\alpha_1 >\alpha$ and $\bar{f}(x,\alpha_1) \in Z \}.$
+
+Then, $C_1\cap \overline{C_2}^{\beta X}=\emptyset$ and $X\cap \overline{C_2}^{\beta X}=\emptyset$.
+
+\vskip 15pt
+
+\textbf{Proof.} We'll first prove that $C_1\cap \overline{C_2}^{\beta X}=\emptyset$. 
+
+\vskip 5pt
+Suppose the contrary. Let $x\in C_1\cap \overline{C_2}^{\beta X}$. 
+
+\vskip 10pt
+
+
+
+For each $y\in C_2$, let $Z_y=\bar{f}\left[\{y\}\times T(|\beta X|^+)\right] \cap Z$. \\
+Since $\{y\}\times T(|\beta X|^+) = \bigcup \left\{ \{y\} \times T(|\beta X|^+) \cap \bar{f}^{-1}(z):z\in Z_y \right\}$, we have:
+\begin{center}
+$\left|\beta X\right|^+ =\left| \{y\}\times T(|\beta X|^+)\right| = \left| \bigcup \left\{ \{y\} \times T(|\beta X|^+) \cap \bar{f}^{-1}(z):z\in Z_y \right\}\right|.$
+\end{center}
+ Since $\left|Z_y\right|< cf(\left|\beta X\right|^+),$ at least one of the terms in the union must have cardinality equal to $\left|\beta X\right|^+$. So there exists $z\in Z_y$ such that 
+ 
+ $$\left|  \{y\} \times T(|\beta X|^+) \cap \bar{f}^{-1}(z) \right|=\left|\beta X\right|^+.$$ 
+ 
+\vskip 15pt
+ 
+Define $A_y=\pi_2 \left[ \{y\} \times T(|\beta X|^+) \cap \bar{f}^{-1}(z) \right]$, where $\pi_2: \beta X \times 
+T(|\beta X|^+) \rightarrow T(|\beta X|^+)$ is the projection map. Thus, we defined $A_y\subseteq T(\left|\beta X\right|^+)$ such that $\left|A_y\right|=\left|\beta X\right|^+$ and $\bar{f}[\{y\}\times A_y]=\{z\}.$ Since $z\in Z$ and $f$ is onto, $z=f(x_y,\alpha_y)$ for some $(x_y,\alpha_y)\in X\times T(|\beta X|^+).$ Hence $\bar{f}\left[\{x\}\times A_y\right]=\{f(x_y,\alpha_y)\}$ for some $(x_y, \alpha_y)\in X\times T(|\beta X|^+).$ By the continuity of $\bar{f},$ we have that $$\bar{f}\left[\{y\}\times \overline{A_y}^{T(|\beta X|^+)}\right]=f(x_y,\alpha_y) \mbox{ holds for all } y \in C_2.$$
+
+\vskip 15pt
+
+Let $T=\bigcap \left\{ \overline{A_y}^{T(|\beta X|^+)} : y\in C_2 \right\}  \cap T_x,$ where $T_x$ was defined in Lemma 3.11, we can find such $T_x$ because $x\in C_1$. Now, by \textbf{FACT 3.3}, $|T|=\left|\beta X\right|^+ $, and $T$ is closed and unbounded in $T(\left|\beta X \right| ^+)$. \\
+
+\vskip 10pt
+
+On one hand, since $x\in C_1$, we have $\left|\bar{f}\left[\{x\} \times T \right] \cap Z \right| = \left|\beta X \right|^+$ holds. This is because    $x\in C_1$ and $T\subseteq T_x$, so we must have $\bar{f}\left[\{x\} \times T \right] = f\left[\{y_x\}\times T\right].$ Since $f$ is one-to-one, $\left|f\left[y_x, T\right]\right|=|T|=\left|\beta X \right| ^+$. So, $\left|\bar{f}\left[\{x\}\times T\right]\right|=|\beta X|^+.$
+
+\vskip 5pt
+On the other hand, since $x\in \overline{C_2}^{\beta X},$ we have $\left|\bar{f}\left[\{x\} \times T \right] \cap Z \right| < \left|\beta X \right|^+$ holds. Because: \\
+$$\bar{f}\left[\{x\}\times T\right] \cap Z 
+\subseteq \bar{f}\left[\overline{C_2}^{\beta X} \times T\right] \cap Z 
+\subseteq \bar{f}\left[\overline{C_2\times T}^{\beta X \times T(|\beta X|^+ +1)}\right] \cap Z$$
+$$=\bar{f}\left[\overline{C_2\times T}^{\beta \left(X \times T(|\beta X|^+ )\right)}\right] \cap Z
+\subseteq \overline{\bar{f}\left[C_2\times T\right]}^{\beta Z} \cap Z
+=\overline{    \left\{ f(x_y,\alpha_y): y\in C_2 \right\}        }^{\beta Z},$$
+
+where the last equality holds because for each $y\in C_2$, $\bar{f}\left[\{y\}\times T \right]=\{f(x_y,\alpha_y)\}$ for some $(x_y,\alpha_y)\in X\times T(|\beta X|^+).$ Now, let $\alpha=\sup\{\alpha_y: y\in C_2\}$, which exists because $|C_2|< cf\left( \left|\beta X\right|^+ \right)$. 
+
+Since $\left\{ f(x_y,\alpha_y): y\in C_2 \right\} 
+\subseteq \bar{f}\left[\beta X \times T(\alpha +1) \right] = \overline{ \bar{f}\left[\beta X \times T(\alpha +1) \right]}^{\beta Z}$, we must have $\overline{    \left\{ f(x_y,\alpha_y): y\in C_2 \right\}        }^{\beta Z} \subseteq \bar{f}\left[\beta X \times T(\alpha +1) \right] $. 
+
+Hence, $\bar{f}\left[\{x\}\times T\right] \cap Z \subseteq \bar{f}\left[\beta X \times T(\alpha +1) \right].$ 
+As $\left| \bar{f}\left[\beta X \times T(\alpha +1) \right] \right| < |\beta X |^+$, we conclude that 
+$\left|\bar{f}\left[\{x\} \times T \right] \cap Z \right| < \left|\beta X \right|^+$. This contradicts to our 
+previous argument that $ \left|\bar{f}\left[\{x\} \times T \right] \cap Z \right| = \left|\beta X \right|^+$. Therefore, 
+$C_1\cap \overline{C_2}^{\beta X}=\emptyset$. 
+
+
+\vskip 10pt
+
+We will show that $X\cap \overline{C_2}^{\beta X}=\emptyset$. Suppose the contrary. Let $x\in X \cap \overline{C_2}^{\beta X}$. 
+
+
+Since $x\in \overline{C_2}^{\beta X},$ by the same reasoning as in above, we must have  $\left|\bar{f}\left[\{x\} \times T \right] \cap Z \right| < \left|\beta X \right|^+$. \\
+
+However, since $x\in X$, $\left|\bar{f}\left[\{x\} \times T \right] \cap Z \right| =\left| f\left[\{x\} \times T \right]\cap Z \right| = \left| f\left[\{x\} \times T\right]\right|= \left|\beta X \right|^+$, where the last equality holds because $f$ is one-to-one and $|T|=|\beta X|^+$. 
+Again, we reached contradiction. Thus, $X\cap \overline{C_2}^{\beta X}=\emptyset$ holds. 
+
+
+\end{document}

@@ -1,0 +1,33 @@
+\documentclass{article}
+\begin{document}
+
+
+\textbf{Lemma 1.2}  Every paracompact space is normal. 
+
+\vskip 10pt
+
+\textbf{Proof.} We first establish regularity. Suppose $A$ is a closed set in a paracompact space $X$ and $x\notin A$. For each $y\in A$, as $X$ is Hausdorff, we can find an open set $V_y$ containing $y$ such that $x\in \overline{V_y}$. Then the sets $V_y, y\in A,$ together with the set $X\backslash A$, form an open cover of $X$. Let $\mathcal{W}$ be an open locally finite refinement and let 
+$$V=\bigcup\left\{ W\in \mathcal{W}: W\cap A\neq \emptyset\right\}.$$
+Then $V$ is an open set containing $A$. Now, 
+$$\overline{V}=\bigcup\left\{ \overline{W}\in \mathcal{W}: W\cap A\neq \emptyset\right\}$$ holds because:\\
+\textbf{$\supseteq$:} If $z\in \bigcup\left\{ \overline{W}\in \mathcal{W}: W\cap A\neq \emptyset\right\}$, then $z\in \overline{W}$ for some $W \in \mathcal{W}.$ Since $W\subseteq V$, we have $z\in \overline{W}\subseteq \overline{V}.$\\
+\textbf{$\subseteq$:} If $z\in \overline{V},$ then there exists a net $\{w_\alpha\}\subseteq V=\bigcup\left\{ W\in \mathcal{W}: W\cap A\neq \emptyset\right\}$ converging to $z$. Since $\left\{W\in \mathcal{W}: W\cap A \neq \emptyset\right\}$ is locally finite, the tail of $\{w_\alpha\}$ must be contained in finitely many $W$'s, say $\{W_1,\dots W_n\}$. By pigeon-hole principle, there exists some $W_k\in \{W_1,\dots W_n\}$
+such that $W_k$ contains infinitely many elements of the net $\{w_\alpha\}.$ Thus, $z\in \overline{W_k}$.
+\vskip 15pt
+
+Now, $x\notin \overline{V}$ because each $W\in \left\{W\in \mathcal{W}: W\cap A \notin \empty \right\}$ is contained in some $V_y$, and hence 
+$\overline{W}\subseteq \overline{V_y}$. So, each $\overline{W}$ does not contain $x$. 
+
+\vskip 15pt
+
+To establish normality, suppose $A$ and $B$ are disjoint closed sets in $X$. For each $y\in A$, by regularity, 
+we can find an open set $V_y$ such that $y\in V_y$ and $\overline{V_y}\cap B= \emptyset$. Then proceed exactly as above, we can 
+produce an open set $V$ such that $A\subseteq V$ and $\overline{V}\cap B=\emptyset.$ Thus $X$ is normal.
+
+
+
+
+
+
+
+\end{document}

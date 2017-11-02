@@ -1,0 +1,33 @@
+\documentclass{article}
+\begin{document}
+
+
+\textbf{Lemma 3.9}\\
+ Let $X,Y$ be Tychonoff spaces and $cX, cY$ be $T_2$ compactifications of $X,Y$.
+ Let $f$ be a continuous function from $X$ onto $Y$, $\bar{f}$ be the continuous extension of $f$. Let $A$ be a closed subset of $X$. Then we have: \\
+\emph{(i) If $f[A]$ is not closed in $Y$ then there exists an element $x\in \overline{A}^{cX} \backslash A$ such that $\bar{f}(x) \in \overline{f[A]}^{Y}\backslash f[A].$}\\
+\emph{(ii) If $f[A]$ is closed in $Y$ then for any element $x \in \overline{A}^{cX} \backslash A$ for which $\bar{f}(x)\in Y $ holds, we have $\bar{f}(x) \in f[A]$ holds.}\\
+
+\vskip 15pt
+
+\textbf{Claim}: $\overline{f[A]}^{cY} = \bar{f}\left[\overline{A}^{cX}\right]$.
+\vskip 10pt
+\textbf{Proof of Claim.} Since $\overline{A}^{cX}$ is compact in $cX$ and $\bar{f}$ is continuous, $\bar{f}\left[\overline{A}^{cX}\right]$ is closed in $cY$. Moreover, since $\bar{f}\left[\overline{A}^{cX}\right]$ is a closed set containing the set $f[A]$, we have $\overline{f[A]}^{cY}\subseteq \bar{f}\left[\overline{A}^{cX}\right].$ On the other hand, we have $\bar{f}\left[\overline{A}^{cX}\right]\subseteq \overline{f[A]}^{cY}$ because $\bar{f}$ is continuous. So, $\overline{f[A]}^{cX}=\bar{f}\left[\overline{A}^{cX}\right].$
+
+
+\vskip 20pt
+
+\textbf{Proof of (i): }\\ 
+By the Claim,  $\overline{f[A]}^{cY} = \bar{f}\left[\overline{A}^{cX}\right]$. So, $\overline{f[A]}^{cY}\cap Y \backslash f[A] = \bar{f}\left[\overline{A}^{cX}\right] \cap Y \backslash f[A].$ \vskip 10pt
+By our assumption, $f[A]$ is not closed in $Y$. So $\overline{f[A]}^{cY}\cap Y \backslash f[A]\neq \emptyset.$ Thus, we have $\bar{f}\left[\overline{A}^{cX}\right]\cap Y\backslash f[A]\neq \emptyset$ as well. So there exists $x\in \overline{A}^{cX}$ such that $\bar{f}(x)\in \bar{f}\left[\overline{A}^{cX}\right]\cap Y\backslash f[A]=\overline{f[A]}^{cY}\cap Y \backslash f[A]=\overline{f[A]}^Y\backslash f[A],$ as required.
+
+
+
+\vskip 25pt
+
+\textbf{Proof of (ii): }\\From the Claim, We have $\bar{f}\left[\overline{A}^{cX}\right] = \overline{f[A]}^{cY}$. So,  $\bar{f}\left[\overline{A}^{cX}\right]\cap Y = \overline{f[A]}^{cY} \cap Y$. By assumption, $f[A]$ is closed in $Y$, so  $\overline{f[A]}^{cY} \cap Y=\overline{f[A]}^Y=f[A]$. 
+So now we have $\bar{f}\left[\overline{A}^{cX}\right]\cap Y= f[A]$, and it gives us that if $x \in  \overline{A}^{cX} \backslash A$ and if $\bar{f}(x) \in Y$, then $\bar{f}(x) \in f[A]$, as required.\\
+
+
+
+\end{document}

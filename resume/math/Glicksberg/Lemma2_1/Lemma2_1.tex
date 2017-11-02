@@ -1,0 +1,40 @@
+\documentclass{article}
+\begin{document}
+
+\textbf{Lemma 2.1}  Let $Y\in E(X)$ for a space $X$, let $Z$ be a regular space, and let $f:X \rightarrow Z$ be continuous. The following are equivalent: 
+\begin{enumerate}
+	\item There exists a continuous function $F: Y\rightarrow Z$ such that $F|_X=f.$
+	\item For each $y\in Y,$ the filter $\mathcal{F}_y=\{A\subseteq Z: A\supseteq f[U]$ for some $U\in O^y\}$ converges(where $O^y=\{W\cap X: W$ is open in $Y$ and $y\in W$\}).
+
+\end{enumerate}
+
+\vskip 15pt
+
+
+\textbf{Proof of 1 $\Rightarrow$ 2: } Suppose $F$ exists and $y\in Y$. We will show $\mathcal{F}_y$ converges to $F(y).$ Let $W$ be an open neighborhood of $F(y)$ in $Z$. By continuity, there is an open neighborhood $U$ of $y$ such that $F[U]\subseteq W.$ Thus, $f\left[U\cap X\right]=F\left[U\cap X\right] \subseteq W$ and $f\left[U\cap X\right]\in \mathcal{F}_y$. Thus, $\mathcal{F}_y$ converges to $F(y)$.
+
+
+
+\vskip 20pt
+
+
+\textbf{Proof of 2 $\Rightarrow$ 1: } Suppose for each $y\in Y, \mathcal{F}_y$ converges to some point. As $Z$ is regular and hence Hausdorff, $\mathcal{F}_y$ converges to an unique point which we denote by $F(y)$. Thus, we have just defined a function $F:Y\rightarrow X$.
+
+\vskip 10pt
+
+If $x\in X$ and $W$ is an open neighborhood of $f(x),$ there is an open set $U$ of $X$ with $x\in U$ and $f[U]\subseteq W.$ 
+If $V$ is an open set in $Y$ such that $V\cap X =U$, then $f\left[V\cap X\right] \in \mathcal{F}_x$. Thus, $\mathcal{F}_x$ converges to $f(x)$. So $F|_x=f$. 
+
+\vskip 15pt
+
+To show $F$ is continuous, let $y\in Y$ and let $W$ be an open neighborhood of $F(y)$. As $Z$ is regular, there is an open subset $V$ of $Z$ such that $F(y)\in V\subseteq \overline{V}^Z \subseteq W.$ Since $F_y$ converges to $F(y)$, there is an open set $U$ of $Y$ such that $y\in U$ and $f\left[ U\cap X\right]\subseteq V.$
+
+\vskip 10pt
+
+Let $p\in U.$ We will show that $F(p)\in \overline{V}^Z.$ Let $T$ be an open set of $Z$ containing $F(p)$. There is an open set $R\in \tau(Y)$ containing $p$ such that $R\subseteq U$ and $f\left[R\cap X\right]\subseteq T.$ As $X$ is dense in $Y$, $R\cap X\neq \emptyset$. Hence $f\left[R\cap X\right]\neq \emptyset.$ Since $f\left[U\cap X\right]\subseteq V$ and $R\subseteq U$, we have $f\left[R\cap X\right]\subseteq V$. Thus $f\left[R\cap X\right]\subseteq T\cap V.$ So, $F(p)\in \overline{V}^Z.$
+
+\vskip 10pt
+
+Since for every $p\in U$, $F(p)\in \overline{V}^Z\subseteq W,$ we conclude that $F[U]\subseteq W.$ Thus $F$ is continuous.
+
+\end{document}

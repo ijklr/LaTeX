@@ -1,0 +1,404 @@
+\documentclass{article}
+\usepackage{amssymb,latexsym}
+\begin{document}
+
+
+\begin{center}
+\textbf{CHAPTER II}
+\end{center}
+\vskip 5pt
+\begin{center}
+\textbf{Glicksberg's Theorem}
+\end{center}
+
+\vskip 35pt
+
+\textbf{Fact 2.1}  Let $Y\in E(X)$ for a space $X$, let $Z$ be a regular space, and let $f:X \rightarrow Z$ be continuous. The following are equivalent: 
+\begin{enumerate}
+	\item There exists a continuous function $F: Y\rightarrow Z$ such that $F|_X=f.$
+	\item For each $y\in Y,$ the filter $\mathcal{F}_y=\{A\subseteq Z: A\supseteq f[U]$ for some $U\in O^y\}$ converges(where $O^y=\{W\cap X: W$ is open in $Y$ and $y\in W$\}).
+
+\end{enumerate}
+
+\vskip 15pt
+
+
+\textbf{Proof of 1 $\Rightarrow$ 2: } Suppose $F$ exists and $y\in Y$. We will show $\mathcal{F}_y$ converges to $F(y).$ Let $W$ be an open neighborhood of $F(y)$ in $Z$. By continuity, there is an open neighborhood $U$ of $y$ such that $F[U]\subseteq W,$ where $U$ is open in $Y$. Thus, $f\left[U\cap X\right]=F\left[U\cap X\right] \subseteq W$ and $f\left[U\cap X\right]\in \mathcal{F}_y$. Thus, $\mathcal{F}_y$ converges to $F(y)$.
+
+
+
+\vskip 20pt
+
+
+\textbf{Proof of 2 $\Rightarrow$ 1: } Suppose for each $y\in Y, \mathcal{F}_y$ converges to some point. As $Z$ is regular and hence Hausdorff, $\mathcal{F}_y$ converges to an unique point which we denote by $F(y)$. Thus, we have just defined a function $F:Y\rightarrow X$.
+
+\vskip 10pt
+
+If $x\in X$ and $W$ is an open neighborhood of $f(x),$ there is an open set $U$ of $X$ with $x\in U$ and $f[U]\subseteq W.$ 
+If $V$ is an open set in $Y$ such that $V\cap X =U$, then $f\left[V\cap X\right] \in \mathcal{F}_x$. Thus, $\mathcal{F}_x$ converges to $f(x)$ for all $x\in X$. That means $F(x)=f(x)$ for all $x\in X$. I.e. $F|_X=f$.
+
+\vskip 15pt
+
+To show $F$ is continuous, let $y\in Y$ and let $W$ be an open neighborhood of $F(y)$. As $Z$ is regular, there is an open subset $V$ of $Z$ such that $F(y)\in V\subseteq \overline{V}^Z \subseteq W.$ Since $\mathcal{F}_y$ converges to $F(y)$, there is an open set $U$ of $Y$ such that $y\in U$ and $f\left[ U\cap X\right]\subseteq V.$
+
+\vskip 10pt
+
+Let $p\in U.$ We will show that $F(p)\in \overline{V}^Z.$ Let $T$ be an open set of $Z$ containing $F(p)$. From the definition of $\mathcal{F}_p$, there is an open set $R\in \tau(Y)$ containing $p$ such that $R\subseteq U$ and $f\left[R\cap X\right]\subseteq T.$ As $X$ is dense in $Y$, $R\cap X\neq \emptyset$. Hence $f\left[R\cap X\right]\neq \emptyset.$ Since $f\left[U\cap X\right]\subseteq V$ and $R\subseteq U$, we have $f\left[R\cap X\right]\subseteq V$. Thus $f\left[R\cap X\right]\subseteq T\cap V.$ As $T\cap V\neq \emptyset,$ and $T$ was an arbitrary open set containing $F(p)$, $F(p)\in \overline{V}^Z$.
+
+\vskip 10pt
+
+Since for every $p\in U$, $F(p)\in \overline{V}^Z\subseteq W,$ we conclude that $F[U]\subseteq W.$ Thus $F$ is continuous.
+
+
+
+
+
+
+
+
+
+
+\vskip 40pt
+
+
+
+
+
+
+
+
+
+
+
+
+
+\textbf{Fact 2.2 } Let $Y\in E(X)$ for a space $X$ and let $Z$ be a regular space. Let $g:Y\rightarrow Z$ be such that for each $y\in Y, g|_{X\cup \{y\}}$ is continuous. Then $g$ is continuous.
+
+\vskip 15pt
+
+\textbf{Proof: } Let 
+\begin{center}
+$O_1^y=\{W\cap X: W$ is open in $Y$ and $y\in W\},$ and 
+
+$O_2^y=\{W\cap X: W$ is open in $X\cup \{y\}$ and $y\in W$\}. 
+\end{center}
+
+
+We have $O_1^y=O_2^y$ because: 
+
+\vskip 5pt
+$(\subseteq:) $ Let $W\cap X \in O_1^y$. $W$ is open in $Y$ and $y\in W.$ Since $X\cup \{y\}$ is the subspace of $Y$, $W\cap (X\cup \{y\})$ is open in $X\cup \{y\}$. Also, $y\in W\cap (X\cup \{y\}).$ So, $W\cap X=\left(W\cap \left(X\cup\{y\}\right)\right)\cap X \in O_2^y$.
+
+
+$(\supseteq:)$ Let $W\cap X\in O_2^y$. Since $W$ is open in $X\cup \{y\},$ there exists $V\in \tau(Y)$ such that $W=V\cap (X\cup \{y\})$. Since $y\in W$ and thus $y\in V$, we have $V\cap X \in O_1^y$. As $W\cap X=V\cap X$, $W\cap X \in O_1^y$. 
+
+
+\vskip 20pt
+
+Since $g|_{X\cup \{y\}}$ is continuous, then by \textbf{Fact 2.1}, the filter $\{A\subseteq Z: A \supseteq g|_X [U]$ for some $U\in O_2^y\}$ converges
+ to $g(y)$. Since $O_1^y=O_2^y$, we have $\{A\subseteq Z: A\supseteq g|_X [U]$ for some $U\in O_1^y\}$ converging to $g(y)$ as well. By the other direction of \textbf{Fact 2.1}, $g$ is continuous.
+
+
+
+
+
+
+
+
+
+
+
+
+
+\vskip 40pt
+
+
+
+
+
+
+
+
+
+
+
+
+\textbf{Fact 2.3} The following are equivalent for the dense subspace $S$ of the Tychonoff space $X$: 
+\begin{enumerate}
+	\item $S$ is $C^*$-embedded in $X$. 
+	\item If $Z_1$ and $Z_2$ are disjoint zero-sets of $S$, then $\overline{Z_1}^X\cap \overline{Z_2}^X=\emptyset$.
+\end{enumerate}
+
+
+\vskip 10pt
+
+\textbf{Proof of 1 $\Rightarrow$ 2: }  By the transitivity of $C^*$-embedding, $S$ is $C^*$-embedded and dense in $\beta X$. Thus $\beta S$ is equivalent to $\beta X$. Let $Z_1$ and $Z_2$ are disjoint zero-sets of $S$. Since disjoint zero-sets in $S$ hve disjoint closures in $\beta S \equiv_S \beta X$, $\overline{Z_1}^{\beta X}\cap \overline{Z_2}^{\beta X}=\emptyset$. Hence $\overline{Z_1}^X\cap \overline{Z_2}^X=\emptyset$.
+
+
+\vskip 20pt
+
+
+
+\textbf{Proof of 2 $\Rightarrow$ 1: } It suffices to show that $S$ is $C^*$-embedded in $S\cup \{p\}$ for each $p\in X\backslash S$. Because if it is true, then by \textbf{Fact 2.2}, for each $f\in C^*(S)$ there exists $F\in C(X)$ such that $F|_S=f, $ and as $F|_S\in C^*(S)$, it follows that $F\in C^*(X)$. Thus $S$ would be $C^*$-embedded in $X$.  
+
+
+\vskip 15pt
+
+So it remains to be shown that for each $p\in X\backslash S,$ $S$ is $C^*$-embedded in $S\cup \{p\}$. Let $p\in X\backslash S$, and let $C(p)$ denote the collection of closed neighborhoods of $p$ in $S\cup \{p\}.$ If $f\in C^*(S)$, for each $A\in C(p),$ the $\overline{f\left[A\cap X\right]}^{\mathbb{R}}$ is a compact nonempty subset of $\mathbb{R}$. Moreover, the set $\left\{\overline{f\left[A\cap S\right]}^{\mathbb{R}}: A\in C(p)\right\}$ has nonemptyset intersection property. Thus,  $\bigcap\left\{\overline{f\left[A\cap S\right]}^{\mathbb{R}}: A\in C(p)\right\}\neq \emptyset$. Note that if $s\in \bigcap\left\{ \overline{f[A\cap S]}^{\mathbb{R}}: A\in C(p)\right\}$ and $\epsilon>0$, then $p\in \overline{f^\leftarrow \left[ [s-\epsilon, s+\epsilon]\right]}^{S\cup \{p\}}$. This is because if $A\in C(p)$, then $(s-\epsilon, s+\epsilon)\cap f[A\cap S]\neq \emptyset$ and so $A\cap f^\leftarrow \left[(s-\epsilon, s+\epsilon)\right]\neq \emptyset.$ 
+
+\vskip 20pt
+ 
+Choose $r\in \bigcap \left\{f[A\cap S]: A\in C(p)\right\}$ and define $F:S\cup \{p\} \rightarrow \mathbb{R}$ as
+$$ F|_S=f \mbox{ and } F(p)=r.$$
+
+Since $f$ is continuous, $F$ is continuous at each point of $S$. We must show that $F$ is continuous at $p$. Let $\epsilon>0$ be given.
+We claim that there exists $A_0\in C(p)$ such that $f\left[A_0\cap S\right] \subseteq (r-\epsilon, r+\epsilon).$ For if this were not the case, then $\overline{f\left[A\cap S\right]}^{\mathbb{R}}\backslash (r-\frac{3\epsilon}{4}, r+\frac{3\epsilon}{4})$ is a nonempty compact subset of $\mathbb{R}$ for each $A\in C(p).$ As $\left\{\overline{f[A\cap S]}^{\mathbb{R}}\backslash (r-\frac{3\epsilon}{4}, r+\frac{3\epsilon}{4}): A\in C(p)\right\}$ has the finite intersection property, there exists $s\in \bigcap \left\{\overline{f[A\cap S]}^{\mathbb{R}}\backslash (r-\frac{3\epsilon}{4}, r+\frac{3\epsilon}{4}): A\in C(p)\right\}$. As noted in the previous paragraph, it follows that $$p\in \overline{f^\leftarrow\left[[s-\frac{\epsilon}{4},s+\frac{\epsilon}{4}]\right]}^{S\cup \{p\}}.$$
+
+
+\vskip 10pt
+
+On the other hand, since $r\in \bigcap \left\{f[A\cap S]: A\in C(p)\right\}$, we have $$p\in \overline{f^\leftarrow \left[[r-\frac{\epsilon}{4}, r+\frac{\epsilon}{4}]\right] }^{S\cup \{p\}}.$$
+
+\vskip 15pt
+
+
+As  $f^\leftarrow\left[[s-\frac{\epsilon}{4},s+\frac{\epsilon}{4}]\right]$ and $f^\leftarrow \left[[r-\frac{\epsilon}{4}, r+\frac{\epsilon}{4}]\right]$ are disjoint zero-sets of $S$, this is a contradiction to our hypothesis that if $Z_1$ and $Z_2$ are disjoint zero-sets of $S$, then $\overline{Z_1}^X\cap \overline{Z_2}^X=\emptyset$. 
+
+\vskip 20pt
+ 
+Thus, there exists $A_0\in C(p)$ such that $f\left[A_0\cap S\right]\subseteq (r-\epsilon, r+\epsilon).$ Thus $F[A_0]\subseteq (r-\epsilon, r+\epsilon)$ and $F$ is continuous at $p$. As $f$ was arbitrarily chosen from $C^*(S)$, it follows that $S$ is $C^*$-embedded in $S\cup\{p\}.$ 
+
+
+
+
+
+
+
+
+\vskip 40pt
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\textbf{Fact 2.4}  Let $X$ and $Y$ be Tychonoff spaces, and $\pi_X: X\times Y\rightarrow X$ be the projection map. If $\pi_X$ is z-closed, $Z$ is a zero-set in $X\times Y$, and $(x,p)\in \overline{Z}^{X\times \beta Y}$, then $(x,p)\in \overline{Z\cap \left(\{x\}\times Y\right)}^{X\times \beta Y}$.
+
+\vskip 20pt
+ 
+\textbf{Proof: }Assume that $(x,p)\notin \overline{Z\cap (\{x\}\times Y)}^{X\times \beta Y}.$ Since $X\times \beta Y$ is Tychonoff, there exists a continuous function $f: X\times \beta Y \rightarrow [0,1]$ such that $f\left[\overline{Z\cap (\{x\}\times Y)}^{X\times \beta Y}\right] \subseteq \{1\}$ and $f[U]\subseteq \{0\},$ where $U$ is some neighborhood of $(x,p).$ 
+
+\vskip 15pt
+
+Let $Z_f=f^{\leftarrow}(0).$ So $(x,p)\in int(Z_f)$. We have $(x,p)\in \overline{Z\cap Z_f}^{X\times \beta Y}$, and so
+$$x\in \pi_X\left[\overline{Z\cap Z_f}^{X\times \beta Y}\right] \subseteq \overline{\pi_X\left[Z\cap Z_f\right]}^X.$$
+
+\vskip 10pt
+
+On the other hand, since $\overline{Z\cap(\{x\}\times Y)}^{X\times \beta Y} \cap Z_f = \emptyset, $ 
+we have $Z\cap (\{x\}\times Y) \cap Z_f=\emptyset$. Now, if $x\in \pi_X\left[Z\cap Z_f\right],$ then $(x,y)\in Z\cap Z_f\neq \emptyset$ for some $y\in Y$. Hence 
+$Z\cap Z_f\cap (\{x\}\times Y) \neq \emptyset,$  contradiction. So, $x\notin \pi_X\left[Z\cap Z_f\right]$.
+
+\vskip 20pt
+
+Now, $$x\in \overline{\pi_X\left[Z\cap Z_f\right]}^X \backslash \pi_X\left[Z\cap Z_f\right].$$
+\vskip 5pt
+As $Z\cap Z_f$ is a zero-set in $X\times Y$, by our hypothesis, $\pi_X\left[Z\cap Z_f\right]$ is closed in $X$. Then,  $\overline{\pi_X\left[Z\cap Z_f\right]}^X \backslash \pi_X\left[Z\cap Z_f\right]=\emptyset,$ contradiction.
+
+
+
+
+
+
+
+
+\vskip 40pt
+
+
+
+
+
+
+\textbf{Fact 2.5} Let $X$ be a Tychonoff space. If $X$ is pseudocompact, then every locally finite family of non-empty open subsets of $X$ is finite.
+
+\vskip 20pt
+
+\textbf{Proof.} By way of contradiction, suppose that there exists a locally finite family $\mathcal{F}=\{U_i \in \tau(X): U_i\neq \emptyset, 1\leq i < \infty\}$ which is infinite. Since each $U_i$ is non-empty, choose a point $x_i\in U_i$ for each $i\in \mathbb{N}$. Since 
+$X$ is a Tychonoff space, there exists continuous functions $f_i:X \rightarrow [0,i]$ such that $f_i(x_i)=i$ and 
+$f_i[X \backslash U_i] \subseteq \{0\}$ for each $i \in \mathbb{N}$.
+
+\vskip 20pt
+
+ Define the function $$f:X\rightarrow \mathbb{R} \mbox{ as } f(x)=\Sigma_{i=1}^\infty |f_i(x)|.$$ To show that $f$ is continuous, pick $x_0\in X$ and an open set $V$ of $\mathbb{R}$ containing $f(x_0)$. 
+We can assume that  $V=(f(x_0)-\frac{1}{m}, f(x_0)+\frac{1}{m})$ for some $m \in \mathbb{N}$.
+Since $\mathcal{F}$ is locally finite, there exists an open set $U_0 \in \tau(X)$ containing $x_0$ such that $U_0$ meets $\mathcal{F}$ only finitely many times. 
+So we have $\{a_i\}_{i=1}^{n} \subset \mathbb{N}$ such that $U_0\cap U_{a_i} \neq \emptyset$ for $i\in [n].$
+
+\vskip 20pt
+
+Define $\delta: \mathcal{P}(\mathbb{R}) \rightarrow \mathbb{R}$ to be $\delta(S)=\sup (S) - \inf (S),$ where we define $\delta$ only on the bounded subsets of $\mathbb{R}$.
+For each $i \in [n]$, since  $f_{a_i}$ is continuous, there exists $W_i \in \tau(X)$ 
+such that $x_0\in W_i$ and  $\delta(f_i[W_i])<\frac{1}{mn}$. 
+Let $W=W_1 \cap W_2 \cap \cdots \cap W_n$. 
+Then $\delta(f_i[W])< \frac{1}{mn}$ for each $i\in [n]$. 
+So, $$\delta(f[W])=\sup_{x\in W}\left(\Sigma_{i=1}^\infty |f_i(x)|\right)-\inf_{x\in W}\left(\Sigma_{i=1}^\infty |f_i(x)|\right)$$ 
+$$=\sup_{x\in W}\left(\Sigma_{a_i: i\in [n]} |f_{a_i}(x)|\right)-\inf_{x\in W}\left(\Sigma_{a_i: i\in [n]}|f_{a_i}(x)|\right)$$
+$$=\Sigma_{a_i: i\in [n]}\left(\sup_{x\in W}( |f_{a_i}(x)|)-\inf_{x\in W}|f_{a_i}(x)|\right)<n\frac{1}{mn}=\frac{1}{m}.$$ 
+
+\vskip 10pt
+
+As $x_0\in W\in \tau(X)$ and $f[W]\subset (f(x_0)-\frac{1}{m}, f(x_0)+\frac{1}{m})=V$, $f$ is a continuous function. 
+However, since $f(x_i) \geq i$ for all $i\in \mathbb{N},$ $f$ is  not bounded. This contradicts the pseudocompactness of $X$.
+
+
+
+
+
+
+
+
+
+
+\vskip 40pt
+
+
+
+
+
+
+
+
+
+
+
+
+
+\textbf{Lemma 2.6} Let $X, Y$ be Tychonoff spaces. If $X\times Y$ is pseudocompact, then the projection map $\pi_X: X\times Y\rightarrow X$, is z-closed. 
+
+\vskip 20pt
+
+\textbf{Proof.} Let $Z$ be a zero-set in $X\times Y$. Suppose that $\pi_X[Z]$ is not closed in $X$. Let $p\in \overline{\pi_X[Z]}^X\backslash \pi_X[Z].$ 
+
+\vskip 15pt
+
+Since $Z$ is a zero-set in $X\times Y$, $Z=f^\leftarrow (0)$ for some $f\in C^*(X\times Y).$ Define $h: X\times Y\rightarrow \mathbb{R}$ such that $h(x,y)=\frac{f(x,y)}{f(p,y)}$. So, $h\left[\{p\}\times Y\right] \subseteq \{1\}$ and $Z=h^\leftarrow (0).$ Without loss of generality, we can assume that the range of $h$ is $[0,1]$. 
+\vskip 10pt
+
+We will show that there are open sets $U_n, V_n$ in $X$, and $W_n$ in $Y$ for $n<\omega$ such that for $m<\omega$, the following hold: 
+
+\begin{enumerate}
+	\item $p\in U_m$
+	\item $(V_m\times W_m)\cap Z \neq \emptyset$
+	\item $h\left[V_m\times W_m\right] \subseteq [0,\frac{1}{3})$
+	\item $h\left[U_m\times W_m\right] \subseteq (\frac{2}{3},1]$
+	\item $U_{m+1}\cup V_{m+1}\subseteq U_m$
+\end{enumerate}
+
+\vskip 5pt
+
+First, pick $(x_1,y_1)\in Z$ and open sets $U_1,V_1\in \tau(X)$ and $W_1\in \tau(Y)$ such that $p\in U_1, x_1\in V_1, y_1\in W_1,$ and $h\left[V_1\times W_1\right] \subseteq [0,\frac{1}{3})$ and $h\left[U_1\times W_1\right] \subseteq (\frac{2}{3}, 1]$. This can be done because $h$ is continuous, $h(x_1,y_1)=0$, and $h(p,y_1)=1$.
+
+\vskip 10pt
+
+Now, $U_1\cap \pi_X[Z]\neq \emptyset$ because $x_1\in U_1\in \tau(X), $ and $x_1\in \overline{\pi_X[Z]}^X.$ So there is some $(x_2,y_2)\in Z$ such that $x_2\in U_1$. Find open neighborhoods $U_2$ of $p$, $V_2$ of $x_2$, and $W_2$ of $y_2$ such that $h\left[V_2\times W_2\right] \subseteq [0,\frac{1}{3}), h\left[U_2\times W_2\right]\subseteq (\frac{2}{3},1],$ and $U_2\cup V_2\subseteq U_1$. Continue by induction. 
+
+
+\vskip 20pt
+The family $D=\left\{V_n\times W_n: n<\omega\right\}$ is pairwise disjoint because the $V_n$'s are pairwise disjoint by our construction. If $D$ is locally finite, then by $\textbf{Fact 2.5}$, $D$ is finite. But $D$ is infinite by our definition, so $D$ cannot be locally finite. Then, there exists $(q,r)\in X\times Y$ with the property that for every neighborhood $R\times T$ of $(q,r)$, $A=\left\{n\in \mathbb{N}: (V_n\times W_n)\cap (R\times T) \neq \emptyset\right\}$ is infinite. 
+\vskip 20pt
+
+On one hand, we have $(q,r)\in \overline{\bigcup\left\{V_m\times W_m: m\in \mathbb{N}\right\}}^{X\times Y}.$ Then, 
+$$h(q,r)\in h\left[\overline{\bigcup\left\{V_m\times W_m: m\in \mathbb{N}\right\}}^{X\times Y}\right] $$
+$$\subseteq \overline{h\left[\bigcup\left\{V_m\times W_m: m\in \mathbb{N}\right\}\right]}^{\mathbb{R}}\subseteq \overline{[0,\frac{1}{3})}^\mathbb{R}=[0,\frac{1}{3}].$$
+
+\vskip 20pt
+
+On the other hand, if $n$ and $n+k$ in $A$ where $n,k\in \mathbb{N}$, then $V_{n+k}\subseteq U_{n+k-1}\subseteq \cdots \subseteq U_n$ by the way we constructed $V_n$'s and $U_n$'s. Since $(R\times T)\cap (V_{n+k}\times W_{n+k})\neq \emptyset, (R\times T)\cap (U_n\times W_n) \neq \emptyset$ as well. 
+\vskip 10pt
+So, $(q,r)\in \overline{\bigcup\left\{U_m\times W_m: m\in \mathbb{N}\right\}}^{X\times Y}.$ Then, 
+$$h(q,r)\in h\left[\overline{\bigcup\left\{U_m\times W_m: m\in \mathbb{N}\right\}}^{X\times Y}\right] $$
+$$\subseteq \overline{h\left[\bigcup\left\{U_m\times W_m: m\in \mathbb{N}\right\}\right]}^{\mathbb{R}}\subseteq \overline{(\frac{2}{3},1]}^\mathbb{R}=[\frac{1}{3}, 1].$$
+
+
+\vskip 15pt
+
+This is a contradiction, so $\pi_X[Z]$ must be closed in $X$.
+
+
+
+
+\vskip 40pt
+
+
+
+
+
+
+
+\textbf{Lemma 2.7}  Let $X,Y$ be Tychonoff spaces. If $\pi_X$ is z-closed, then $X\times Y$ is $C^*$-embedded in $X\times \beta Y$.
+
+
+\vskip 15pt
+
+
+\textbf{Proof:} By \textbf{Fact 2.3}, it suffices to show that if $Z_1$ and $Z_2$ are disjoint zero-sets of $X\times Y$, then $\overline{Z_1}^{X\times \beta Y} \cap \overline{Z_2}^{X\times \beta Y}=\emptyset.$
+
+\vskip 15pt
+
+ Assume there is some point $(x,p)\in \overline{Z_1}^{X\times \beta Y}\cap \overline{Z_2}^{X\times \beta Y},$ where $x\in Y$ and $p\in \beta Y\backslash Y$. By \textbf{Fact 2.4}, $$(x,p)\in \overline{Z_1\cap (\{x\}\times Y)}^{\{x\}\times \beta Y} \cap \overline{Z_2\cap (\{x\}\times Y)}^{\{x\}\times \beta Y}.$$
+
+\vskip 10pt
+
+Now, $Z_1\cap (\{x\}\times Y)$ and $Z_2\cap (\{x\} \times Y)$ are disjoint open sets in $\{x\}\times Y$. Since $\{x\}\times Y$ is $C^*$-embedded in $\{x\}\times \beta Y$, then, by the other direction of \textbf{Fact 2.3}, $$\overline{Z_1\cap (\{x\}\times Y)}^{\{x\}\times \beta Y} \cap \overline{Z_2\cap (\{x\}\times Y)}^{\{x\}\times \beta Y}=\emptyset$$
+
+Contradiction, so $\overline{Z_1}^{X\times \beta Y} \cap \overline{Z_2}^{X\times \beta Y} =\emptyset$.  
+
+
+
+
+
+\vskip 40pt
+
+
+
+
+
+\textbf{Glicksberg's Theorem: } Let $X\times Y$ be Tychonoff spaces. If $X\times Y$ is pseudocompact, then $\beta(X\times Y)=\beta X\times \beta Y$. 
+
+\vskip 20pt
+
+\textbf{Proof. } By \textbf{Lemma 2.6}, the projection map $\pi_X: X\times Y\rightarrow X$ is z-closed. By \textbf{Lemma 2.7}, $X\times Y$ is $C^*$-embedded in $X\times \beta Y$. Since $X$ is pseudocompact and $\beta Y$ is compact, by \textbf{Fact 3.1} of Chapter III, $X\times \beta Y$ is pseudocompact. Using \textbf{Lemma 2.6}, \textbf{Lemma 2.7} again, and by symmetry, $X\times \beta Y$ is $C^*$-embedded in $\beta X\times \beta Y$. By the transitivity of $C^*$-embedding, $X\times Y$ is $C^*$-embedded in $\beta X\times \beta Y$. I.e, $\beta (X\times Y)=\beta X\times \beta Y$.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

@@ -1,0 +1,33 @@
+ \documentclass{amsart}
+	\usepackage{amssymb,latexsym}
+	\usepackage{verbatim} 
+\author{shaun yi cheng}
+\begin{document}
+\textbf{Lemma 3}
+\emph{Let $X$ be a Tychonoff space. If $X$ is pseudocompact, then every locally finite family of non-empty open subsets of $X$ is finite.}
+
+\begin{proof}
+(By way of contradiction.)Suppose that there exists a locally finite family $\mathcal{F}=\{U_i \in \tau(X): U_i\neq \emptyset, 1\leq i < \infty\}$. Since each $U_i$ is non-empty, choose a point $x_i\in U_i$ for $i\in \mathbb{N}$ Since 
+$X$ is a Tychonoff space, there exists continuous functions $f_i:X \rightarrow [0,i]$ such that $f_i(x_i)=i$ and 
+$f_i[X \backslash U_i] \subseteq \{0\}$ for each $i \in \mathbb{N}$. Define the fuction $f:X\rightarrow \mathbb{R}$ as $f(x)=\Sigma_{i=1}^\infty |f_i(x)|$. To show that $f$ is continuous, pick $x_0\in X$ and an open set $V$ of $\mathbb{R}$ containing $f(x_0)$. 
+We can assume that  $V=(f(x_0)-\frac{1}{m}, f(x_0)+\frac{1}{m})$ for some $m \in \mathbb{N}$.
+Since $\mathcal{F}$ is locally finite, there exists an open set $U_0 \in \tau(X)$ containing $x_0$ such that $U_0$ meets $\mathcal{F}$ only finitely many times. 
+So we have $\{a_i\}_{i=1}^{n} \subset \mathbb{N}$ such that $U_0\cap U_{a_i} \neq \emptyset$ for $i\in [n].$
+Define $\delta: \mathcal{P}(\mathbb{R}) \rightarrow \mathbb{R}$ to be $\delta(S)=sup (S) - inf (S).$
+For each $i \in [n]$, since  $f_{a_i}$ is continuous, there exists $W_i \in \tau(X)$ 
+such that $x_0\in W_i$ and  $\delta(f_i[W_i])<\frac{1}{mn}$. 
+Let $W=W_1 \cap W_2 \cap \cdots \cap W_n$. 
+Then $\delta(f_i[W])< \frac{1}{mn}$ for each $i\in [n]$ 
+So $\delta(f[W])=sup_{x\in W}(\Sigma_{i=1}^\infty |f_i(x)|)-inf_{x\in W}(\Sigma_{i=1}^\infty |f_i(x)|) 
+=\sup_{x\in W}(\Sigma_{a_i: i\in [n]} |f_{a_i}(x)|)-inf_{x\in W}(\Sigma_{a_i: i\in [n]}|f_{a_i}(x)|)
+=\Sigma_{a_i: i\in [n]}(\sup_{x\in W}( |f_{a_i}(x)|)-inf_{x\in W}|f_{a_i}(x)|)<n\frac{1}{mn}=\frac{1}{m}$. 
+As $x_0\in W\in \tau(X)$ and $f[W]\subset (f(x_0)-\frac{1}{m}, f(x_0)+\frac{1}{m})=V$, $f$ is a continuous function. 
+However, since $f(x_i) \geq i$ for all $i\in \mathbb{N},$ $f$ is  not bounded. This contradicts the pseudocompactness of $X$, which says that every real-valued continuous function on $X$ must be bounded.
+
+
+
+\end{proof}
+
+
+
+\end{document}

@@ -1,0 +1,249 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                    HOW TO PROCESS THIS FILE                   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%  To process these files, it is assumed that you are using the 
+%  program Latex2e, the ams-math version for equations.  To do
+%  thishere at the Math Dept, in your .cshrc file you need to have 
+%
+%  /usr/local/TeX/bin
+%
+%  in your path, and you should 
+% 
+%  unsetenv TEXINPUTS unsetenv TEXFONTS unsetenv TEXFORMATS 
+%
+%  if these environment variables are set.
+%
+%  Once you have this file (swig_diss.tex) made up, you turn 
+%  it into a .dvi file (swig_diss.dvi) by typing (at the Unix
+%  prompt)
+%
+%        ``latex swig_diss.tex''  
+%
+%  (you'll have to do this up to 3 times, in order to create 
+%  the files which contain the referencing/numbering info for 
+%  citations, equations, section numbers, etc.).  You can view 
+%  this .dvi file by typing (at the Unix prompt) 
+%
+%        ``xdvi main.dvi''
+% 
+%  which will pop up a window where you can view the final 
+%  product without ever wasting a piece of paper. Once you've 
+%  proofread your file via xdvi and are ready to print out your
+%  final version, you need to turn the document into a postscript 
+%  (swig_diss.ps) file by typing (at the Unix prompt)
+%
+%        ``dvips swig_diss.dvi -o swig_diss.ps''  
+%
+%  Note that dvips has several options (just type dvips with no 
+%  arguments to view them). For instance, to save just pages 10-20 
+%  to a postscript file, type (at the Unix prompt)
+%
+%        ``dvips -p 10 -l 20 swig_diss.dvi -o swig_diss.ps''  
+%
+%  This creates the postscript file swig_diss.ps which contains just
+%  the pages 10-20 of swig_diss.dvi. (If you omit the -o option, then 
+%  no .ps file will be created, and the generated postscript info will 
+%  go directly to your default printer).
+%
+%  At this point, the postscript file can still be viewed without 
+%  printing anything: at the Unix prompt type
+%
+%        ``ghostview swig_diss.ps''
+%
+%  This will pop up a separate window through which you can view
+%  your file swig_diss.ps exactly as it would look printed out. I 
+%  take every opportunity to avoid wasting paper.  Once you do want 
+%  a hard copy, you can type (at the Unix prompt)
+%
+%        ``lpr swig_diss.ps''
+%
+%  which will print the postscript file swig_diss.ps at your
+%  default printer.  Most of the formatting work will be taken 
+%  care of by the beautiful latex2e class file written by Marcel 
+%  Oliver (ua-thesis.cls). If desired you can move a copy of 
+%  ua-thesis.cls to the directory which contains this file
+%  (swig_diss.tex), and edit/modify it however you want. The 
+%  copy in your directory will then be the copy which latex2e 
+%  references for instructions. You can find the system's copy in 
+%
+%  /usr/local/TeX/lib/texmf/tex/latex2e/dissertation
+%
+%  The file which documents this handy class file is called 
+%  ua-classes.ps, and is truly a gem (it should be available 
+%  with the latex2e info, under UofA dissertation document 
+%  classes...thanks, Marcel!).
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                    SOME LATEX2E SPECIFICS                     %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%  In a latex file (such as the one you are presently viewing),
+%  each time the command 
+%
+%  \input{intro_stuff} 
+%
+%  is given, it's as if all of the stuff from ``intro_stuff.tex'' 
+%  gets substituted right there.  If you'd like to refer back 
+%  to the stuff that just got inserted, you have to label it with 
+%  the command 
+%
+%  \label{intro_chpt}
+%
+%  which allows you to refer back to this chapter with the command 
+%
+%  \ref{intro_chpt} 
+%
+%  This command will obviously occur rather frequently in the 
+%  files containing the actual stuff. You can see a good amount 
+%  of such stuff in the source files referenced by this file 
+%  (swig_diss.tex): abstract.tex, acknowledgements.tex, conc.tex, 
+%  dedication.tex, intro_hist.tex, intro_models.tex, pde_derv.tex, 
+%  pde_gen.tex, pde_motiv.tex, and swig_diss.bbl, mickey.ps
+%
+%  This is supposed to make your life easier.. . ..feel free 
+%  to copy whatevery you'd like, and just fill in blinks, put 
+%  in your name/info/files/whatever!...I suggest that you keep 
+%  one directory as a reference for something that does work 
+%  (again, you should be able to get the final copy just by 
+%  entering ``latex swig_diss.tex'' 3 times).  The hope is that 
+%  you can simply make a parallel directory containing your 
+%  dissertation info, and your own main.tex file (which 
+%  should look a heck of a lot like this swig_diss.tex file), 
+%  enter those same 3 commands (``latex main.tex'') and not 
+%  have a problem in the world...(I'm crossing my fingers).
+%  Definitely go through the documentation first, and a 
+%  latex2e or ams-latex book never hurts.
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                 %
+%                    Dissertation  - Kevin Kremeyer               %
+%                                                                 %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                 %
+%                            ROOT FILE                            %
+%                                                                 %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%  the [final] option will double space the document...save a tree...
+%  don't use it until the final final final pre-draft.
+%
+
+%\documentclass[final]{ua-thesis}
+\documentclass{article}
+\usepackage[dvips]{graphicx}
+%\usepackage{amssymb}
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                 %
+%                            TITLE PAGE                           %
+%                                                                 %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+\title{Experimental and Computational Investigations of Binary Solidification}
+\author{Kevin P. Kremeyer}
+%\degree{Master of Science}
+%\degreeabbrev{M.S.}
+\begin{document}
+
+\maketitle
+
+\chapter*{Acknowledgements}
+\input{acknowledgements}
+
+\chapter*{Dedication}
+\input{dedication}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                 %
+%                         TABLE OF CONTENTS                       %
+%                                                                 %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\tableofcontents
+\listoftables
+\listoffigures
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                 %
+%                            ABSTRACT                             %
+%                                                                 %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+%\chapter*{ABSTRACT}
+\begin{abstract}
+  \input{abstract}
+\end{abstract}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                 %
+%                            CHAPTER ONE                          %
+%                                                                 %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+\chapter{ INTRODUCTION } 
+\label{intro} 
+\markright{} 
+
+\section{Historical Perspective}
+\label{intro_hist}
+\input{intro_hist}
+
+\section{An Overview of Solidification Models}
+\label{intro_models}
+\input{intro_models}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                 %
+%                           CHAPTER FOUR                          %
+%                                                                 %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{ PARTIAL DIFFERENTIAL EQUATIONS }
+\label{pde}
+\markright{}
+\input{pde_gen}
+
+\section{Physical Motivation}
+\label{pde_motiv}
+\input{pde_motiv}
+
+\section{Derivation and Discussion}
+\label{pde_derv}
+\input{pde_derv}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                 %
+%                           CHAPTER FIVE                          %
+%                                                                 %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{ FUTURE WORK AND CONCLUSIONS}
+\label{GeneralFutureWork}
+\markright{}
+
+\section{Conclusions}
+\label{conc}
+\input{conc}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                 %
+%                           EXTRA STUFF                           %
+%                                                                 %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+\chapter{EXTRA STUFF}
+\label{extra}
+\markright{}
+
+\input{EXTRA}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                 %
+%                           BIBLIOGRAPHY                          %
+%                                                                 %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+\bibliography{nbm}
+\end{document}

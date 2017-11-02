@@ -1,0 +1,71 @@
+% LaTeX resume using res.cls
+\documentclass[margin]{res}
+%\usepackage{helvetica} % uses helvetica postscript font (download helvetica.sty)
+%\usepackage{newcent}   % uses new century schoolbook postscript font 
+\setlength{\textwidth}{5.1in} % set width of text portion
+
+\begin{document}
+
+% Center the name over the entire width of resume:
+ \moveleft.5\hoffset\centerline{\large\bf Shaun Y. Cheng}
+% address begins here
+% Again, the address lines must be centered over entire width of resume:
+ \moveleft.5\hoffset\centerline{cheng754@gmail.com (785)979-0490 \hfill 200 Dey St. Unit\#200, Harrison, NJ 07029}
+% Draw a horizontal line the whole width of resume:
+ \moveleft\hoffset\vbox{\hrule width\resumewidth height 1pt}
+
+\begin{resume}
+\section{SOFTWARE\\DEVELOPMENT} 
+\begin{itemize}       
+       \item Extensive professional experience with C++, STL, high performance code.
+       \item Solid understanding of algorithms and data structures.
+       \item SQLite, indexing, database sharding techniques.
+       \item Working knowledge of: Javascript, Python, Perl, AutoHotkey.
+\end{itemize}
+\section{WORK \\ EXPERIENCE} 
+                      % \sl will be bold italic in New Century Schoolbook (or
+	              % any postscript font) and just slanted in
+		      %	Computer Modern (default) font         
+         
+		{\sl Recurser} \hfill February  2016 - May 2016\\
+		Recurse Center(formerly known as Hacker School),
+                New York, NY
+ \begin{itemize}  
+	       \item Embedded programming(esp8266, FPGA), compression algorithm, blockchains.
+\end {itemize}
+		{\sl Senior Software Developer in R\&D Infrastructure} \hfill March 2010 - January 2016\\
+                Bloomberg LP,
+                New York, NY 
+                 \begin{itemize}  
+		 \item Responsible for the full life cycle of the software development process, including requirements definition, prototyping, proof of concept, design, interface implementation, testing and maintenance.
+                 \item Designed and maintained a securities mapping system for company-wide use. Distributed load for read/write.
+		 \item Maintained numerous legacy systems. Deprecated/refactored unstable programs to clean up the codebase.
+		 \end {itemize}
+		{\sl Actuarial Analyst} \hfill May 2007-February 2010\\
+                Actuarial Resources Corporation,
+                Overland Park, KS
+                 \begin{itemize} 
+                 \item Developed a C3 Phase 2 economic stochastic economic scenario generator for
+                   interest rates, bonds, and equities.
+                 \item Developed multi-threaded, stochastic modeling libraries for the SunGard Prophet actuarial projection system.
+                 \item Actuarial exams: Probability, Financial Mathematics, Financial Economics.
+                 \end{itemize}
+                {\sl Graduate Teaching Assistant} \hfill            August 2005 - May 2007\\
+                Department of Mathematics, University of Kansas 
+                 \begin{itemize}
+                 \item Taught algebra, and trigonometry, calculus I\&II, statistics.
+                 \end{itemize} 
+                {\sl Statistical Analyst Intern} \hfill             January 2007 - May 2007\\
+                Laidlaw International, Inc.
+                 \begin{itemize}  \itemsep -2pt %reduce space between items
+                 \item Analyzed correlation and trends for the frequency and severity of road accidents.
+                 \end{itemize} 
+\section{EDUCATION} 
+		{\sl M.A., B.S. Mathematics, 2007. } University of Kansas, Lawrence, KS. GPA: 3.8  \\
+		    Graduate research in point-set toppology. Thesis: goo.gl/8kxtwK
+\section{CERTIFICATES} 
+            KU Charles H. Ashton Scholarship, KU Math Department Merit Scholarship, 4-month Bloomberg Advanced Technology Training Certificate.
+\section{COMPETITIONS}
+         Putnam Mathematics competition(Ranked top 400 in the U.S.). Represents Bloomberg chess team since 2010. 1st Place, Division A, Athletic Bankers League NYC 2011 \& 2012. MVP of The Year Award in 2014. NYC commercial chess league 2016 champion. Disrupt NY Hackathon 2016. Consensus 2016 Hackathon BlockApps winner.
+\end{resume}
+\end{document}

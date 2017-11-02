@@ -1,0 +1,42 @@
+\documentclass{article}
+\begin{document}
+
+
+
+\textbf{Proposition 2}\\
+The following statements are equivalent: \\
+\emph{(i)For every bounded continuous function $f: X \times Y \rightarrow \Bbb{R}$, the formula $F(x)=sup\{f(x,y): y\in Y\}$ defines a continuous function $F: X \rightarrow \Bbb{R}$.\\
+(ii)The projection $\pi_X: X\times Y \rightarrow X$transforms functionally closed subsets of $X\times Y$ to closed subsets of $X$}\\
+
+\\
+\emph{Proof of (i)$\Rightarrow$ (ii):}\\ 
+Given a functionally closed set  $Z=g^{\leftarrow}(0) \subseteq X \times Y.$ If $X \backslash \pi_X[Z]=\emptyset,$ we're done as $\pi_X[Z]=X$ is closed. Otherwise, for $x_0 \in X \backslash \pi_X[Z],$ define $f:X\timesY \rightarrow \Bb{R}$ by $f(x,y)=-min\{\frac{g(x,y)}{g(x_0,y)}, 1\}.$ Let $F(x)=sup\{f(x,y): y\in Y\}$. By assumption, since  $f$ is bounded and continuous, then $F(x)$ must be a continuous function from $X$ to $\Re.$ $F^\leftarrow (0)$ is closed in $X$. We are done if we can show that  $F^\leftarrow (0)= \pi_X[Z]$.
+If $x\in \pi_X[Z]$, then $sup\{f(x,y): y\in Y\}=0$. Hence $\pi_X[Z] \subseteq F^\leftarrow (0)$, i.e. $X\backslash F^{\leftarrow}(0) \subseteq X\backslash \pi_X[Z]$.
+Note that $F(x_0)=sup\{-min\{\frac{g(x_0,y)}{g(x_0,y)}, 1\}: y\in Y\}=-1$. Hence, $x_0 \in X\backslash F^\leftarrow(0)\subseteq X\backslash \pi_X[Z].$ As $X\F^\leftarrow(0)\in \tau(X),$ this shows that $X\backslash \pi_X[Z]$ is open.
+
+\emph{Proof of (ii) $\Rightarrow$ (i):}
+
+
+Let $f$ be a bounded continuous function from $X\times Y \rightarrow \Bbb{R}$ and define $F: X \rightarrow \Bbb{R}$ to be $F(x)=sup\{f(x,y):y\in Y\}.$ 
+To show that $F^\leftarrow [(a,b)]$ is open for all $a<b \in \Bbb{R}$, it is enough to show that for any $a\in \Bbb{R}$, we have both $F^\leftarrow [(a,\infty)]$ and $F^\leftarrow [(-\infty,a)]$ open in $X$:\\
+\\
+\emph{Proof of $F^\leftarrow [(a,\infty)]$ is open:}
+
+
+Let $x_0 \in F^\leftarrow [(a,\infty)]$. Equivalently,  $F(x_0) \in (a, \infty).$ Then, $\sup\{f(x_0,y):y\in Y\} \in (a, \infty)$ means that there must exist $y_0\in Y$ such that $f(x_0, y_0) \in (a, \infty).$ Since $f$ is continuous, there is a basic open set $U \times V$ of $X \times Y$ such that $(x_0,y_0) \in U\times V$ and $f[U\times V] \subseteq (a, \infty).$ Now, for any $x\in U$ we have $F(x)=\sup\{f(x,y):y\in Y\}\geq f(x,y_0) > a.$ So, $F(x)\in (a, \infty)$ for all $x\in U$. Since $x_0\in U$ and $F[U] \subseteq (a, \infty), x_0\in U \subseteq F^\leftarrow(a, \infty).$ So, $F^\leftarrow(a, \infty)$ is open.\\
+\\
+\emph{Proof of $F^\leftarrow [(-\infty,a)]$ is open: }
+
+Let $x_0 \in F^\leftarrow [(-\infty,a)]$. Equivalently, $F(x_0)\in (-\infty,a).$ Since $\Bbb{R}$ is dense, there exists $r \in \Bbb{R}$ such that $F(x_0) <r <a.$ 
+Since $\Bbb{R}$ is perfectly normal and $[r, \infty)$ is a closed subset of $\Bbb{R}$, there exists a continuous function $g: \Bbb{R} \rightarrow [0,1]$ such that $g[[r, \infty)]\subseteq \{0\}.$ The function $h:=f\circ g: X\times Y \rightarrow [0,1]$ is continous. Moreover, $h^\leftarrow(0)=f^\leftarrow[[r,\infty)]=Z$ is a zero-set in $X\times Y$.
+
+By our hypothesis, $\pi_X[Z]$ must be a closed subset of $X$. 
+From the definition of $F$, $f(x_0,y)\leq F(x_0) $ for all $y\in Y$. So, $f(x_0,y)\leq r$ for all $y \in Y$. Thus, $f[{x_0}\times Y]\cap [r,\infty)=\emptyset.$ This can be rewritten as $\{x_0\} \times Y \cap f^\leftarrow[[r,\infty)] =\emptyset,$ which is same as $x_0\times Y \cap Z =\emptyset.$ Hence, $x_0\in X \backslash \pi_X[Z].$ 
+
+	On the other hand, pick any $x\in X \backslash \pi_X[Z],$ $f(x,y)<r$ for all $y\in Y.$(Otherwise, if $f(x,y')\geq r,$ then $(x,y')\in Z.$ Contradicting that $x\notin \pi X[Z]$.) So, $sup\{f(x,y):y\in Y\}\leq r.$ That means $F(x)\leq r <a.$ Thus, $F(x)<a$ for all $x \in 
+X \backslash \pi_X[Z].$  So, $F[X\backslash \pi_X[Z]] \subseteq (-\infty, a),$ which implies $X\backslash \pi_X[Z] \subseteq F^\leftarrow [(-\infty, a)].$ We have then $x_0\in X\backslash \pi_X[Z] \subseteq F^\leftarrow [(-\infty, a)]$, and $X\backslash \pi_X[Z]$ is open. Hence,  $F^\leftarrow[(-\infty, a)]$ is open.\\
+
+
+
+
+\end{document}

@@ -1,0 +1,167 @@
+\documentclass{article}
+\usepackage{amssymb,latexsym}
+\begin{document}
+\begin{center}
+
+
+\textbf{CHAPTER I}
+
+\vskip 15pt
+
+\textbf{Tamano's Theorem}
+
+
+\end{center}
+
+
+
+\vskip 30pt
+
+
+\textbf{Lemma 1.1} The product of a paracompact space with a compact Hausdorff space is paracompact. 
+
+\vskip 5pt
+
+\textbf{Proof.} Let $X$ be paracompact, $Y$ compact, and let $\mathcal{U}$ be an open cover of $X\times Y$. For fixed $x\in X,$ as $\{x\}\times Y$ is compact in $X\times Y$, a finite number of elements of $\mathcal{U}$, say $U_{\alpha_1}^x, \dots , U_{\alpha_{n_x}}^x$, cover $\{x\}\times Y$. Pick an open nhood $V_x$ of $x$ in $X$ such that $V_x\times Y\subseteq \bigcup_{i=1}^{n_x} U_{\alpha_i}^x.$ 
+\vskip 10pt
+The sets $V_x$, as $x$ ranges through $X$, form an open cover of $X$. By the paracompactness of $X$, let $\mathcal{V}$ be an open locally finite refinement of $V_x$. For each $V\in \mathcal{V}, V\subseteq V_x$ for some $V_x$. 
+Let $$\mathcal{W}_V=\left\{(V\times Y)\cap U_{\alpha_i}^x: 1\leq i\leq n_x\right\},$$ and let 
+
+$$\mathcal{R}=\bigcup \left\{\mathcal{W}_V: V\in \mathcal{V}\right\}.$$
+
+\vskip 5pt
+
+Since $\mathcal{W}_V\subseteq \mathcal{U}$ for each $V\in \mathcal{V}$, $\mathcal{R}$ is a refinement of $\mathcal{U}$. For each $x\in X$, $W_V$ is a cover for $\{x\}\times Y$ for some $V\in \mathcal{V}$. Thus, $\mathcal{R}$ is a cover of $X\times Y$. Lastly, $\mathcal{R}$ is locally finite because given $(x,y)\in X\times Y,$ there is a neighborhood $U_x$ of $x$ which meets only finitely many $V$'s in $\mathcal{V}$ because $\mathcal{V}$ is locally finite. Then the neighborhood $U_x\times Y$ of $(x,y)$ can then only meet only finitely many sets of $\mathcal{R}$. Hence, $X\times Y$ is paracompact.
+
+
+\vskip 35pt
+
+
+\textbf{Lemma 1.2}  Every paracompact space is normal. 
+
+\vskip 10pt
+
+\textbf{Proof.} We first establish regularity. Suppose $A$ is a closed set in a paracompact space $X$ and $x\notin A$. For each $y\in A$, as $X$ is Hausdorff, we can find an open set $V_y$ containing $y$ such that $x\notin \overline{V_y}$. Then the sets $V_y, y\in A,$ together with the set $X\backslash A$, form an open cover of $X$. Let $\mathcal{W}$ be an open locally finite refinement and let 
+$$V=\bigcup\left\{ W\in \mathcal{W}: W\cap A\neq \emptyset\right\}.$$
+\vskip 5pt
+Then $V$ is an open set containing $A$. Now, 
+$$\overline{V}=\bigcup\left\{ \overline{W}\in \mathcal{W}: W\cap A\neq \emptyset\right\}$$ holds because:\\
+\textbf{$\supseteq$:} If $z\in \bigcup\left\{ \overline{W}\in \mathcal{W}: W\cap A\neq \emptyset\right\}$, then $z\in \overline{W}$ for some $W \in \mathcal{W}.$ Since $W\subseteq V$, we have $z\in \overline{W}\subseteq \overline{V}.$\\
+\textbf{$\subseteq$:} If $z\in \overline{V},$ then there exists a net $\{w_\alpha\}\subseteq V=\bigcup\left\{ W\in \mathcal{W}: W\cap A\neq \emptyset\right\}$ converging to $z$. Since $\left\{W\in \mathcal{W}: W\cap A \neq \emptyset\right\}$ is locally finite, the tail of $\{w_\alpha\}$ must be contained in finitely many $W$'s, say $\{W_1,\dots W_n\}$. By pigeon-hole principle, there exists some $W_k\in \{W_1,\dots W_n\}$
+such that $W_k$ contains infinitely many elements of the net $\{w_\alpha\}.$ Thus, $z\in \overline{W_k}$.
+\vskip 15pt
+
+Since $x\notin \overline{V_y}$ for each $y\in A$ and $\overline{W}\subseteq \overline{V_y}$ for each $W\in \left\{W\in \mathcal{W}: W\cap A\neq \emptyset\right\}, x\notin \overline{W}$ for each $W\in \left\{W\in \mathcal{W}: W\cap A\neq \emptyset\right\}.$ So $x\notin \overline{V}.$ Regularity is established. 
+
+
+\vskip 15pt
+
+To establish normality, suppose $A$ and $B$ are disjoint closed sets in $X$. For each $y\in A$, by regularity, 
+we can find an open set $V_y$ such that $y\in V_y$ and $\overline{V_y}\cap B= \emptyset$. Then proceed exactly as before, we can 
+produce an open set $V$ such that $A\subseteq V$ and $\overline{V}\cap B=\emptyset.$ Thus $X$ is normal.
+
+
+
+
+\vskip 35pt
+
+
+
+\textbf{Theorem 1.3} Let $X$ be a Hausdorff space. Then $X \times \beta X$ is normal iff $X$ is paracompact. 
+
+\vskip10pt
+
+\textbf{Proof of $\Leftarrow$:} 
+Since $X$ is paracompact and $\beta X$ is compact $T_2$, by \textbf{Lemma 1.1}, $X\times \beta X$ is paracompact. 
+By \textbf{Lemma 1.2}, paracompact implies normal and so $X\times \beta X$ is normal. 
+
+\vskip 15pt
+
+
+
+\textbf{Proof of $\Rightarrow$: }
+We will prove a slighty stronger version that for any compactification $cX$ of $X$, if $X \times cX$ is normal, 
+then $X$ is paracompact. 
+\vskip 10pt
+Let $cX$ be a compactification of $X$ such that $X \times cX$ is normal. Let 
+$\left\{U_a: a \in A\right\}$ be an open cover of $X$. We will show that it has an open locally finite refinement.
+
+\vskip 10pt
+
+$X$ is a subspace of $cX$, so for each $a \in A$, there exists $V_a$ open in $cX$ such that $V_a \cap X = U_a.$ Let $F=cX\backslash \bigcup \left\{V_a: a\in A\right\}$.  We can assume that $F$ is nonempty. Since if $F=\emptyset$, then $cX=\bigcup \left\{V_a: a\in A\right\}$, and since $cX$ is compact, we can find a finite subcover $\left\{V_{a_i}: 1\leq i \leq n\right\}\subseteq \left\{V_a: a\in A\right\}$. Then, $\left\{U_{a_i}: 1\leq i\leq n\right\}$ is an open locally finite refinement of $\left\{U_a: a \in A\right\}$. 
+  
+
+\vskip 10pt
+
+Let $\triangle = \{(x,x): x \in X\}.$
+Both $X \times F$ and $\triangle$ are closed in $X \times cX $. Since $X \times cX $ is normal, by Urysohn's Lemma, there is 
+a continuous function $f$: $X \times cX \rightarrow [0,1]$ with $f[\triangle] \subseteq \{0\}$ and $f[X\times F] \subseteq
+ \{1\}$. 
+ 
+\vskip 15pt 
+
+Define $d: X\times X \rightarrow \mathbb{R}$ 
+
+
+
+such that $$d(x,y)=\sup \left\{ \left|f(x,z)-f(y,z)\right|: z\in X\right\}$$ for all $(x,y) \in X \times X$. 
+Now, for all $x,y,w \in X$, we have: 
+
+\begin{enumerate}
+	\item $d(x,x)=\sup_{z\in X} |f(x,z)-f(x,z)|=0$
+	\item $d(x,y)=\sup_{z\in X} |f(x,z)-f(y,z)|=\sup_{z\in X} |f(y,z)-f(x,z)|=d(y,x)$
+	\item $d(x,w)=\sup_{z\in X} |f(x,z)-f(w,z)|\\
+	=\sup_{z\in X} |f(x,z)-f(y,z)+f(y,z)-f(w,z)|\\
+	\leq \sup_{z\in X} |f(x,z)-f(y,z)|+\sup_{z\in X} |f(y,z)-f(w,z)|\\
+	=d(x,y)+d(y,w)$
+\end{enumerate}
+
+
+Thus $d$ is a pseudometric on $X$. Denote $\tau_d(X)$ to be the set of open sets in the topology induced by the pseudometric $d$. 
+
+\vskip 10pt
+
+For each $B(x_0, \epsilon) \in \tau_d$, pick any point $x' \in B(x_0, \epsilon)$ . Let $\epsilon' = \epsilon - d(x_0,x').$ 
+The set $\Gamma=\{ G \times H \subseteq X \times cX : G \times H$ is open in $X \times cX, x'\in G,$ and $diam\left(f\left[G\times H\right]\right)<\epsilon' \}$ is an open cover of $\{x'\} \times cX$. To show that, pick any point $(x',y)\in \{x'\} \times cX$. Let $c=f(x',y)\in [0,1].$ Since $f$ is continuous and the set $E=(c-\frac{\epsilon'}{2}, c+\frac{\epsilon'}{2}) \cap [0,1]$ is open in $[0,1], f^\leftarrow[E]$ must be open in $X\times cX$. Since $f^{\leftarrow}[E]$ is an open set that contains $(x',y)$ in $X\times cX$, there exist $G_b \in \tau(X)$ containing $x'$, and $H_b \in \tau(cX)$ containing $y$ such that $G_b\times H_b\subseteq f^\leftarrow[E]$. Thus $G_b\times H_b$ is an element of $\Gamma$. Since $(x',y)$ was arbitrarily chosen from $\{x'\}\times cX$, we conclude that $\Gamma$ is an open cover of $\{x'\}\times cX$.
+
+\vskip 10pt
+
+$\Gamma$ being an open cover of $\{x'\}\times cX$ means that $\left\{ H_b : b \in B \right\}$ is an open cover of $cX$. Since $cX$ is compact, there is an finite subcover $\{ H_i: 1\leq i \leq n\} \subseteq \{H_b : b \in B\}.$ Corresponding to $\{ H_i: 1\leq i \leq n\}$ is the set $\{ G_i: 1\leq i \leq n\}$. Where for each $i \in \{1\dots n\}$, we have $f[G_i \times H_i] \subseteq (c_i-\frac{\epsilon'}{2}, c_i+\frac{\epsilon'}{2})$ for some $c_i \in (0,1).$ Pick any $z \in cX=\bigcup \left\{H_i: 1\leq i\leq n\right\}.$ For some $1 \leq k \leq n$, $z \in H_k$. Then $f[G_k\times \{z\}] \subseteq f[G_k\times H_k]\subseteq (c_k-\frac{\epsilon'}{2}, c_k+\frac{\epsilon'}{2}).$ 
+
+\vskip 10pt
+
+Let $S=\bigcap\left\{G_i:1\leq i \leq n\right\}  \subseteq G_k.$ Then 
+$$f[S\times \{z\}]\subseteq f[G_k \times \{z\}] \subseteq (c_k-\frac{\epsilon'}{2}, c_k+\frac{\epsilon'}{2}).$$ 
+\vskip 5pt
+For all $x,y \in S, |f(x,z)-f(y,z)|<\epsilon'$, and because this inequality holds true for all $z \in cX,$ $d(x,y)=\displaystyle{sup_{z\in cX}} |f(x,z)-f(y,z)|\leq \epsilon'.$ Since $x' \in G_b$ for all $b\in B, x' \in \bigcap \left\{G_i: 1\leq i \leq n\right\} = S.$ Combining with the fact that $d(x,y)\leq \epsilon'$ for all $x,y \in S,$ we have $x' \in S \subseteq B(x',\epsilon') \subseteq B(x_0, \epsilon).$ Note that $S\in \tau(X)$ because $G_i\in \tau(X)$ for each $i\in \{1\dots n\}$.
+
+
+\vskip 10pt
+
+
+Thus, for each $x' \in B(x_0,\epsilon)$, we can find $S\in \tau(X)$ such that $x'\in S \subseteq B(x_0,\epsilon).$ Since $B(x_0, \epsilon)$ is an arbitrarily chosen set in 
+$\tau_d(X)$, we have $B(x_0, \epsilon)\in \tau_d(X) \Rightarrow B(x_0,\epsilon) \in \tau(X)$. Hence, $\tau_d(X) \subseteq \tau(X)$.
+
+\vskip 10pt
+
+
+Stone's Theorem states that pseudo-metrizable implies paracompact. So $X$ is paracompact with respect to the pseudo-metrizable topology $\tau_d$. For an open cover $\left\{B(x,\frac{9}{10}): x\in X\right\}$, there is an open locally finite refinement, $\{W_t : t\in T\}.$ Since $\tau_d(X) \subseteq \tau(X)$, $\{W_t: t\in T\} \subseteq \tau(X)$. 
+
+
+\vskip 10pt
+Pick any $x_0\in X$ and $x' \in B(x_0,\frac{9}{10})$. We have $f(x_0, x')= |f(x_0,x')-0|=|f(x_0,x')-f(x',x')| \leq \sup_{z\in X}\left|f(x_0,z)-f(x_0,z)\right|= d(x_0,x') < \frac{9}{10}$. 
+So, $f\left[\{x_0\} \times B(x_0, \frac{9}{10})\right] \subseteq [0,\frac{9}{10})$. By continuity, $f\left[\{x_0\}\times \overline{B(x_0,\frac{9}{10})}^{cX}\right] \subseteq [0,\frac{9}{10}].$ So, $\overline{B(x_0,\frac{9}{10})}^{cX} \cap F =\emptyset$ because $f\left[X\times F\right] \subseteq \{1\}.$
+
+\vskip 15pt
+
+We now have $\{W_t:  t\in T\}$ refines $\{B(x_0,\frac{9}{10}): x_0\in X\}$ and $\overline{B(x_0,\frac{9}{10})}^{cX} \cap F =\emptyset$ for all $x_0\in X$. These give us $\overline{W_t}^{cX} \cap F = \emptyset$ for every $t \in T$. Then, for each $t\in T$, 
+$\overline{W_t}^{cX} \subseteq cX\backslash F = \bigcup \left\{V_a: a\in A\right\}$. Since $\overline{W_t}^{cX}$ is compact in $cX$, there exists a finite subcover $\left\{V_j^t: 1\leq j\leq m_t\right\} \subseteq \{V_a: a \in A\}$ such that $\overline{W_t}^{cX} \subseteq \bigcup \left\{V_j^t: 1\leq j \leq m \right\}$. We have: 
+$$X\cap \overline{W_t}^{cX} \subseteq X\cap (\bigcup \left\{V_j^t: 1\leq j \leq m\right\}).$$
+$$\mbox{Thus, }X\cap W_t \subseteq X\cap \overline{W_t}^{cX} \subseteq \bigcup \left\{U_j^t: 1\leq j\leq m\right\}.$$
+
+\vskip 20pt
+
+The set $\{W_t \cap U_j^t: t\in T, 1 \leq j \leq m_t \} \subseteq \tau(X)$ is the desired locally finite open cover of $X$ which refines $\{U_a: a \in A\}$. Hence $X$ is paracompact.
+
+
+\end{document}

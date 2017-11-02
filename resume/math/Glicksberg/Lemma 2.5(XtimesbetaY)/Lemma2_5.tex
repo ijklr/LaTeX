@@ -1,0 +1,27 @@
+\documentclass{article}
+\begin{document}
+
+\textbf{Lemma 2.5}  Let $X,Y$ be Tychonoff spaces. If $\pi_X$ is z-closed, then $X\times Y$ is $C^*$-embedded in $X\times \beta Y$.
+
+
+\vskip 15pt
+
+
+\textbf{Proof:} By \textbf{Lemma 2.3}, it suffices to show that if $Z_1$ and $Z_2$ are disjoint zero-sets of $X\times Y$, then $\overline{Z_1}^{X\times \beta Y} \cap \overline{Z_2}^{X\times \beta Y}=\emptyset.$
+
+\vskip 15pt
+
+ Assume there is some point $(x,p)\in \overline{Z_1}^{X\times \beta Y}\cap \overline{Z_2}^{X\times \beta Y},$ where $x\in Y$ and $p\in \beta Y\backslash Y$. By \textbf{Lemma 2.4}, $$(x,p)\in \overline{Z_1\cap (\{x\}\times Y)}^{\{x\}\times \beta Y} \cap \overline{Z_2\cap (\{x\}\times Y)}^{\{x\}\times \beta Y}.$$
+
+\vskip 10pt
+
+Now, $Z_1\cap (\{x\}\times Y)$ and $Z_2\cap (\{x\} \times Y)$ are disjoint open sets in $\{x\}\times Y$. Since $\{x\}\times Y$ is $C^*$-embedded in $\{x\}\times \beta Y$, then, by the other direction of \textbf{Lemma 2.3}, $$\overline{Z_1\cap (\{x\}\times Y)}^{\{x\}\times \beta Y} \cap \overline{Z_2\cap (\{x\}\times Y)}^{\{x\}\times \beta Y}=\emptyset$$
+
+Contradiction, so $\overline{Z_1}^{X\times \beta Y} \cap \overline{Z_2}^{X\times \beta Y} =\emptyset$. 
+
+
+
+
+
+
+\end{document}

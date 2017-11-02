@@ -1,0 +1,83 @@
+\documentclass{article}
+\begin{document}
+
+\textbf{Lemma 3.10} Let $X$ be a pseudocompact space and $f$ be a continuous mapping of $X\times T(|\beta X|^+) $
+onto a space $Z$. Let $C_1=\{x\in  \beta X \backslash X: |\bar{f}[\{x\} \times T(|\beta X|^+)] \cap Z|=|\beta X|^+\}$
+If $x\in C_1$, then there exist an element $y_x \in X$ and a subset $T_x \subseteq T(|\beta X|^+)$ satisfying the following conditions: 
+\begin{enumerate}
+	\item $|T_x|=|\beta X|^+$
+	\item The set $T_x$ is closed in $T(|\beta X|^+).$
+	\item For any ordinal number $\alpha \in T_x, \bar{f} (x,\alpha)=f(y_x,\alpha)$ holds.
+\end{enumerate}
+
+\vskip 20pt
+
+\textbf{Proof:} \\
+Let $x\in C_1$. Since $f$ is onto, we can write $Z=\bigcup \{f[\{y\}\times T(|\beta X|^+)]: y\in X\}$. Then,  $$\bar{f}[\{x\}\times T(|\beta X|^+)] \cap Z$$
+$$=\bar{f}\left[\{x\}\times T(|\beta X|^+)\right] \cap \left(\bigcup \left\{f[\{y\}\times T(|\beta X|^+)]: y\in X\right\}\right)$$
+$$=\bigcup \left\{\bar{f}\left[\{x\}\times T(|\beta X|^+)\right] \cap f\left[\{y\}\times T(|\beta X|^+)\right]: y\in X \right\}.$$
+
+\vskip 5pt
+
+As $|\beta X|^+$ is regular, $|X|<|\beta X|^+=cf(|\beta X|^+).$ So, at lease one of the terms of our union is of cardinality $|\beta X|^+$. \\
+Let that term be:
+\begin{center}
+ $ \bar{f}\left[\{x\}\times T(|\beta X|^+)\right] \cap f\left[\{y_x\} \times T(|\beta X |^+)\right]$.
+\end{center}
+Fix this $y_x$. We will now construct the set $T_x=\{\beta_\alpha: \alpha < |\beta X|^+\}$ by transfinite induction:\\
+
+\texttt{Step 1.}\\ Pick two ordinals, $\alpha_1$ and $ \alpha^1$ from $T(|\beta X|^+)$ such that $\bar{f}(x,\alpha_1)=f(y_x, \alpha^1)$. This can be done because $\bar{f}[\{x\}\times T(|\beta X|^+)] \cap f[\{y_x\} \times T(|\beta X |^+)]$ is nonempty.\\
+
+\texttt{Induction Hypothesis.}\\ For each $k<n$, we can find two ordinals $\alpha_k$ and $\alpha^k$ from $T(|\beta X|^+)$,  satisfying the following conditions: \\
+	\texttt{a)} $\bar{f}(x,\alpha_k)=f(y_x,\alpha^k)$.	\\	
+\texttt{	b)} $\alpha_k> \max\{\alpha_{k-1}, \alpha^{k-1}\}$.\\	
+	\texttt{c)} $\alpha^k> \max\{\alpha_{k-1}, \alpha^{k-1}\}$.\\
+
+
+\texttt{Step N.}\\ Let $\alpha=\max\{\alpha_{n-1}+1,\alpha^{n-1}\}.$ Now,  \vskip 10pt    
+$$|\beta X|^+ $$
+    $$= \left| \bar{f}\left[\{x\}\times T(|\beta X|^+)\right] \cap f\left[\{y_x\} \times T(|\beta X |^+)\right]\right|$$
+    $$=\left| \bar{f}\left[\{x\}\times T(|\beta X|^+)\right] \cap f\left[\{y_x\} \times T(\alpha)\right]\right|$$
+    
+    $$+\left| \bar{f}\left[\{x\}\times T(\alpha)\right] \cap f\left[\{y_x\} \times T(|\beta X |^+)\right]\right|$$
+    
+    $$+\left| \bar{f}\left[\{x\}\times T(|\beta X|^+)\backslash T(\alpha)\right] \cap f\left[\{y_x\} \times T(|\beta X |^+)\backslash T(\alpha)\right]\right|$$\\
+
+\vskip 10pt
+
+Since the first two terms of the sum both have cardinality no more than $\alpha$, where $\alpha <|\beta X|^+$, the third term must have cardinality equal to $|\beta X|^+$. Otherwise the sum of these three terms will not add up to $|\beta X|^+$. Obviously, $\bar{f}[\{x\}\times T(|\beta X|^+)\backslash T(\alpha)] \cap f[\{y_x\} \times T(|\beta X |^+)\backslash T(\alpha)] $ is nonempty. So, we can pick two ordinals $\alpha_n$ and $\alpha^n$ from $T(|\beta X|^+)\backslash T(\alpha)$ such that these conditions hold: \\
+	\texttt{a)} $\bar{f}(x,\alpha_n)=f(y_x,\alpha^n)$.	\\	
+\texttt{	b)} $\alpha_n> \alpha= \max\{\alpha_{n-1}, \alpha^{n-1}\}$.\\	
+	\texttt{c)} $\alpha^n> \alpha= \max\{\alpha_{n-1}, \alpha^{n-1}\}$.\\
+	
+This completes \texttt{Step N.} Hence, we can define $\alpha_n$ and $\alpha^n$ for all $n<\omega$.\\
+\vskip 10 pt
+ Let $\beta_1=\sup\{\alpha_n:n<\omega\}=\sup\{\alpha^n: n<\omega \}.$ Such $\beta_1\in T(|\beta X|^+)$ exists because by condition \texttt{b)} and \texttt{c)}, the sup's must equal, provided they exist, and indeed, the existence follows from $cf(|\beta X|^+) > \omega$. 
+ 
+\vskip 15pt 
+ 
+Since $f$ is continuous, $\{f(y_x,\alpha^n): n<\omega\}$ converges to $f(y_x,\beta_1)$.\\
+Since $\bar{f}(x,\alpha_n)=f(y_x,\alpha^n)$ for all $n<\omega$, $\{\bar{f}(x,\alpha_n)\: n<\omega\}$ converges to $f(y_x,\beta_1)$ also. A the same time, since $\bar{f}$ is continuous, $\left\{\bar{f}(x,\alpha_n): n<\omega\right\}$ converges to $\bar{f}(x,\beta_1).$ Hence, $\bar{f}(x, \beta_1)=f(y_x,\beta_1).$
+
+\vskip 20pt
+
+Now, we will define all the other $\beta_\alpha$'s by transfinite induction: \\
+
+\texttt{Induction Hypothesis.}\\
+Let $\beta_\alpha$ be defined for all $\alpha<\gamma$ such that $\bar{f}(x,\beta_\alpha)=f(y_x,\beta_\alpha)$.\\
+
+\texttt{Step $\gamma$(isolated ordinal).}\\
+As $\bar{f}[\{x\}\times T(|\beta X|^+)\backslash T(\beta_{\gamma-1})] \cap f[\{y_x\} \times T(|\beta X |^+)\backslash T(\beta_{\gamma-1})]$ is nonempty, we can find a pair of ordinals in  $T(|\beta X|^+)\backslash T(\beta_{\gamma-1})$, enabling us to start from \texttt{Step 1} again with those two ordinals. Then, we can constuct $\beta_\gamma$ in the way as we did for $\beta_1$.\\
+
+
+\texttt{Step $\gamma$(limite ordinal).}\\
+Define $\beta_\gamma = \sup\{\beta_\alpha: \alpha<\gamma\}.$ Again, the $sup$ exists because $\gamma < |\beta X|^+= cf|\beta X|^+.$ Furthermore, $\bar{f}(x,\beta_\gamma)=f(y_x,\beta_\gamma)$ by the continuity of $\bar{f}$.\\
+
+
+By defining the $\beta_\gamma$'s that way for all $\gamma <|\beta X|^+$, we have just successfully constructed the set $T_x=\{\beta_\alpha: \alpha < |\beta X|^+\}$. By the way $T_x$ and $y_x$ were defined, conditions 1 and 3 as required by the lemma automatically follow.  $T_x=\{\beta_\alpha: \alpha < |\beta X|^+\}$ is
+ closed in $T(|\beta X|^+)$ because we defined $\beta_\gamma = \sup\{\beta_\alpha: \alpha<\gamma\}$ if $\gamma$ is a limit ordinal. Hence condition 2 of the lemma follows as well. This proves the Lemma.
+
+\end{document}
+
+
+

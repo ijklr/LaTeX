@@ -1,0 +1,118 @@
+   \documentclass{amsart}
+	\usepackage{amssymb,latexsym}
+	\usepackage{verbatim} 
+\author{shaun yi cheng}
+\begin{document}
+
+\bf{Fact A: If $X$ is dense in $Y$, $B \subseteq X$ open in $X$, $V$ open in $Y$ such that $V\cap X = B$, then $cl_Y B = cl_Y V$. 
+\begin{proof}
+\\
+$\subseteq$: Easy. \\
+$\supseteq$: Let $y \in cl_Y B$ and $W$ open in $Y$ such that $y\in W$. 
+$W\cap B = W\cap (V\cap X) = (W\cap V)\cap X \neq \emptyset$ ($W\cap V \neq \emptyset$ because $y\in cl_Y V$ and ($W\cap V$)$\cap X \neq \emptyset$ because $X$ is dense in $Y$).
+So $y\in cl_Y B$.
+\end{proof}
+
+\bf{Fact B: If $X$ is dense in $Y$ and $B \subseteq X $ is open in $X$, then $int_X cl_X B = (int_Y cl_Y B) \cap X$.  }
+
+\begin{proof}
+\\
+
+$\subseteq $:
+Let $V$ be open in $Y$ such that $V\cupX=int_X cl_X B$. By Fact A, $cl_Y V = cl_Y int_X cl_X B$. 
+$cl_Y int_X cl_X B \subseteq cl_Y cl_X B \subseteq cl_Y cl_Y B = cl_Y B$. Also, $cl_Y B \subseteq cl_Y V$. So, 
+$cl_Y B= cl_Y V$. Therefor, $int_X cl_X B \subseteq int_Y cl_Y V \subseteq int_Y cl_Y B$ and $int_X cl_X B \subseteq 
+(int_Y cl_Y B)\cap X$.\\
+
+
+
+
+
+	\begin{comment}
+	Let $x \in int_X cl_X B$. Then there is an open set $U$ in $X$ such that $x \in U \subseteq cl_X B$.
+	Let $V$ be open in $Y$ such that $V\cap X = U$. Let $E$ be open in $Y$ such that $E\cap X= B$.
+	Pick any $y \in V$ and let $W$ be any open set in $Y$ such that $y \in W$. 
+	Now, $W\cap B = W\cap (E\cap X) = (W\cap E) \cap X \neq \emptyset$ (Since $W\cap E$ is open in $Y$ and $X$ is dense 		in $Y$.)
+	So $y \in cl_Y B$, and thus $V \subseteq cl_Y B$.
+	Since $x \in V \subseteq cl_Y B$, we have $x\in int_Y cl_Y B$.
+	\end{comment}
+
+
+
+$\supseteq$: 
+	$(int_Y cl_Y B) \cap X \subseteq (cl_Y B)\cap X = cl_X B$. As $int_Y cl_Y B \cap X$ is open in $X$, 
+	$(\int_Y cl_Y B)\capX \subseteq int_X cl_X B$.
+	
+
+
+
+	\begin{comment}
+	Let $y \in (int_Y clyB) \cap X$. Then $y \in W \subseteq cl_Y B$ for some $W$ open in $Y$. Let $V$ be open in $Y$ 	such that $B=V\cap X$. $W\cap X$ is open in $X$. For $x\in W\cap X$ and any $U$ open in $X$ such that $x\in U$, let 	$K$ be open in $Y$ so that $U=K\cap X$.
+	Now we have $U\cap B= (K\cap X) \cap (V\cap X) = (K\cap V) \cap X \neq \emptyset$ (Since $K\cap V$ open in $Y$, and 	$X$ is dense in $Y$. Additionally, $K\cap V \neq \emptyset$ because $cl_Y B= cl_Y V$ by Fact A, so $W\subseteq cl_Y B= 	cl_Y V
+	\Rightarrow x\in cl_Y V \Rightarrow U\cap V \neq \emptyset \Rightarrow K\cap V \neq \emptyset$) 
+	Thus $W\cap X \subseteq cl_X B$. So $y \in W\cap X \subseteq cl_X B \Rightarrow y \in int_X cl_X B$.
+	\end{comment}
+
+
+
+\end{proof}
+
+	
+
+LEMMA C: Let $X$ be a dense subspace of a topological space $Y$.\\
+i)If $A$ is regular open in $Y$ then the restriction $A\cap X$ of $A$ on $X$ is regular open in $X$. 
+\begin{proof}\\
+$A\cap X$ is open in $X$, so we can apply Fact B.
+$A\cap X \subseteq int_X cl_X (A\cap X) = (int_Y cl_Y (A\cap X))\cap X \subseteq (int_Y cl_Y A) \cap X = A\cap X$. (Note: the first containment is true because $A\cap X$ is open in $X$, so $A\cap X = int_X (A\cap X) \subseteq int_X cl_Y (A\cap X)$. The first equality is true because of Fact B. The second containment is true because $A\cap X \subseteq A$. The second equality is true because $A$ is reguarly open.)\\
+So we have here $A\cap X = int_X cl_X (A\cap X)$, i.e. $A$ is regular open.
+\end{proof}
+
+
+ii)Any regular open set $B$ in $X$ is the restriction of some regular open set in $Y$. 
+
+\begin{proof}
+If $B$ is regular open in $X$, then $B$ is open, so applying Fact B we get:
+$B= int_X cl_XB = (int_Y cl_Y B)\cap X$, and $int_Y cl_Y B$ is regular open in $Y$.
+
+
+			\begin{comment}
+			(Note: $int_Y cl_Y int_Y cl_Y B = int_Y cl_Y B$ because for 
+			$\subseteq$: $int_Y cl_Y int_Y cl_Y B \subseteq int_Y cl_Y cl_Y B = int_Y cl_Y B$. 
+			On the other hand for $\supseteq$: Since  $int_Y cl_Y B$ is open in $X$, write $U=int_Y cl_Y B$ 
+			and $U= int_Y U \subseteq int_Y cl_Y U$.)
+
+			So we have $B$ as an intersection of a regular open set in $Y$ (namely int_Y cl_Y B) and  $X$.
+			\end{comment}
+
+
+\end{proof}
+
+
+
+	
+
+LEMMA D: Two regular open sets $A$, $A^\prime  $ in $Y$ are identical iff $A\cap X = A^\prime   \cap X$.
+
+\begin{proof}
+One direction is easy. Now suppose $A\cap X = A^\prime \cap X$. By Fact A, $cl_Y A= cl_Y (A\cap X) = cl_Y (A^\prime \cap X)= cl_YA^
+\prime$. So, $A=int_Y cl_Y A = int_Y cl_Y A^\prime = A^\prime$.
+\end{proof}
+
+
+\begin {comment}
+$A\cap \\
+$\Leftarrow$: Assume $A\cap X= A^\prime   \cap X$. 
+Enough to show that $A^\prime  \cap X \subseteq A\cap X \Rightarrow A^\prime   \subseteq A$. \\
+
+Suppose $A^\prime   \nsubseteq A$, then since $A=int_Y cl_Y A$, we have $A^\prime   \nsubseteq int_Y cl_Y A$. (So $A^\prime  $ is not contained in the biggest open set containing $cl_Y A$. $A^\prime  $ is open, so if $A^\prime   \subseteq cl_Y A$ then $A^\prime   \subseteq int_Y cl_Y A$, a contradiction.) Thus $A^\prime   \nsubseteq cl_Y A$. So $A^\prime   \cap [cl_YA]^c \neq \emptyset$. $A^\prime   \cap [cl_YA]^c$ is open in $Y$ and $X$ is dense, so $(A^\prime   \cap [cl_YA]^c )\cap X \neq \emptyset$. 
+I.e. $\exists x\in A^\prime  $ but $x \notin A$, so $A^\prime   \cap X \nsubseteq A\cap X$, contradicting our assumption that $A\cap X= A^\prime   \cap X$.
+\end{comment}
+
+
+
+
+\end{proof}
+
+
+
+\end{document}
